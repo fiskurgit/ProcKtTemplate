@@ -19,7 +19,7 @@ open class KApplet: PApplet() {
 
     override fun settings() {
         size(600, 600, PConstants.P3D)
-        PJOGL.setIcon("icon.png")
+        PJOGL.setIcon("p5kt.png")
     }
 
     fun ellipse(x: Number, y: Number, w: Number, h: Number){
