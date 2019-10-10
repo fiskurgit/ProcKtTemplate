@@ -10,7 +10,7 @@ class Grid {
     var columns = 10
     var rows = 10
 
-    var occupants = mutableListOf<Any>()
+    var occupants = mutableListOf<Cell>()
 
     fun cellWidth(): Float{
         return width.toFloat()/columns
@@ -26,11 +26,21 @@ class Grid {
         return xC + columns * yC
     }
 
-    fun addOccupant(occupant: Any){
+    fun cellOrigin(cellIndex: Int): PVector {
+        val column = cellIndex%columns
+        val row = cellIndex/rows
+        val cellWidth = width/columns
+        val cellHeight = height/rows
+        val originX = (column * cellWidth) + cellWidth/2
+        val originY = (row * cellHeight) + cellHeight/2
+        return PVector(originX.toFloat(), originY.toFloat())
+    }
+
+    fun addOccupant(occupant: Cell){
         occupants.add(occupant)
     }
 
-    fun getOccupant(cellIndex: Int): Any?{
+    fun getOccupant(cellIndex: Int): Cell?{
         return when {
             occupants.size <= cellIndex -> {
                 KApplet.e("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
@@ -40,7 +50,7 @@ class Grid {
         }
     }
 
-    fun setOccupant(cellIndex: Int, occupant: Any){
+    fun setOccupant(cellIndex: Int, occupant: Cell){
         when {
             occupants.size <= cellIndex -> {
                 KApplet.e("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
@@ -48,16 +58,5 @@ class Grid {
             }
             else -> occupants[cellIndex] = occupant
         }
-    }
-
-
-    fun cellOrigin(cellIndex: Int): PVector {
-        val column = cellIndex%columns
-        val row = cellIndex/rows
-        val cellWidth = width/columns
-        val cellHeight = height/rows
-        val originX = (column * cellWidth) + cellWidth/2
-        val originY = (row * cellHeight) + cellHeight/2
-        return PVector(originX.toFloat(), originY.toFloat())
     }
 }

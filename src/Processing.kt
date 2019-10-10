@@ -16,7 +16,7 @@ class Processing: KApplet() {
         drawGrid()
 
         if(clickedCell != null){
-            fill(Color.CYAN.rgb)
+            fill(Color.PINK.rgb)
             ellipse(clickedCell!!.x, clickedCell!!.y, grid.cellWidth(), grid.cellHeight())
         }
     }
