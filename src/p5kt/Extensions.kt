@@ -5,7 +5,7 @@ import processing.core.PConstants
 import java.awt.Color
 
 /*
-    Only use extension functions for convenience overloads of existing Sketch001 API
+    Only use extension functions for convenience overloads of existing Processing API
  */
 fun KApplet.color(color: String): Int{
     return Color.decode(color).rgb
