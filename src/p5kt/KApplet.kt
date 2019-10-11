@@ -51,6 +51,14 @@ open class KApplet: PApplet() {
         return PApplet.lerpColor(startColor, endColor, amount, PConstants.RGB)
     }
 
+    fun colorLerp(startColor: String, endColor: String, amount: Float): Int{
+        return PApplet.lerpColor(color(startColor), color(endColor), amount, PConstants.RGB)
+    }
+
+    fun colorLerp(startColor: String, endColor: String, index: Int, range: Int): Int{
+        return PApplet.lerpColor(color(startColor), color(endColor), index/range.toFloat(), PConstants.RGB)
+    }
+
     var saveScreenshotChooser: JFileChooser? = null
 
     open fun screenshot(){

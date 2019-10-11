@@ -12,7 +12,7 @@ class Processing: KApplet() {
         background(BLACK)
 
         grid.occupants<BasicCell>().forEachIndexed { index, cell ->
-            val color = colorLerp(color("#4973a1"), color("#9d2f4d"), index/grid.count().toFloat())
+            val color = colorLerp("#4973a1", "#9d2f4d", index, grid.count())
             cell.draw(this, grid.cellOrigin(index), grid.cellDiam(), color)
         }
     }
