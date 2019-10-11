@@ -1,7 +1,7 @@
 # P5Kt
 ![P5Kt logo](p5kt.png)  
 
-Kotlin wrapper for Processing. Clone, open in Jetbrains IDEA, and start sketching.
+[Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching.
 
 ```
 class Processing: KApplet() {
