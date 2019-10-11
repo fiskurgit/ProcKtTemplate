@@ -21,7 +21,7 @@ open class KApplet: PApplet() {
 
     fun run() {
         PApplet.runSketch(arrayOf("P5Sketch"), this)
-        surface.setTitle("p5kt.P5Kt Sketch")
+        surface.setTitle("p5kt.ProcessingKt Sketch")
     }
 
     override fun settings() {

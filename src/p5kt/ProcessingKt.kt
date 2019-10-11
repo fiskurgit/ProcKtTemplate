@@ -3,7 +3,7 @@ package p5kt
 import p5kt.sketches.sk001.Sketch001
 import p5kt.sketches.sk002.Sketch002
 
-class P5Kt {
+class ProcessingKt {
     companion object {
 
         @JvmStatic
