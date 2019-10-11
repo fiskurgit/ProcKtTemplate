@@ -1,10 +1,9 @@
 import gridutils.BasicCell
-import java.awt.Color
 
 class Processing: KApplet() {
 
     override fun setup() {
-        noFill()
+        fill(BLACK)
         stroke(WHITE)
         prepopulate(gridutils.BasicCell::class)
     }
@@ -14,21 +13,18 @@ class Processing: KApplet() {
 
         drawGrid()
 
-        var index = 0
-        grid.occupants.forEach { cell ->
+        grid.occupants.forEachIndexed { index, cell ->
             if((cell as BasicCell).active){
                 val activeOrigin = grid.cellOrigin(index)
-                fill(Color.PINK.rgb)
                 ellipse(activeOrigin.x, activeOrigin.y, grid.cellWidth(), grid.cellHeight())
             }
-
-            index++
         }
     }
 
     override fun mouseClicked() {
-        val clickedIndex = cellIndex()
-        val occupant = grid.getOccupant(clickedIndex) as BasicCell
-        occupant.active = !occupant.active
+        val clickedIndex = mouseLocationCellIndex()
+        val occupant = grid.getOccupant<BasicCell>(clickedIndex)
+        if(occupant != null) occupant.active = !occupant.active
+
     }
 }

@@ -36,7 +36,7 @@ open class KApplet: PApplet() {
     fun <T: Any>prepopulate(clazz: KClass<T>){
         grid.prepopulate(clazz)
     }
-    fun cellIndex(): Int{
+    fun mouseLocationCellIndex(): Int{
         return grid.cellIndex(mouseX, mouseY)
     }
 

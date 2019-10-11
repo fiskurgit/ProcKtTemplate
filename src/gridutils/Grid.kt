@@ -49,13 +49,16 @@ class Grid {
         occupants.add(occupant)
     }
 
-    fun getOccupant(cellIndex: Int): Any?{
+    inline fun <reified T: Any>getOccupant(cellIndex: Int): T?{
         return when {
             occupants.size <= cellIndex -> {
                 KApplet.e("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
                 null
             }
-            else -> occupants[cellIndex]
+            else -> {
+                val occupant = occupants[cellIndex]
+                occupant as? T
+            }
         }
     }
 
