@@ -2,7 +2,6 @@ package p5kt.sketches.sk001
 
 import p5kt.KApplet
 import p5kt.colorLerp
-import p5kt.gridutils.BasicCell
 
 class Sketch001: KApplet() {
 
@@ -17,6 +16,8 @@ class Sketch001: KApplet() {
 
     override fun draw() {
         background(BLACK)
+
+        grid.draw(this, WHITE, 20f)
 
         grid.occupants<BasicCell>().forEachIndexed { index, cell ->
             val color = colorLerp("#4973a1", "#9d2f4d", index, grid.count())

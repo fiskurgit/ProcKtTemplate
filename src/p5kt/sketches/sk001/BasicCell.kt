@@ -1,10 +1,10 @@
-package p5kt.gridutils
+package p5kt.sketches.sk001
 
 import p5kt.KApplet
 import p5kt.circle
 import processing.core.PVector
 
-class BasicCell: Cell() {
+class BasicCell {
 
     var active = false
 
