@@ -1,13 +1,19 @@
 package p5kt
 
 import p5kt.sketches.sk001.Sketch001
+import p5kt.sketches.sk002.Sketch002
 
 class P5Kt {
     companion object {
 
         @JvmStatic
         fun main(args: Array<String>) {
-            Sketch001().run()
+            val sketch = 2
+            when (sketch) {
+                1 -> Sketch001().run()
+                2 -> Sketch002().run()
+            }
+
         }
     }
 }

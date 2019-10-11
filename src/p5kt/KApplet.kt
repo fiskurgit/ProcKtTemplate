@@ -2,7 +2,6 @@ package p5kt
 
 import p5kt.gridutils.Grid
 import processing.core.PApplet
-import processing.core.PConstants
 import processing.event.KeyEvent
 import processing.opengl.PJOGL
 import java.awt.Color
