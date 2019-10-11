@@ -31,34 +31,6 @@ open class KApplet: PApplet() {
         grid.height = height
     }
 
-    fun ellipse(x: Number, y: Number, w: Number, h: Number){
-        ellipse(x.toFloat(), y.toFloat(), w.toFloat(), h.toFloat())
-    }
-
-    fun line(x1: Number, y1: Number, x2: Number, y2: Number){
-        line(x1.toFloat(), y1.toFloat(), x2.toFloat(), y2.toFloat())
-    }
-
-    fun circle(x: Number, y: Number, diameter: Number){
-        ellipse(x.toFloat(), y.toFloat(), diameter.toFloat(), diameter.toFloat())
-    }
-
-    fun color(color: String): Int{
-        return Color.decode(color).rgb
-    }
-
-    fun colorLerp(startColor: Int, endColor: Int, amount: Float): Int{
-        return PApplet.lerpColor(startColor, endColor, amount, PConstants.RGB)
-    }
-
-    fun colorLerp(startColor: String, endColor: String, amount: Float): Int{
-        return PApplet.lerpColor(color(startColor), color(endColor), amount, PConstants.RGB)
-    }
-
-    fun colorLerp(startColor: String, endColor: String, index: Int, range: Int): Int{
-        return PApplet.lerpColor(color(startColor), color(endColor), index/range.toFloat(), PConstants.RGB)
-    }
-
     var saveScreenshotChooser: JFileChooser? = null
 
     open fun screenshot(){

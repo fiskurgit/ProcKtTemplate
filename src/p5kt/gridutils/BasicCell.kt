@@ -1,6 +1,7 @@
 package p5kt.gridutils
 
 import p5kt.KApplet
+import p5kt.circle
 import processing.core.PVector
 
 class BasicCell: Cell() {
