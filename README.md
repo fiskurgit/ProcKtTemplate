@@ -1,16 +1,18 @@
 # P5Kt
+![P5Kt logo](p5kt.png)  
+
 Kotlin wrapper for Processing. Clone, open in Jetbrains IDEA, and start sketching.
 
 ```
 class Processing: KApplet() {
 
     override fun setup() {
-        noFill()
         stroke(WHITE)
     }
 
     override fun draw() {
         background(BLACK)
+        line(0, 0, width, height)
     }
 }
 

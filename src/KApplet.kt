@@ -8,6 +8,8 @@ import kotlin.reflect.KClass
 
 open class KApplet: PApplet() {
 
+    val grid = Grid()
+
     companion object {
         val BLACK = Color.BLACK.rgb
         val WHITE = Color.WHITE.rgb
@@ -17,8 +19,6 @@ open class KApplet: PApplet() {
 
         }
     }
-
-    var grid = Grid()
 
     fun run() {
         val processingArgs = arrayOf("P5Sketch")
@@ -33,33 +33,15 @@ open class KApplet: PApplet() {
         grid.height = height
     }
 
-    fun <T: Any>prepopulate(clazz: KClass<T>){
-        grid.prepopulate(clazz)
-    }
-    fun mouseLocationCellIndex(): Int{
-        return grid.cellIndex(mouseX, mouseY)
-    }
-
-    fun cellOrigin(cellIndex: Int): PVector{
-        return grid.cellOrigin(cellIndex)
-    }
-
-    fun drawGrid(){
-        stroke(200, 100f)
-        for (i in 0..grid.rows) {
-            line(0f, grid.cellHeight() * i, width, grid.cellHeight() * i)
-        }
-
-        for (j in 0..grid.columns) {
-            line(grid.cellWidth() * j, 0f, grid.cellWidth() * j, height)
-        }
-    }
-
     fun ellipse(x: Number, y: Number, w: Number, h: Number){
         ellipse(x.toFloat(), y.toFloat(), w.toFloat(), h.toFloat())
     }
 
     fun line(x1: Number, y1: Number, x2: Number, y2: Number){
         line(x1.toFloat(), y1.toFloat(), x2.toFloat(), y2.toFloat())
+    }
+
+    fun circle(x: Number, y: Number, diameter: Number){
+        ellipse(x.toFloat(), y.toFloat(), diameter.toFloat(), diameter.toFloat())
     }
 }

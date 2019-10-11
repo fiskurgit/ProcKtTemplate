@@ -1,5 +1,6 @@
 package gridutils
 
+import processing.core.PApplet
 import processing.core.PVector
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
@@ -14,12 +15,29 @@ class Grid {
 
     var occupants = mutableListOf<Any>()
 
+    fun draw(sketch: PApplet, color: Int = 200, alpha: Float = 100f){
+        sketch.stroke(color, alpha)
+        val cellWidth = cellWidth()
+        val cellHeight = cellHeight()
+        for (y in 0..rows) {
+            sketch.line(0f, cellHeight * y, width.toFloat(), cellHeight * y)
+        }
+
+        for (x in 0..columns) {
+            sketch.line(cellWidth * x, 0f, cellWidth * x, height.toFloat())
+        }
+    }
+
     fun cellWidth(): Float{
         return width.toFloat()/columns
     }
 
     fun cellHeight(): Float{
         return height.toFloat()/rows
+    }
+
+    fun cellDiam(): Float{
+        return Math.min(cellWidth(), cellHeight())
     }
 
     fun cellIndex(mouseX: Int, mouseY: Int): Int{
@@ -45,30 +63,26 @@ class Grid {
         }
     }
 
-    fun addOccupant(occupant: Cell){
+    fun addOccupant(occupant: Any){
         occupants.add(occupant)
     }
 
-    inline fun <reified T: Any>getOccupant(cellIndex: Int): T?{
-        return when {
-            occupants.size <= cellIndex -> {
-                KApplet.e("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
-                null
-            }
-            else -> {
-                val occupant = occupants[cellIndex]
-                occupant as? T
-            }
-        }
+    inline fun <reified T: Any>occupantAt(mouseX: Int, mouseY: Int): T{
+        val index = cellIndex(mouseX, mouseY)
+        return getOccupant(index)
     }
 
-    fun setOccupant(cellIndex: Int, occupant: Cell){
-        when {
-            occupants.size <= cellIndex -> {
-                KApplet.e("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
-                return
-            }
-            else -> occupants[cellIndex] = occupant
-        }
+    inline fun <reified T: Any>occupants(): List<T>{
+        return occupants.map { it as T }
+    }
+
+    inline fun <reified T: Any>getOccupant(cellIndex: Int): T{
+        if(occupants.size <= cellIndex) throw Exception("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
+        return occupants[cellIndex] as T
+    }
+
+    fun setOccupant(cellIndex: Int, occupant: Any){
+        if(occupants.size <= cellIndex) throw Exception("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
+        occupants[cellIndex] = occupant
     }
 }

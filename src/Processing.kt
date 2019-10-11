@@ -4,27 +4,24 @@ class Processing: KApplet() {
 
     override fun setup() {
         fill(BLACK)
-        stroke(WHITE)
-        prepopulate(gridutils.BasicCell::class)
+        grid.prepopulate(BasicCell::class)
     }
 
     override fun draw() {
         background(WHITE)
 
-        drawGrid()
+        grid.draw(this)
 
-        grid.occupants.forEachIndexed { index, cell ->
-            if((cell as BasicCell).active){
-                val activeOrigin = grid.cellOrigin(index)
-                ellipse(activeOrigin.x, activeOrigin.y, grid.cellWidth(), grid.cellHeight())
+        grid.occupants<BasicCell>().forEachIndexed { index, cell ->
+            if(cell.active){
+                val cellOrigin = grid.cellOrigin(index)
+                circle(cellOrigin.x, cellOrigin.y, grid.cellDiam())
             }
         }
     }
 
     override fun mouseClicked() {
-        val clickedIndex = mouseLocationCellIndex()
-        val occupant = grid.getOccupant<BasicCell>(clickedIndex)
-        if(occupant != null) occupant.active = !occupant.active
-
+        val occupant = grid.occupantAt<BasicCell>(mouseX, mouseY)
+        occupant.active = !occupant.active
     }
 }
