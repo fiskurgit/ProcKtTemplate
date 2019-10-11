@@ -19,10 +19,10 @@ class HexagramCell {
         kappl.stroke(color, opacity.toFloat())
 
         for (i in 0 until 6) {
-            val xx = diam/4 * sin(RADS * i) + origin.x
-            val yy = diam/4 * cos(RADS * i) + origin.y
-            kappl.circle(xx, yy, 2)
-            hexPoints[i] = PVector(xx, yy)
+            val x = diam/4 * sin(RADS * i) + origin.x
+            val y = diam/4 * cos(RADS * i) + origin.y
+            kappl.circle(x, y, 2)
+            hexPoints[i] = PVector(x, y)
         }
 
         val lines = kappl.random(30f).toInt() + 2
