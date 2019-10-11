@@ -1,9 +1,10 @@
-import grid.Grid
+import gridutils.Grid
 import processing.core.PApplet
 import processing.core.PConstants
 import processing.core.PVector
 import processing.opengl.PJOGL
 import java.awt.Color
+import kotlin.reflect.KClass
 
 open class KApplet: PApplet() {
 
@@ -32,6 +33,9 @@ open class KApplet: PApplet() {
         grid.height = height
     }
 
+    fun <T: Any>prepopulate(clazz: KClass<T>){
+        grid.prepopulate(clazz)
+    }
     fun cellIndex(): Int{
         return grid.cellIndex(mouseX, mouseY)
     }

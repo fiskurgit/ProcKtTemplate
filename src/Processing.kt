@@ -1,13 +1,12 @@
-import processing.core.PVector
+import gridutils.BasicCell
 import java.awt.Color
 
 class Processing: KApplet() {
 
-    var clickedCell: PVector? = null
-
     override fun setup() {
         noFill()
         stroke(WHITE)
+        prepopulate(gridutils.BasicCell::class)
     }
 
     override fun draw() {
@@ -15,14 +14,21 @@ class Processing: KApplet() {
 
         drawGrid()
 
-        if(clickedCell != null){
-            fill(Color.PINK.rgb)
-            ellipse(clickedCell!!.x, clickedCell!!.y, grid.cellWidth(), grid.cellHeight())
+        var index = 0
+        grid.occupants.forEach { cell ->
+            if((cell as BasicCell).active){
+                val activeOrigin = grid.cellOrigin(index)
+                fill(Color.PINK.rgb)
+                ellipse(activeOrigin.x, activeOrigin.y, grid.cellWidth(), grid.cellHeight())
+            }
+
+            index++
         }
     }
 
     override fun mouseClicked() {
         val clickedIndex = cellIndex()
-        clickedCell = cellOrigin(clickedIndex)
+        val occupant = grid.getOccupant(clickedIndex) as BasicCell
+        occupant.active = !occupant.active
     }
 }

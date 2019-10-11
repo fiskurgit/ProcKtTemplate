@@ -1,4 +1,4 @@
-package grid
+package gridutils
 
 abstract class Cell {
 

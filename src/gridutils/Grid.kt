@@ -1,6 +1,8 @@
-package grid
+package gridutils
 
 import processing.core.PVector
+import kotlin.reflect.KClass
+import kotlin.reflect.full.createInstance
 
 class Grid {
 
@@ -10,7 +12,7 @@ class Grid {
     var columns = 10
     var rows = 10
 
-    var occupants = mutableListOf<Cell>()
+    var occupants = mutableListOf<Any>()
 
     fun cellWidth(): Float{
         return width.toFloat()/columns
@@ -36,11 +38,18 @@ class Grid {
         return PVector(originX.toFloat(), originY.toFloat())
     }
 
+    fun <T: Any>prepopulate(clazz: KClass<T>){
+        val occupantCount = rows * columns
+        for(index in 0..occupantCount){
+            occupants.add(clazz.createInstance())
+        }
+    }
+
     fun addOccupant(occupant: Cell){
         occupants.add(occupant)
     }
 
-    fun getOccupant(cellIndex: Int): Cell?{
+    fun getOccupant(cellIndex: Int): Any?{
         return when {
             occupants.size <= cellIndex -> {
                 KApplet.e("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
