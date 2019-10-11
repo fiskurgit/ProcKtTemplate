@@ -1,4 +1,4 @@
-package gridutils
+package p5kt.gridutils
 
 abstract class Cell {
 

@@ -1,3 +1,5 @@
+package p5kt
+
 class P5Kt {
     companion object {
 

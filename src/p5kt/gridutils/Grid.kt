@@ -1,4 +1,4 @@
-package gridutils
+package p5kt.gridutils
 
 import processing.core.PApplet
 import processing.core.PVector
@@ -10,8 +10,8 @@ class Grid {
     var width = 0
     var height = 0
 
-    var columns = 10
-    var rows = 10
+    var columns = 8
+    var rows = 8
 
     var occupants = mutableListOf<Any>()
 
@@ -84,5 +84,9 @@ class Grid {
     fun setOccupant(cellIndex: Int, occupant: Any){
         if(occupants.size <= cellIndex) throw Exception("Error: index $cellIndex out of bounds, we have ${occupants.size} occupants")
         occupants[cellIndex] = occupant
+    }
+
+    fun count(): Int {
+        return rows * columns
     }
 }

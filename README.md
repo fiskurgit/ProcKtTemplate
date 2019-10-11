@@ -1,10 +1,10 @@
-# P5Kt
-![P5Kt logo](p5kt.png)  
+# p5kt.P5Kt
+![p5kt.P5Kt logo](p5kt.png)  
 
-[Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching.
+[Kotlin](https://kotlinlang.org/) wrapper for [p5kt.Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching.
 
 ```
-class Processing: KApplet() {
+class p5kt.Processing: p5kt.KApplet() {
 
     override fun setup() {
         stroke(WHITE)
@@ -19,8 +19,8 @@ class Processing: KApplet() {
 ```
 
 ## Note.
-Processing requires JDK8, OpenJDK is fine: `brew cask install adoptopenjdk8`
+p5kt.Processing requires JDK8, OpenJDK is fine: `brew cask install adoptopenjdk8`
 
 ## Licence
 
-The Processing core libraries are distributed under [GPL licence](LICENSE.md), this project is too.
+The p5kt.Processing core libraries are distributed under [GPL licence](LICENSE.md), this project is too.
