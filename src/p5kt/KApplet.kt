@@ -13,6 +13,7 @@ open class KApplet: PApplet() {
 
     val grid = Grid()
     private var commandKeyPressed = false
+    private var saveScreenshotChooser: JFileChooser? = null
 
     companion object {
         val BLACK = Color.BLACK.rgb
@@ -25,13 +26,10 @@ open class KApplet: PApplet() {
     }
 
     override fun settings() {
-        size(600, 600, PConstants.P3D)
         PJOGL.setIcon("p5kt.png")
         grid.width = width
         grid.height = height
     }
-
-    var saveScreenshotChooser: JFileChooser? = null
 
     open fun screenshot(){
         if(saveScreenshotChooser == null) saveScreenshotChooser = JFileChooser()
@@ -43,7 +41,7 @@ open class KApplet: PApplet() {
 
     override fun keyPressed(e: KeyEvent?) {
         when {
-            keyCode == 157 -> commandKeyPressed = true
+            keyCode == 157 -> commandKeyPressed = true//Apple Command key
             (key == 's' || key == 'S') && commandKeyPressed -> screenshot()
         }
         super.keyPressed(e)
@@ -53,6 +51,4 @@ open class KApplet: PApplet() {
         commandKeyPressed = false
         super.keyReleased()
     }
-
-
 }

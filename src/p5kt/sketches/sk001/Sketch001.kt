@@ -1,8 +1,16 @@
-package p5kt
+package p5kt.sketches.sk001
 
+import p5kt.KApplet
+import p5kt.colorLerp
 import p5kt.gridutils.BasicCell
+import processing.core.PConstants
 
-class Processing: KApplet() {
+class Sketch001: KApplet() {
+
+    override fun settings() {
+        size(600, 600, PConstants.P3D)
+        super.settings()
+    }
 
     override fun setup() {
         grid.prepopulate(BasicCell::class)

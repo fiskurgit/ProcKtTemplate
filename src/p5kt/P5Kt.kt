@@ -1,14 +1,13 @@
 package p5kt
 
+import p5kt.sketches.sk001.Sketch001
+
 class P5Kt {
     companion object {
 
-        lateinit var sketch: Processing
-
         @JvmStatic
         fun main(args: Array<String>) {
-            sketch = Processing()
-            sketch.run()
+            Sketch001().run()
         }
     }
 }
