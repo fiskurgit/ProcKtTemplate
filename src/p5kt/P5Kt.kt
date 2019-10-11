@@ -8,12 +8,10 @@ class P5Kt {
 
         @JvmStatic
         fun main(args: Array<String>) {
-            val sketch = 2
-            when (sketch) {
+            when (args[0].toInt()) {
                 1 -> Sketch001().run()
                 2 -> Sketch002().run()
             }
-
         }
     }
 }
