@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ExtensionsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ExtensionsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/KApplet$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/KApplet$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/KApplet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/KApplet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/Extensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/KApplet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/KApplet.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noloop_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/noloop_temp.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/processingkt/KApplet.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="780">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding>
                 <element signature="e#22#225#0" expanded="true" />
               </folding>
@@ -191,22 +187,6 @@
             </path>
             <path>
               <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="processingkt" type="462c0819:PsiDirectoryNode" />
-              <item name="sketches" type="462c0819:PsiDirectoryNode" />
-              <item name="sk001" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="processingkt" type="462c0819:PsiDirectoryNode" />
-              <item name="sketches" type="462c0819:PsiDirectoryNode" />
-              <item name="sk002" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -218,7 +198,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570884243229" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570892845830" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -358,9 +338,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -369,14 +348,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.489011" visible="true" weight="0.34545454" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4884005" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.493895" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.510989" side_tool="true" visible="true" weight="0.34545454" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4932845" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51159954" side_tool="true" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.495116" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -537,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/processingkt/KApplet.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        <state relative-caret-position="780">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding>
             <element signature="e#22#225#0" expanded="true" />
           </folding>
