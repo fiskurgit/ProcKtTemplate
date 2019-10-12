@@ -5,14 +5,11 @@ import processing.core.PApplet
 import processing.event.KeyEvent
 import processing.opengl.PJOGL
 import java.awt.Color
-import java.io.File
-import javax.swing.JFileChooser
 
 open class KApplet: PApplet() {
 
     val grid = Grid()
     private var commandKeyPressed = false
-    private var saveScreenshotChooser: JFileChooser? = null
 
     companion object {
         val BLACK = Color.BLACK.rgb
@@ -29,14 +26,6 @@ open class KApplet: PApplet() {
         PJOGL.setIcon("processingkt.png")
         grid.width = width
         grid.height = height
-    }
-
-    open fun screenshot(){
-        if(saveScreenshotChooser == null) saveScreenshotChooser = JFileChooser()
-        val filename = "p5kt_${System.currentTimeMillis()}.png"
-        saveScreenshotChooser?.selectedFile = File(filename)
-        val returnVal = saveScreenshotChooser?.showSaveDialog(this.frame)
-        if (returnVal == JFileChooser.APPROVE_OPTION) saveFrame(saveScreenshotChooser?.selectedFile?.path)
     }
 
     override fun keyPressed(e: KeyEvent?) {
