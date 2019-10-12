@@ -1,4 +1,4 @@
-package p5kt.gridutils
+package processingkt.gridutils
 
 import processing.core.PApplet
 import processing.core.PVector

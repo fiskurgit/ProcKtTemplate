@@ -1,7 +1,7 @@
-package p5kt.sketches.sk001
+package processingkt.sketches.sk001
 
-import p5kt.KApplet
-import p5kt.circle
+import processingkt.KApplet
+import processingkt.circle
 import processing.core.PVector
 
 class BasicCell {

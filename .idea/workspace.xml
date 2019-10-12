@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P5Kt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingKt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/p5kt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/p5kt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p5kt/KApplet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/p5kt/KApplet.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p5kt/P5Kt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/p5kt/ProcessingKt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/Extensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/KApplet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/KApplet.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/ProcessingKt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/ProcessingKt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/gridutils/Grid.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/gridutils/Grid.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/sketches/sk001/BasicCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk001/BasicCell.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/sketches/sk001/Sketch001.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/sketches/sk002/HexagramCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk002/HexagramCell.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p5kt/sketches/sk002/Sketch002.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p5kt/sketches/sk001/Sketch001.kt">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
+              <caret line="24" column="9" selection-start-line="17" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
               <folding>
                 <element signature="e#29#102#0" expanded="true" />
               </folding>
@@ -29,16 +37,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p5kt/sketches/sk002/Sketch002.kt">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p5kt/sketches/sk002/HexagramCell.kt">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/HexagramCell.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
               <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
@@ -50,7 +58,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p5kt/Extensions.kt">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/Extensions.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="77">
               <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
@@ -61,8 +69,8 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/p5kt/ProcessingKt.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/ProcessingKt.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
@@ -74,7 +82,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p5kt/gridutils/Grid.kt">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/gridutils/Grid.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1335">
               <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
@@ -86,7 +94,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p5kt/KApplet.kt">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/KApplet.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
@@ -97,7 +105,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -186,30 +194,7 @@
               <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
               <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="p5kt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="p5kt" type="462c0819:PsiDirectoryNode" />
-              <item name="sketches" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="p5kt" type="462c0819:PsiDirectoryNode" />
-              <item name="sketches" type="462c0819:PsiDirectoryNode" />
-              <item name="sk001" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="p5kt" type="462c0819:PsiDirectoryNode" />
-              <item name="sketches" type="462c0819:PsiDirectoryNode" />
-              <item name="sk002" type="462c0819:PsiDirectoryNode" />
+              <item name="processingkt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
@@ -224,7 +209,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570830928644" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570871140410" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -252,9 +237,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.p5kt.ProcessingKt">
+  <component name="RunManager" selected="Kotlin.processingkt.ProcessingKt">
     <configuration name="P5Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="P5Kt" />
+      <module name="ProcessingKt" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -267,7 +252,7 @@
       </method>
     </configuration>
     <configuration name="Processing" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="P5Kt" />
+      <module name="ProcessingKt" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -279,15 +264,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="p5kt.ProcessingKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="P5Kt" />
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="ProcessingKt" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="processingkt.ProcessingKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="ProcessingKt" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="p5kt.ProcessingKt" />
+      <option name="MAIN_CLASS_NAME" value="processingkt.ProcessingKt" />
       <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="ProcessingKt" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -295,11 +327,11 @@
     <list>
       <item itemvalue="Kotlin.P5Kt" />
       <item itemvalue="Kotlin.Processing" />
-      <item itemvalue="Kotlin.p5kt.ProcessingKt" />
+      <item itemvalue="Kotlin.processingkt.ProcessingKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.p5kt.ProcessingKt" />
+        <item itemvalue="Kotlin.processingkt.ProcessingKt" />
         <item itemvalue="Kotlin.P5Kt" />
         <item itemvalue="Kotlin.Processing" />
       </list>
@@ -319,7 +351,7 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -400,41 +432,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/sketches/sk001/BasicCell.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk001/BasicCell.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="12" column="57" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/sketches/sk001/Sketch001.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
+          <caret line="24" column="9" selection-start-line="17" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="e#29#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/sketches/sk002/Sketch002.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/Extensions.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/Extensions.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
@@ -444,7 +466,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/sketches/sk002/HexagramCell.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/HexagramCell.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
@@ -454,7 +476,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/KApplet.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/KApplet.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
@@ -464,7 +486,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/gridutils/Grid.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/ProcessingKt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="e#14#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/gridutils/Grid.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
           <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
@@ -474,13 +506,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p5kt/ProcessingKt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="e#14#87#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

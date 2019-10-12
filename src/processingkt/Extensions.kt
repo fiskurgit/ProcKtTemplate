@@ -1,4 +1,4 @@
-package p5kt
+package processingkt
 
 import processing.core.PApplet
 import processing.core.PConstants

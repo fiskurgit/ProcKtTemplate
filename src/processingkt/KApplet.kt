@@ -1,6 +1,6 @@
-package p5kt
+package processingkt
 
-import p5kt.gridutils.Grid
+import processingkt.gridutils.Grid
 import processing.core.PApplet
 import processing.event.KeyEvent
 import processing.opengl.PJOGL
@@ -21,11 +21,11 @@ open class KApplet: PApplet() {
 
     fun run() {
         PApplet.runSketch(arrayOf("P5Sketch"), this)
-        surface.setTitle("p5kt.ProcessingKt Sketch")
+        surface.setTitle("processingkt.ProcessingKt Sketch")
     }
 
     override fun settings() {
-        PJOGL.setIcon("p5kt.png")
+        PJOGL.setIcon("processingkt.png")
         grid.width = width
         grid.height = height
     }

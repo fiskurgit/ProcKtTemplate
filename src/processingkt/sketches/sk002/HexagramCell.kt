@@ -1,7 +1,7 @@
-package p5kt.sketches.sk002
+package processingkt.sketches.sk002
 
-import p5kt.KApplet
-import p5kt.circle
+import processingkt.KApplet
+import processingkt.circle
 import processing.core.PApplet.cos
 import processing.core.PApplet.sin
 import processing.core.PConstants.TWO_PI

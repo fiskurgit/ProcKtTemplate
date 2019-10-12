@@ -1,7 +1,7 @@
-package p5kt
+package processingkt
 
-import p5kt.sketches.sk001.Sketch001
-import p5kt.sketches.sk002.Sketch002
+import processingkt.sketches.sk001.Sketch001
+import processingkt.sketches.sk002.Sketch002
 
 class ProcessingKt {
     companion object {

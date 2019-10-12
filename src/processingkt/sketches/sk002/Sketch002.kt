@@ -1,6 +1,6 @@
-package p5kt.sketches.sk002
+package processingkt.sketches.sk002
 
-import p5kt.KApplet
+import processingkt.KApplet
 
 class Sketch002: KApplet() {
 
