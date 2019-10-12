@@ -20,8 +20,9 @@ open class KApplet: PApplet() {
     }
 
     fun run() {
-        PApplet.runSketch(arrayOf("P5Sketch"), this)
-        surface.setTitle("processingkt.ProcessingKt Sketch")
+        val sketchName = this::class.simpleName
+        PApplet.runSketch(arrayOf(sketchName), this)
+        surface.setTitle(sketchName)
     }
 
     override fun settings() {
