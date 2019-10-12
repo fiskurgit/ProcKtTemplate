@@ -6,12 +6,14 @@
 ```
 class Sketch: KApplet() {
 
-    override fun setup() {
-        stroke(WHITE)
+    override fun settings() {
+        size(600, 600)
+        super.settings()
     }
 
     override fun draw() {
         background(BLACK)
+        stroke(WHITE)
         line(0, 0, width, height)
     }
 }
