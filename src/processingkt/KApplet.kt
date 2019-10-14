@@ -14,12 +14,13 @@ open class KApplet: PApplet() {
 
     val grid = Grid()
     private var commandKeyPressed = false
-    private var saveScreenshotChooser: JFileChooser? = null
+    private var saveChooser: JFileChooser? = null
 
     companion object {
         val BLACK = Color.BLACK.rgb
         val WHITE = Color.WHITE.rgb
         const val NO_LOOP_TEMP_SCREENSHOT = "noloop_temp.png"
+        const val VECTOR_TEMP_FILE = "vector_temp.pdf"
     }
 
     fun run() {
@@ -37,7 +38,8 @@ open class KApplet: PApplet() {
     override fun keyPressed(e: KeyEvent?) {
         when {
             keyCode == 157 -> commandKeyPressed = true//Apple Command key
-            (key == 's' || key == 'S') && commandKeyPressed -> screenshot()
+            (key == 's' || key == 'S') && commandKeyPressed -> exportRaster()
+            (key == 'p' || key == 'P') && commandKeyPressed -> exportVector()
         }
         super.keyPressed(e)
     }
@@ -47,20 +49,31 @@ open class KApplet: PApplet() {
         super.keyReleased()
     }
 
-    open fun screenshot(){
-        if(saveScreenshotChooser == null) saveScreenshotChooser = JFileChooser()
-        val filename = "processingkt_${System.currentTimeMillis()}.png"
-        saveScreenshotChooser?.selectedFile = File(filename)
-        val returnVal = saveScreenshotChooser?.showSaveDialog(this.frame)
+    open fun exportRaster(){
+        if(saveChooser == null) saveChooser = JFileChooser()
+        val filename = "processingkt_raster_${System.currentTimeMillis()}.png"
+        saveChooser?.selectedFile = File(filename)
+        val returnVal = saveChooser?.showSaveDialog(this.frame)
         if (returnVal == JFileChooser.APPROVE_OPTION){
             if(isLooping){
-                saveFrame(saveScreenshotChooser?.selectedFile?.path)
+                saveFrame(saveChooser?.selectedFile?.path)
             }else{
                 val temp = File(NO_LOOP_TEMP_SCREENSHOT)
-                if(temp.exists()){
-                    Files.copy(Paths.get(temp.path), Paths.get(saveScreenshotChooser?.selectedFile!!.path))
-                }
+                if(temp.exists()) Files.copy(Paths.get(temp.path), Paths.get(saveChooser?.selectedFile!!.path))
             }
+        }
+    }
+
+    open fun exportVector(){
+        val temp = File(VECTOR_TEMP_FILE)
+        if(temp.exists()) {
+            if (saveChooser == null) saveChooser = JFileChooser()
+            val filename = "processingkt_vector_${System.currentTimeMillis()}.pdf"
+            saveChooser?.selectedFile = File(filename)
+            val returnVal = saveChooser?.showSaveDialog(this.frame)
+            if (returnVal == JFileChooser.APPROVE_OPTION) Files.copy(Paths.get(temp.path), Paths.get(saveChooser?.selectedFile!!.path))
+        }else{
+            println("No PDF export available, have you added startPdf() and endPdf()?")
         }
     }
 
@@ -72,5 +85,14 @@ open class KApplet: PApplet() {
     override fun loop() {
         File(NO_LOOP_TEMP_SCREENSHOT).delete()
         super.loop()
+    }
+
+    fun startPdf(){
+        beginRecord(PDF, VECTOR_TEMP_FILE)
+    }
+
+    fun endPdf(){
+        endRecord()
+
     }
 }
