@@ -1,7 +1,7 @@
 # ProcessingKt
 ![ProcessingKt logo](processingkt.png)  
 
-[Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching.
+Completely unofficial [Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching.
 
 ```
 class Sketch: KApplet() {
