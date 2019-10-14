@@ -2,6 +2,7 @@ package processingkt
 
 import processingkt.gridutils.Grid
 import processing.core.PApplet
+import processing.core.PGraphics
 import processing.event.KeyEvent
 import processing.opengl.PJOGL
 import java.awt.Color
@@ -87,12 +88,6 @@ open class KApplet: PApplet() {
         super.loop()
     }
 
-    fun startPdf(){
-        beginRecord(PDF, VECTOR_TEMP_FILE)
-    }
-
-    fun endPdf(){
-        endRecord()
-
-    }
+    fun startPdf(): PGraphics = beginRecord(PDF, VECTOR_TEMP_FILE)
+    fun endPdf() = endRecord()
 }
