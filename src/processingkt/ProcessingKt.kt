@@ -38,7 +38,7 @@ class ProcessingKt {
                 println("${index+1}: $name")
             }
 
-            println("or 'cs' to generate markdown contact sheet of all sketches.")
+            println("or 'cs' to generate a markdown contact sheet of all sketches.")
 
             val scanner = Scanner(System.`in`)
             val input = scanner.next()
