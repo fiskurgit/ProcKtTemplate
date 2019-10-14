@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk003/Sketch003.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk004/SnowflakeCell.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/noloop_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/noloop_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ExtensionsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ExtensionsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ProcessingKt$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ProcessingKt$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ProcessingKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ProcessingKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk002/Sketch002.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk002/Sketch002.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processingkt/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/Extensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processingkt/ProcessingKt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/ProcessingKt.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,46 +24,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="150">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
-                <element signature="e#29#102#0" expanded="true" />
+                <element signature="e#37#91#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/gridutils/Grid.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk004/SnowflakeCell.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processingkt/KApplet.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
               <folding>
-                <element signature="e#22#225#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/HexagramCell.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-              <folding>
-                <element signature="e#29#238#0" expanded="true" />
+                <element signature="e#37#136#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,35 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/processingkt/Extensions.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-              <folding>
-                <element signature="e#22#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processingkt/ProcessingKt.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-              <folding>
-                <element signature="e#14#87#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="375">
-                <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="452">
+              <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -137,10 +106,15 @@
         <option value="$PROJECT_DIR$/src/p5kt/P5Kt.kt" />
         <option value="$PROJECT_DIR$/src/p5kt/ProcessingKt.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt" />
-        <option value="$PROJECT_DIR$/src/processingkt/Extensions.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/KApplet.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt" />
+        <option value="$PROJECT_DIR$/src/processingkt/ProcessingKt.kt" />
+        <option value="$PROJECT_DIR$/src/processingkt/sketches/sk003/Sketch003.kt" />
+        <option value="$PROJECT_DIR$/src/processingkt/Extensions.kt" />
+        <option value="$PROJECT_DIR$/src/processingkt/sketches/sk004/SnowflakeCell.kt" />
+        <option value="$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt" />
       </list>
     </option>
   </component>
@@ -189,6 +163,22 @@
             </path>
             <path>
               <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="processingkt" type="462c0819:PsiDirectoryNode" />
+              <item name="sketches" type="462c0819:PsiDirectoryNode" />
+              <item name="sk003" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="P5Kt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="processingkt" type="462c0819:PsiDirectoryNode" />
+              <item name="sketches" type="462c0819:PsiDirectoryNode" />
+              <item name="sk004" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="P5Kt" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -200,7 +190,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570893119908" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571054908175" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -271,7 +261,7 @@
     <configuration name="processingkt.ProcessingKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="ProcessingKt" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="2" />
+      <option name="PROGRAM_PARAMETERS" value="4" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -342,7 +332,7 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -351,16 +341,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48779" visible="true" weight="0.34545454" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48046398" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.492674" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51221" side_tool="true" visible="true" weight="0.34545454" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4920635" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.519536" side_tool="true" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.495116" weight="0.32941177" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4871795" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -429,7 +419,7 @@
     <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding>
             <element signature="e#29#102#0" expanded="true" />
           </folding>
@@ -440,36 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5762">
           <caret line="94" column="11" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/processingkt/gridutils/Grid.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
-          <folding>
-            <element signature="e#24#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/HexagramCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="e#29#238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/processingkt/ProcessingKt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#14#87#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -490,19 +450,36 @@
     <entry file="file://$PROJECT_DIR$/noloop_temp.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/processingkt/Extensions.kt">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="285">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/HexagramCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="17" column="85" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="85" />
           <folding>
-            <element signature="e#22#160#0" expanded="true" />
+            <element signature="e#29#238#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/processingkt/KApplet.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
+        <state relative-caret-position="180">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
             <element signature="e#22#225#0" expanded="true" />
@@ -510,20 +487,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt">
+    <entry file="file://$PROJECT_DIR$/src/processingkt/ProcessingKt.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="e#22#201#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="375">
-            <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk003/Sketch003.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#37#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="59" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="59" />
+          <folding>
+            <element signature="e#37#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/Extensions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/gridutils/Grid.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk004/SnowflakeCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding>
+            <element signature="e#37#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#37#91#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
