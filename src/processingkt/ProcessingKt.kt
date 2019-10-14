@@ -10,12 +10,15 @@ class ProcessingKt {
 
         @JvmStatic
         fun main(args: Array<String>) {
+
+            /*
             when (args[0].toInt()) {
                 1 -> Sketch001().run()
                 2 -> Sketch002().run()
                 3 -> Sketch003().run()
                 4 -> Sketch004().run()
             }
+            */
 
             ContactSheet.generate()
         }

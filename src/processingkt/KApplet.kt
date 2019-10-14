@@ -65,6 +65,17 @@ open class KApplet: PApplet() {
         }
     }
 
+    open fun exportRasterHeadless(filename: String){
+        val file = File(filename)
+        if(file.exists()) file.delete()
+        if(isLooping){
+            saveFrame(filename)
+        }else{
+            val temp = File(NO_LOOP_TEMP_SCREENSHOT)
+            if(temp.exists()) Files.copy(Paths.get(temp.path), Paths.get(filename))
+        }
+    }
+
     open fun exportVector(){
         val temp = File(VECTOR_TEMP_FILE)
         if(temp.exists()) {

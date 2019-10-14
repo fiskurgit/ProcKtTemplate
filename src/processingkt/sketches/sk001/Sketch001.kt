@@ -6,7 +6,7 @@ import processingkt.colorLerp
 class Sketch001: KApplet() {
 
     override fun settings() {
-        size(600, 600, P3D)
+        size(600, 600)
         super.settings()
     }
 
