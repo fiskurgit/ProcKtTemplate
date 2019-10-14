@@ -7,8 +7,10 @@ import processing.core.PConstants.TWO_PI
 class SnowflakeCell {
 
     companion object {
-        const val DENDRITE_ANGLE = TWO_PI / 6
+        const val DENDRITES = 6
+        const val DENDRITE_ANGLE = TWO_PI / DENDRITES
     }
+
     private lateinit var kappl: KApplet
     private var dendriteReduce: Float = 1f
     private var dendriteEndLength: Float = 1f
@@ -16,17 +18,14 @@ class SnowflakeCell {
     fun draw(kappl: KApplet, origin: PVector, diam: Float){
         this.kappl = kappl
         dendriteReduce = kappl.random(1.5f, 2.5f)
-        dendriteEndLength = kappl.random(1f, 10f)
+        dendriteEndLength = kappl.random(2f, 4f)
 
-        val branches = 6
-        for (i in 0 until branches) {
-            val angle = DENDRITE_ANGLE * i
-            generateDendrite(origin, diam/2, angle)
+        for (d in 0 until DENDRITES) {
+            generateDendrite(origin, diam/2, DENDRITE_ANGLE * d)
         }
     }
 
     private fun generateDendrite(origin: PVector, dendriteLength: Float, angle: Float) {
-
 
         if (dendriteLength < dendriteEndLength) {
             return
