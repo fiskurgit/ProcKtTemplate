@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noloop_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/noloop_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk003/Sketch003.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk003/Sketch003.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="e#37#91#0" expanded="true" />
               </folding>
@@ -76,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
+            <state relative-caret-position="555">
               <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
             </state>
           </provider>
@@ -158,12 +156,12 @@
         <option value="$PROJECT_DIR$/src/processingkt/ProcessingKt.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/Extensions.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/sketches/sk004/SnowflakeCell.kt" />
-        <option value="$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/KApplet.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/processingkt/sketches/sk003/Sketch003.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt" />
+        <option value="$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt" />
       </list>
     </option>
   </component>
@@ -237,7 +235,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571064873180" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571064895635" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -309,13 +307,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47985348" visible="true" weight="0.34489796" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47985348" weight="0.34489796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4908425" weight="0.32857144" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4908425" visible="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50915754" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4871795" weight="0.32857144" />
@@ -443,16 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#37#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/processingkt/KApplet.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -512,8 +500,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
+        <state relative-caret-position="555">
           <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="e#37#91#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

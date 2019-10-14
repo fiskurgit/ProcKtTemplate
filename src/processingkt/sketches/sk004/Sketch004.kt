@@ -27,8 +27,6 @@ class Sketch004: KApplet() {
             cell.draw(this, grid.cellOrigin(index), grid.cellDiam()/3)
         }
 
-
-
         noLoop()
 
         endPdf()
