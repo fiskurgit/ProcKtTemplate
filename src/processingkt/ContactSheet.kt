@@ -3,8 +3,10 @@ package processingkt
 import java.io.File
 import java.io.IOException
 
-
-
+/*
+    This is experimental - not yet functional.
+    The hope is it'll iterate all sketches and generate screenshots.
+ */
 object ContactSheet {
 
     fun generate(){
