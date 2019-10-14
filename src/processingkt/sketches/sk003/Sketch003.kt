@@ -6,7 +6,7 @@ import processingkt.stroke
 class Sketch003: KApplet() {
 
     override fun settings() {
-        size(600, 600, P3D)
+        size(600, 600)
         grid.columns = 20
         grid.rows = 20
         super.settings()
@@ -23,12 +23,6 @@ class Sketch003: KApplet() {
         grid.occupants<RandomisedCell>().forEachIndexed { index, cell ->
             cell.draw(this, grid.cellOrigin(index), grid.cellDiam())
         }
-
-        println("ones: ${RandomisedCell.ones}")
-        println("twos: ${RandomisedCell.twos}")
-        println("threes: ${RandomisedCell.threes}")
-        println("fours: ${RandomisedCell.fours}")
-        println("fives: ${RandomisedCell.fives}")
 
         noLoop()
     }
