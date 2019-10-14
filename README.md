@@ -25,7 +25,7 @@ Processing requires JDK8, OpenJDK is fine: `brew cask install adoptopenjdk8`
 
 ## Licence
 
-The Processing core libraries are distributed under [GPL licence](LICENSE.md), this project is too.
+The Processing core libraries are distributed under a [GPL licence](https://github.com/processing/processing/blob/master/license.txt) -  [this project is too](LICENSE.md).
 
 ## Additions
 
