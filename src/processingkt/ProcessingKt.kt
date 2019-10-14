@@ -16,6 +16,8 @@ class ProcessingKt {
                 3 -> Sketch003().run()
                 4 -> Sketch004().run()
             }
+
+            ContactSheet.generate()
         }
     }
 }
