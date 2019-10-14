@@ -1,26 +1,72 @@
 package processingkt
 
+import processingkt.classloader.ContactSheet
+import processingkt.classloader.SketchFinder
 import processingkt.sketches.sk001.Sketch001
 import processingkt.sketches.sk002.Sketch002
 import processingkt.sketches.sk003.Sketch003
 import processingkt.sketches.sk004.Sketch004
+import java.awt.EventQueue
+import java.util.*
 
 class ProcessingKt {
     companion object {
 
         @JvmStatic
         fun main(args: Array<String>) {
+            when {
+                args.isEmpty() -> {
+                    println("Specify which sketch to run:")
+                    val sketches = SketchFinder.getSketchNames()
 
-            /*
-            when (args[0].toInt()) {
-                1 -> Sketch001().run()
-                2 -> Sketch002().run()
-                3 -> Sketch003().run()
-                4 -> Sketch004().run()
+                    if(sketches.isEmpty()){
+                        displayWelcome()
+                    }else{
+                        displaySketches(sketches)
+                    }
+                }
+                else -> parse(args[0])
             }
-            */
+        }
 
-            ContactSheet.generate()
+        private fun displayWelcome(){
+            println("Create a new kotlin file that subclasses KApplet to get started (new file wizard coming soon hopefully)")
+        }
+
+        private fun displaySketches(sketches: List<String>){
+            sketches.forEachIndexed{ index: Int, name: String ->
+                println("${index+1}: $name")
+            }
+
+            println("or 'cs' to generate markdown contact sheet of all sketches.")
+
+            val scanner = Scanner(System.`in`)
+            val input = scanner.next()
+            parse(input)
+        }
+
+        private fun parse(arg: String){
+            val index = arg.toIntOrNull()
+
+            when {
+                index != null ->{
+                    val sketch = when (index) {
+                        1 -> Sketch001()
+                        2 -> Sketch002()
+                        3 -> Sketch003()
+                        4 -> Sketch004()
+                        else -> null
+                    }
+                    sketch?.run()
+                    EventQueue.invokeAndWait {
+                        sketch?.surface?.setVisible(true)
+                        sketch?.surface?.setAlwaysOnTop(true)
+                    }
+                }
+                else -> if(arg == "cs" || arg == "contact_sheet"){
+                    ContactSheet.generate()
+                }
+            }
         }
     }
 }

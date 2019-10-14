@@ -1,6 +1,5 @@
 package processingkt
 
-import processingkt.gridutils.Grid
 import processing.core.PApplet
 import processing.core.PGraphics
 import processing.event.KeyEvent

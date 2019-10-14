@@ -1,12 +1,12 @@
-package processingkt
+package processingkt.classloader
 
+import processingkt.KApplet
 import java.awt.EventQueue
 import java.io.File
 import java.io.IOException
 import java.lang.StringBuilder
 import java.nio.file.Files
 import java.nio.file.Paths
-import javax.swing.JFileChooser
 import java.io.PrintWriter
 import java.awt.FileDialog
 import javax.swing.JFrame
@@ -17,18 +17,13 @@ import javax.swing.JFrame
 object ContactSheet {
 
     private val screenshots = mutableListOf<Pair<String, String>>()
-    private var chooser: JFileChooser? = null
 
     fun generate(){
         println("Warning: this feature is experimental. Only works with 2D sketches.")
         screenshots.clear()
-        var currentSketch: KApplet? = null
-        getClasses("processingkt").forEach {
-            if(it.superclass.toString().endsWith("KApplet")){
-                println("Found sketch: ${it.simpleName}")
-                currentSketch = it.newInstance() as KApplet
-                getScreenshot(currentSketch)
-            }
+
+        SketchFinder.getSketches().forEach { sketch ->
+            getScreenshot(sketch)
         }
 
         chooseExportDirectory()
@@ -84,47 +79,7 @@ object ContactSheet {
 
             PrintWriter("${directory.path}/contact_sheet.md").use { out -> out.println(markupBuilder.toString()) }
             println("Export finished.")
+            System.exit(0)
         }
-    }
-
-    @Throws(ClassNotFoundException::class, IOException::class)
-    private fun getClasses(packageName: String): Array<Class<*>> {
-        val classLoader = Thread.currentThread().contextClassLoader!!
-        val path = packageName.replace('.', '/')
-        val resources = classLoader.getResources(path)
-        val dirs = mutableListOf<File>()
-        while (resources.hasMoreElements()) {
-            val resource = resources.nextElement()
-            dirs.add(File(resource.file))
-        }
-        val classes = mutableListOf<Class<*>>()
-        for (directory in dirs) {
-            findClasses(directory, packageName).forEach {
-                classes.add(it)
-            }
-        }
-        classes.sortBy { it.simpleName }.also {
-            return classes.toTypedArray()
-        }
-    }
-
-    @Throws(ClassNotFoundException::class)
-    private fun findClasses(directory: File, packageName: String): List<Class<*>> {
-        val classes = mutableListOf<Class<*>>()
-        if (!directory.exists()) {
-            return classes
-        }
-        val files = directory.listFiles()
-        for (file in files!!) {
-            if (file.isDirectory) {
-                assert(!file.name.contains("."))
-                findClasses(file, packageName + "." + file.name).forEach {
-                    classes.add(it)
-                }
-            } else if (file.name.endsWith(".class")) {
-                classes.add(Class.forName(packageName + '.'.toString() + file.name.substring(0, file.name.length - 6)))
-            }
-        }
-        return classes
     }
 }
