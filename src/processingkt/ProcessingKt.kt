@@ -50,17 +50,11 @@ class ProcessingKt {
 
             when {
                 index != null ->{
-                    val sketch = when (index) {
-                        1 -> Sketch001()
-                        2 -> Sketch002()
-                        3 -> Sketch003()
-                        4 -> Sketch004()
-                        else -> null
-                    }
-                    sketch?.run()
+                    val sketch = SketchFinder.getSketchAt(index-1)
+                    sketch.run()
                     EventQueue.invokeAndWait {
-                        sketch?.surface?.setVisible(true)
-                        sketch?.surface?.setAlwaysOnTop(true)
+                        sketch.surface?.setVisible(true)
+                        sketch.surface?.setAlwaysOnTop(true)
                     }
                 }
                 else -> if(arg == "cs" || arg == "contact_sheet"){
