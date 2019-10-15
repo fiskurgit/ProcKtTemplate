@@ -53,7 +53,6 @@ class ProcessingKt {
                     val sketch = SketchFinder.getSketchAt(index-1)
                     sketch.run()
                     EventQueue.invokeAndWait {
-                        sketch.surface?.setVisible(true)
                         sketch.surface?.setAlwaysOnTop(true)
                     }
                 }
