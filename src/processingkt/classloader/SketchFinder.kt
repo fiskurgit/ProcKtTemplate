@@ -5,29 +5,29 @@ import java.io.File
 import java.io.IOException
 
 object SketchFinder {
-    //todo - return clazz, not instantiated class, but this will do for now
-    fun getSketches(): List<KApplet> {
+
+    fun getSketches(): List<Class<KApplet>> {
         val allClasses= getClasses("processingkt")
         return allClasses.filter {
-            it.superclass.toString().endsWith("KApplet")
+            it.superclass is KApplet
         }.map {
-            it.newInstance() as KApplet
+            it as Class<KApplet>
         }
     }
 
     fun getSketchNames(): List<String> {
         val allClasses= getClasses("processingkt")
         return allClasses.filter {
-            it.superclass.toString().endsWith("KApplet")
+            it.superclass is KApplet
         }.map {
-            it.simpleName as String
+            it.simpleName
         }
     }
 
     fun getSketchAt(index: Int): KApplet{
         val sketches = getSketches()
         when {
-            index < sketches.size -> return getSketches()[index]
+            index < sketches.size -> return getSketches()[index].newInstance()
             else -> throw Exception("No sketch at index $index")
         }
     }

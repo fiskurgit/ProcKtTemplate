@@ -23,7 +23,7 @@ object ContactSheet {
         screenshots.clear()
 
         SketchFinder.getSketches().forEach { sketch ->
-            getScreenshot(sketch)
+            getScreenshot(sketch.newInstance())
         }
 
         chooseExportDirectory()
