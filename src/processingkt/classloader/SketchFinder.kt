@@ -5,11 +5,10 @@ import java.io.File
 import java.io.IOException
 
 object SketchFinder {
-
     fun getSketches(): List<Class<KApplet>> {
         val allClasses= getClasses("processingkt")
         return allClasses.filter {
-            it.superclass is KApplet
+            it.superclass.simpleName.endsWith("KApplet")
         }.map {
             it as Class<KApplet>
         }
@@ -18,7 +17,7 @@ object SketchFinder {
     fun getSketchNames(): List<String> {
         val allClasses= getClasses("processingkt")
         return allClasses.filter {
-            it.superclass is KApplet
+            it.superclass.simpleName.endsWith("KApplet")
         }.map {
             it.simpleName
         }
