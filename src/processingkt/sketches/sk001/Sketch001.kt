@@ -1,7 +1,7 @@
 package processingkt.sketches.sk001
 
-import processingkt.KApplet
-import processingkt.colorLerp
+import processingkt.*
+import java.awt.Color
 
 class Sketch001: KApplet() {
 
@@ -17,12 +17,16 @@ class Sketch001: KApplet() {
     override fun draw() {
         background(BLACK)
 
-        grid.draw(this, WHITE, 20f)
+        grid.draw(this, WHITE, 55f)
 
         grid.occupants<BasicCell>().forEachIndexed { index, cell ->
             val color = colorLerp("#4973a1", "#9d2f4d", index, grid.count())
             cell.draw(this, grid.cellOrigin(index), grid.cellDiam(), color)
         }
+
+        stroke(255)
+        dashedLine(0, 0, width, height, 5)
+        dottedLine(width, 0, 0, height, 10)
     }
 
     override fun mouseMoved() {

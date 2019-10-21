@@ -1,8 +1,12 @@
 package processingkt
 
 import processing.core.PApplet
+import processing.core.PApplet.lerp
 import processing.core.PConstants
 import java.awt.Color
+import processing.core.PVector
+import sun.security.util.Length
+
 
 /*
     Only use extension functions for convenience overloads of existing Processing API
@@ -17,6 +21,61 @@ fun KApplet.ellipse(x: Number, y: Number, w: Number, h: Number){
 
 fun KApplet.line(x1: Number, y1: Number, x2: Number, y2: Number){
     line(x1.toFloat(), y1.toFloat(), x2.toFloat(), y2.toFloat())
+}
+
+fun KApplet.line(aCoord: PVector, bCoord: PVector){
+    line(aCoord.x, aCoord.y, bCoord.x, bCoord.y)
+}
+
+fun KApplet.dashedLine(x1: Number, y1: Number, x2: Number, y2: Number, dashLength: Number){
+
+    val v1 = PVector(x1.toFloat(), y1.toFloat())
+    val v2 = PVector(x2.toFloat(), y2.toFloat())
+    val distance = v1.dist(v2)
+
+    val dashCount = distance/dashLength.toFloat()
+
+    for (i in 0..dashCount.toInt()  step 3) {
+        val xA = lerp(x1.toFloat(), x2.toFloat(), (i + 0.5f) / dashCount)
+        val yA = lerp(y1.toFloat(), y2.toFloat(), (i + 0.5f) / dashCount)
+        val aCoord = PVector(xA, yA)
+
+        val xB = lerp(x1.toFloat(), x2.toFloat(), (i+1.5f) / dashCount)
+        val yB = lerp(y1.toFloat(), y2.toFloat(), (i+1.5f) / dashCount)
+        val bCoord = PVector(xB, yB)
+
+        line(aCoord, bCoord)
+    }
+}
+
+fun KApplet.dottedLine(x1: Number, y1: Number, x2: Number, y2: Number, gapLength: Number){
+
+    val v1 = PVector(x1.toFloat(), y1.toFloat())
+    val v2 = PVector(x2.toFloat(), y2.toFloat())
+    val distance = v1.dist(v2)
+
+    val dashCount = distance/gapLength.toFloat()
+
+    for (i in 0..dashCount.toInt()) {
+        val x = lerp(x1.toFloat(), x2.toFloat(), (i + 0.5f) / dashCount)
+        val y = lerp(y1.toFloat(), y2.toFloat(), (i + 0.5f) / dashCount)
+        point(x, y)
+    }
+}
+
+fun KApplet.circleLine(x1: Number, y1: Number, x2: Number, y2: Number, gapLength: Number, circleDiam: Number){
+
+    val v1 = PVector(x1.toFloat(), y1.toFloat())
+    val v2 = PVector(x2.toFloat(), y2.toFloat())
+    val distance = v1.dist(v2)
+
+    val dashCount = distance/gapLength.toFloat()
+
+    for (i in 0..dashCount.toInt()) {
+        val x = lerp(x1.toFloat(), x2.toFloat(), (i + 0.5f) / dashCount)
+        val y = lerp(y1.toFloat(), y2.toFloat(), (i + 0.5f) / dashCount)
+        circle(x, y, circleDiam)
+    }
 }
 
 fun KApplet.circle(x: Number, y: Number, diameter: Number){
@@ -42,6 +101,8 @@ fun KApplet.random(max: Int): Int{
 fun KApplet.random(min: Int, max: Int): Int{
     return (random(min.toFloat(), max.toFloat()) + 0.5f).toInt()
 }
+
+
 
 //todo - there must be a better way
 fun KApplet.randomWeightedLarge(max: Int): Int{

@@ -1,11 +1,10 @@
 package processingkt.sketches.sk002
 
-import processingkt.KApplet
-import processingkt.circle
 import processing.core.PApplet.cos
 import processing.core.PApplet.sin
 import processing.core.PConstants.TWO_PI
 import processing.core.PVector
+import processingkt.*
 
 class HexagramCell {
 
@@ -30,7 +29,13 @@ class HexagramCell {
         for (i in 0 until lines) {
             val index1 = kappl.random(0f, 6f).toInt()
             val index2 = kappl.random(0f, 6f).toInt()
-            kappl.line(hexPoints[index1]!!.x, hexPoints[index1]!!.y, hexPoints[index2]!!.x, hexPoints[index2]!!.y)
+
+            val lineStyle = kappl.random(100f)
+            when {
+                lineStyle < 5 -> kappl.circleLine(hexPoints[index1]!!.x, hexPoints[index1]!!.y, hexPoints[index2]!!.x, hexPoints[index2]!!.y, 8, 2)
+                lineStyle < 30 -> kappl.dashedLine(hexPoints[index1]!!.x, hexPoints[index1]!!.y, hexPoints[index2]!!.x, hexPoints[index2]!!.y, 2)
+                else -> kappl.line(hexPoints[index1]!!.x, hexPoints[index1]!!.y, hexPoints[index2]!!.x, hexPoints[index2]!!.y)
+            }
         }
 
         val rand = kappl.random(100f)

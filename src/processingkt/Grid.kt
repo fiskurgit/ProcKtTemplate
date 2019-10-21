@@ -1,6 +1,5 @@
 package processingkt
 
-import processing.core.PApplet
 import processing.core.PVector
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
@@ -15,16 +14,16 @@ class Grid {
 
     var occupants = mutableListOf<Any>()
 
-    fun draw(sketch: PApplet, color: Int = 200, alpha: Float = 100f){
+    fun draw(sketch: KApplet, color: Int = 200, alpha: Float = 100f){
         sketch.stroke(color, alpha)
         val cellWidth = cellWidth()
         val cellHeight = cellHeight()
         for (y in 0..rows) {
-            sketch.line(0f, cellHeight * y, width.toFloat(), cellHeight * y)
+            sketch.dashedLine(0f, cellHeight * y, width.toFloat(), cellHeight * y, 3)
         }
 
         for (x in 0..columns) {
-            sketch.line(cellWidth * x, 0f, cellWidth * x, height.toFloat())
+            sketch.dashedLine(cellWidth * x, 0f, cellWidth * x, height.toFloat(), 3)
         }
     }
 

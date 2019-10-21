@@ -5,7 +5,7 @@ import processingkt.KApplet
 class Sketch002: KApplet() {
 
     override fun settings() {
-        size(600, 600)
+        size(1000, 1000)
         super.settings()
     }
 
