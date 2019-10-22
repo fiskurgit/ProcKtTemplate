@@ -9,11 +9,22 @@ import processingkt.sketches.sk004.Sketch004
 import java.awt.EventQueue
 import java.util.*
 
+/*
+
+  ____                              _             _  ___
+ |  _ \ _ __ ___   ___ ___  ___ ___(_)_ __   __ _| |/ / |_
+ | |_) | '__/ _ \ / __/ _ \/ __/ __| | '_ \ / _` | ' /| __|
+ |  __/| | | (_) | (_|  __/\__ \__ \ | | | | (_| | . \| |_
+ |_|   |_|  \___/ \___\___||___/___/_|_| |_|\__, |_|\_\\__|
+                                            |___/
+
+ */
 class ProcessingKt {
     companion object {
 
         @JvmStatic
         fun main(args: Array<String>) {
+            printLogo()
             when {
                 args.isEmpty() -> {
                     println("Specify which sketch to run:")
@@ -60,6 +71,17 @@ class ProcessingKt {
                     ContactSheet.generate()
                 }
             }
+        }
+
+        private fun printLogo(){
+            println()
+            println(" ____                              _             _  ___")
+            println("|  _ \\ _ __ ___   ___ ___  ___ ___(_)_ __   __ _| |/ / |_")
+            println("| |_) | '__/ _ \\ / __/ _ \\/ __/ __| | '_ \\ / _` | ' /| __|")
+            println("|  __/| | | (_) | (_|  __/\\__ \\__ \\ | | | | (_| | . \\| |_")
+            println("|_|   |_|  \\___/ \\___\\___||___/___/_|_| |_|\\__, |_|\\_\\__|")
+            println("                                           |___/")
+            println()
         }
     }
 }
