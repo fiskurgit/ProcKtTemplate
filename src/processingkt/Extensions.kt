@@ -27,6 +27,9 @@ fun KApplet.line(aCoord: PVector, bCoord: PVector){
     line(aCoord.x, aCoord.y, bCoord.x, bCoord.y)
 }
 
+/*
+    For more control and performance use this lib instead: https://github.com/garciadelcastillo/-dashed-lines-for-processing-
+ */
 fun KApplet.dashedLine(x1: Number, y1: Number, x2: Number, y2: Number, dashLength: Number){
 
     val v1 = PVector(x1.toFloat(), y1.toFloat())
@@ -38,13 +41,10 @@ fun KApplet.dashedLine(x1: Number, y1: Number, x2: Number, y2: Number, dashLengt
     for (i in 0..dashCount.toInt()  step 3) {
         val xA = lerp(x1.toFloat(), x2.toFloat(), (i + 0.5f) / dashCount)
         val yA = lerp(y1.toFloat(), y2.toFloat(), (i + 0.5f) / dashCount)
-        val aCoord = PVector(xA, yA)
+        val xB = lerp(x1.toFloat(), x2.toFloat(), (i + 1.5f) / dashCount)
+        val yB = lerp(y1.toFloat(), y2.toFloat(), (i + 1.5f) / dashCount)
 
-        val xB = lerp(x1.toFloat(), x2.toFloat(), (i+1.5f) / dashCount)
-        val yB = lerp(y1.toFloat(), y2.toFloat(), (i+1.5f) / dashCount)
-        val bCoord = PVector(xB, yB)
-
-        line(aCoord, bCoord)
+        line(xA, yA, xB, yB)
     }
 }
 
