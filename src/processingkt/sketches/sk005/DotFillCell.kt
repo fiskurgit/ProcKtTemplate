@@ -24,7 +24,12 @@ class DotFillCell {
 
         for(x in 0..(diam*2).toInt() step dotSpacing){
             for(y in 0..(diam*2).toInt() step dotSpacing){
-                maskImage.ellipse(x.toFloat(), y.toFloat(), 2f, 2f)
+                if(y % 2 == 0){
+                    maskImage.ellipse(x.toFloat(), y.toFloat(), 2f, 2f)
+                }else{
+                    maskImage.ellipse(x.toFloat() - dotSpacing/2, y.toFloat(), 2f, 2f)
+                }
+
             }
         }
 
