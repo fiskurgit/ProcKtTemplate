@@ -8,11 +8,6 @@ class Sketch006: KApplet() {
     lateinit var shapeImage: PGraphics
     lateinit var maskImage: PGraphics
 
-    override fun settings() {
-        size(600, 600)
-        super.settings()
-    }
-
     override fun setup() {
         maskImage = createGraphics(width, height)
         shapeImage = createGraphics(width, height)

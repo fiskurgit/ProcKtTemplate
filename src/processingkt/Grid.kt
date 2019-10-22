@@ -62,6 +62,15 @@ class Grid {
         }
     }
 
+    fun <T: Any>prepopulate(rows: Int, columns: Int, clazz: KClass<T>){
+        this.rows = rows
+        this.columns = columns
+        val occupantCount = rows * columns
+        for(index in 0..occupantCount){
+            occupants.add(clazz.createInstance())
+        }
+    }
+
     fun addOccupant(occupant: Any){
         occupants.add(occupant)
     }

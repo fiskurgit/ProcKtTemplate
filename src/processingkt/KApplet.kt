@@ -17,10 +17,20 @@ open class KApplet: PApplet() {
     private var saveChooser: JFileChooser? = null
 
     companion object {
+        val DEFAULT_SIZE = 600
         val BLACK = Color.BLACK.rgb
         val WHITE = Color.WHITE.rgb
         const val NO_LOOP_TEMP_SCREENSHOT = "noloop_temp.png"
         const val VECTOR_TEMP_FILE = "vector_temp.pdf"
+    }
+
+
+    fun sizeDefault(){
+        size(DEFAULT_SIZE)
+    }
+
+    fun size(size: Int){
+        size(size, size)
     }
 
     fun run() {
@@ -30,6 +40,10 @@ open class KApplet: PApplet() {
     }
 
     override fun settings() {
+        //Override default 100x100 sketch size
+        when {
+            width == 100 && height == 100 -> size(DEFAULT_SIZE)
+        }
         PJOGL.setIcon("processingkt.png")
         grid.width = width
         grid.height = height

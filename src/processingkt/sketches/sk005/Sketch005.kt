@@ -5,15 +5,8 @@ import processingkt.stroke
 
 class Sketch005: KApplet() {
 
-    override fun settings() {
-        size(600, 600)
-        grid.columns = 4
-        grid.rows = 4
-        super.settings()
-    }
-
     override fun setup() {
-        grid.prepopulate(DotFillCell::class)
+        grid.prepopulate(4, 4, DotFillCell::class)
         stroke(WHITE, 150)
     }
 

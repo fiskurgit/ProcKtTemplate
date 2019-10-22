@@ -5,11 +5,6 @@ import java.awt.Color
 
 class Sketch001: KApplet() {
 
-    override fun settings() {
-        size(600, 600)
-        super.settings()
-    }
-
     override fun setup() {
         grid.prepopulate(BasicCell::class)
     }

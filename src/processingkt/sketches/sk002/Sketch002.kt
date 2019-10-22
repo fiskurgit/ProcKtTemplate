@@ -4,11 +4,6 @@ import processingkt.KApplet
 
 class Sketch002: KApplet() {
 
-    override fun settings() {
-        size(1000, 1000)
-        super.settings()
-    }
-
     override fun setup() {
         grid.prepopulate(HexagramCell::class)
     }

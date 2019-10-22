@@ -5,15 +5,8 @@ import processingkt.stroke
 
 class Sketch004: KApplet() {
 
-    override fun settings() {
-        size(600, 600)
-        grid.columns = 4
-        grid.rows = 4
-        super.settings()
-    }
-
     override fun setup() {
-        grid.prepopulate(SnowflakeCell::class)
+        grid.prepopulate(4, 4, SnowflakeCell::class)
         stroke(WHITE, 150)
     }
 
