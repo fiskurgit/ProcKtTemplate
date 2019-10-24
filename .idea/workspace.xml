@@ -2,55 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Milestones.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P5Kt/Processing$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/META-INF/ProcessingKt.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/META-INF/ProcessingKt.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ExtensionsKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/Grid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/KApplet$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/KApplet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ProcessingKt$Companion$parse$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ProcessingKt$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/ProcessingKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/classloader/ContactSheet$chooseExportDirectory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/classloader/ContactSheet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/classloader/Sketch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/classloader/SketchFinder$getClasses$$inlined$sortBy$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/classloader/SketchFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk001/BasicCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk001/Sketch001.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk002/HexagramCell$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk002/HexagramCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk002/Sketch002.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk003/RandomisedCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk003/Sketch003.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk004/Sketch004.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk004/SnowflakeCell$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk004/SnowflakeCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk005/DotFillCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk005/Sketch005.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/processingkt/sketches/sk006/Sketch006.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processingkt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/processingkt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/Extensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/Grid.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/Grid.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/KApplet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/KApplet.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/ProcessingKt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/ProcKt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/classloader/ContactSheet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/classloader/ContactSheet.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/classloader/Sketch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/classloader/Sketch.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/classloader/SketchFinder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/classloader/SketchFinder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk001/BasicCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk001/BasicCell.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk001/Sketch001.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk001/Sketch001.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk002/HexagramCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk002/HexagramCell.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk002/Sketch002.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk002/Sketch002.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk003/RandomisedCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk003/RandomisedCell.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk003/Sketch003.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk003/Sketch003.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk004/Sketch004.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk004/Sketch004.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk004/SnowflakeCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk004/SnowflakeCell.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk005/DotFillCell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk005/DotFillCell.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk005/Sketch005.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk005/Sketch005.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processingkt/sketches/sk006/Sketch006.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="52" column="37" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="93">
+              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -124,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prockt/ProcKt.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="409">
               <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
             </state>
           </provider>
@@ -205,8 +157,8 @@
         <option value="$PROJECT_DIR$/src/processingkt/ProcessingKt.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/sketches/sk006/Sketch006.kt" />
         <option value="$PROJECT_DIR$/src/processingkt/Extensions.kt" />
-        <option value="$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt" />
         <option value="$PROJECT_DIR$/src/prockt/ProcKt.kt" />
+        <option value="$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt" />
       </list>
     </option>
   </component>
@@ -607,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk001/BasicCell.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -644,8 +589,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prockt/ProcKt.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="409">
           <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk006/Sketch006.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
         </state>
       </provider>
     </entry>

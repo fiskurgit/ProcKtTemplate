@@ -49,12 +49,13 @@ class Sketch006: KApplet() {
 
         for(x in 0..(width) step dotSpacing){
             for(y in 0..(height) step dotSpacing){
-                if(y % 2 == 0){
-                    maskImage.ellipse(x.toFloat(), y.toFloat(), 2f, 2f)
-                }else{
-                    maskImage.ellipse(x.toFloat() - dotSpacing/2, y.toFloat(), 2f, 2f)
+                if(random(100f) > 1) {
+                    if (y % 2 == 0) {
+                        maskImage.ellipse(x.toFloat(), y.toFloat(), 2f, 2f)
+                    } else {
+                        maskImage.ellipse(x.toFloat() - dotSpacing / 2, y.toFloat(), 2f, 2f)
+                    }
                 }
-
             }
         }
 
