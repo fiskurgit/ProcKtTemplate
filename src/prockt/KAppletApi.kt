@@ -19,6 +19,15 @@ open class KAppletApi: PApplet() {
         size(size, size)
     }
 
+    fun translate(x: Number, y: Number){
+        translate(x.toFloat(), y.toFloat())
+    }
+
+    fun overlay(color: Int, alpha: Number){
+        fill(color, alpha)
+        rect(-1f, -1, width.toFloat() + 1, height.toFloat() + 1)
+    }
+
     fun color(color: String): Int{
         return Color.decode(color).rgb
     }
@@ -51,12 +60,8 @@ open class KAppletApi: PApplet() {
         return lerpColor(color(startColor), color(endColor), amount, PConstants.RGB)
     }
 
-    fun colorLerp(startColor: String, endColor: String, index: Int, range: Int): Int{
-        return lerpColor(color(startColor), color(endColor), index/range.toFloat(), PConstants.RGB)
-    }
-
-    fun colorLerp(startColor: String, endColor: String, index: Float, range: Float): Int{
-        return lerpColor(color(startColor), color(endColor), index/range, PConstants.RGB)
+    fun colorLerp(startColor: String, endColor: String, index: Number, range: Number): Int{
+        return lerpColor(color(startColor), color(endColor), index.toFloat()/range.toFloat(), PConstants.RGB)
     }
 
     //Drawing
@@ -70,6 +75,22 @@ open class KAppletApi: PApplet() {
 
     fun line(aCoord: Coord, bCoord: Coord){
         line(aCoord.x, aCoord.y, bCoord.x, bCoord.y)
+    }
+
+    fun rect(x: Number, y: Number, width: Number, height: Number){
+        rect(x.toFloat(), y.toFloat(), width.toFloat(), height.toFloat())
+    }
+
+    fun square(x: Number, y: Number, diameter: Number){
+        rect(x, y, diameter, diameter)
+    }
+
+    fun circle(coord: Coord, diameter: Number){
+        ellipse(coord.x, coord.y, diameter.toFloat(), diameter.toFloat())
+    }
+
+    fun circle(x: Number, y: Number, diameter: Number){
+        ellipse(x.toFloat(), y.toFloat(), diameter.toFloat(), diameter.toFloat())
     }
 
     fun circleLine(x1: Number, y1: Number, x2: Number, y2: Number, gapLength: Number, circleDiam: Number){
@@ -180,13 +201,5 @@ open class KAppletApi: PApplet() {
         val x = r * cos(a)
         val y = r * sin(a)
         return Coord(x, y)
-    }
-
-    fun circle(coord: Coord, diameter: Number){
-        ellipse(coord.x, coord.y, diameter.toFloat(), diameter.toFloat())
-    }
-
-    fun circle(x: Number, y: Number, diameter: Number){
-        ellipse(x.toFloat(), y.toFloat(), diameter.toFloat(), diameter.toFloat())
     }
 }
