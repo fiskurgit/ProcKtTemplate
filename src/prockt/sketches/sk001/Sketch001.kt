@@ -1,10 +1,6 @@
 package prockt.sketches.sk001
 
 import prockt.KApplet
-import prockt.colorLerp
-import prockt.dashedLine
-import prockt.dottedLine
-
 
 class Sketch001: KApplet() {
 

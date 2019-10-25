@@ -10,27 +10,15 @@ import java.nio.file.Files
 import java.nio.file.Paths
 import javax.swing.JFileChooser
 
-open class KApplet: PApplet() {
+open class KApplet: KAppletApi() {
 
     val grid = Grid()
     private var commandKeyPressed = false
     private var saveChooser: JFileChooser? = null
 
     companion object {
-        val DEFAULT_SIZE = 600
-        val BLACK = Color.BLACK.rgb
-        val WHITE = Color.WHITE.rgb
         const val NO_LOOP_TEMP_SCREENSHOT = "noloop_temp.png"
         const val VECTOR_TEMP_FILE = "vector_temp.pdf"
-    }
-
-
-    fun sizeDefault(){
-        size(DEFAULT_SIZE)
-    }
-
-    fun size(size: Int){
-        size(size, size)
     }
 
     fun run() {
@@ -47,6 +35,8 @@ open class KApplet: PApplet() {
         PJOGL.setIcon("prockt.png")
         grid.width = width
         grid.height = height
+
+        super.settings()
     }
 
     override fun keyPressed(e: KeyEvent?) {

@@ -1,7 +1,6 @@
 package prockt.sketches.sk001
 
 import prockt.KApplet
-import prockt.circle
 import processing.core.PVector
 
 class BasicCell {

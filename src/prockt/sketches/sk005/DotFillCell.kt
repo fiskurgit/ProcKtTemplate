@@ -6,7 +6,7 @@ import processing.core.PConstants
 import processing.core.PConstants.CLOSE
 import processing.core.PVector
 import prockt.KApplet
-import prockt.KApplet.Companion.WHITE
+import prockt.KAppletApi.Companion.WHITE
 
 class DotFillCell {
 

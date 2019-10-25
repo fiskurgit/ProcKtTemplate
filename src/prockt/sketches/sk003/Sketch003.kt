@@ -1,7 +1,6 @@
 package prockt.sketches.sk003
 
 import prockt.KApplet
-import prockt.stroke
 
 class Sketch003: KApplet() {
 

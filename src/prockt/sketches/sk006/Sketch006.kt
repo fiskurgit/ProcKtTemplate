@@ -2,7 +2,6 @@ package prockt.sketches.sk006
 
 import processing.core.PGraphics
 import prockt.KApplet
-import prockt.image
 
 class Sketch006: KApplet() {
 
