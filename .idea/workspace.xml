@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/prockt/OneBitFilters.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/prockt/KAppletApi$Coord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/prockt/KAppletApi$Coord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/prockt/KAppletApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/prockt/KAppletApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/prockt/sketches/sk007/Sketch007.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcessingKt/prockt/sketches/sk007/Sketch007.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prockt/KAppletApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/KAppletApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prockt/sketches/sk007/Sketch007.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk007/Sketch007.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,31 +16,25 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prockt/KAppletApi.kt">
+        <entry file="file://$PROJECT_DIR$/src/prockt/OneBitFilters.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="480">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="34" />
               <folding>
-                <element signature="e#16#102#0" expanded="true" />
+                <element signature="e#16#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk007/Sketch007.kt">
+        <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prockt/KApplet.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="406">
+              <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+              <folding>
+                <element signature="e#31#142#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,9 +56,21 @@
       <find>window</find>
       <find>settings(</find>
       <find>setup</find>
+      <find>override fun process(source: BufferedImage): BufferedImage {</find>
+      <find>val out = BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)</find>
+      <find>setRGB</find>
+      <find>ge(x, y)</find>
+      <find>out.set</find>
+      <find>target!!</find>
+      <find>: Filter() {</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>ge</replace>
+      <replace>get(x, y)</replace>
+      <replace>target.set</replace>
+      <replace>target</replace>
+      <replace>: OneBitFilter() {</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -76,8 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/KApplet.kt" />
-        <option value="$PROJECT_DIR$/src/gridutils/BasicCell.kt" />
         <option value="$PROJECT_DIR$/src/Processing.kt" />
         <option value="$PROJECT_DIR$/src/p5kt/gridutils/Grid.kt" />
         <option value="$PROJECT_DIR$/src/p5kt/Processing.kt" />
@@ -127,10 +128,12 @@
         <option value="$PROJECT_DIR$/src/prockt/KApplet.kt" />
         <option value="$PROJECT_DIR$/src/prockt/KAppletApi.kt" />
         <option value="$PROJECT_DIR$/src/prockt/sketches/sk007/Sketch007.kt" />
+        <option value="$PROJECT_DIR$/src/prockt/OneBitFilters.kt" />
+        <option value="$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="358" />
     <option name="y" value="23" />
     <option name="width" value="1095" />
@@ -177,7 +180,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="prockt" type="462c0819:PsiDirectoryNode" />
               <item name="sketches" type="462c0819:PsiDirectoryNode" />
-              <item name="sk007" type="462c0819:PsiDirectoryNode" />
+              <item name="sk008" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProcessingKt" type="b2602c69:ProjectViewProjectNode" />
@@ -190,7 +193,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572016575742" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572032796214" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -227,7 +230,7 @@
     <configuration name="prockt.ProcKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="ProcessingKt" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -257,10 +260,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="358" y="23" width="1095" height="1027" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28869894" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18559219" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -269,7 +272,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47985348" visible="true" weight="0.40320855" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47985348" visible="true" weight="0.3846939" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -290,6 +293,24 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/prockt/OneBitFilters.kt</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Number.kt">
@@ -365,24 +386,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/core/PImage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="523" column="16" selection-start-line="523" selection-start-column="16" selection-end-line="523" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/awt/PGraphicsJava2D.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="668" selection-start-line="668" selection-end-line="668" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/core/PGraphics.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="1300" column="19" selection-start-line="1300" selection-start-column="19" selection-end-line="1300" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -423,16 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk005/DotFillCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding>
-            <element signature="e#31#268#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -509,37 +506,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/processingkt.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/core/PApplet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="5684" column="16" selection-start-line="5684" selection-start-column="16" selection-end-line="5684" selection-end-column="16" />
+        <state relative-caret-position="161">
+          <caret line="750" selection-start-line="750" selection-end-line="750" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/core/PGraphics.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="3003" selection-start-line="3003" selection-end-line="3003" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prockt/KApplet.kt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk005/DotFillCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <element signature="e#31#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/core/PImage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/opengl/PGL.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="838" selection-start-line="838" selection-end-line="838" />
+          <folding>
+            <element signature="e#34657#34658#0" expanded="true" />
+            <element signature="e#34701#34702#0" expanded="true" />
+            <element signature="e#34739#34740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/opengl/PJOGL.class">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <caret line="728" column="27" selection-start-line="728" selection-start-column="27" selection-end-line="728" selection-end-column="27" />
+          <folding>
+            <element signature="e#22903#22904#0" expanded="true" />
+            <element signature="e#22946#22947#0" expanded="true" />
+            <element signature="e#41778#41779#0" expanded="true" />
+            <element signature="e#41826#41827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/p5libs/jogl-all.jar!/com/jogamp/opengl/GL.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="459" column="8" selection-start-line="459" selection-start-column="8" selection-end-line="459" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/p5libs/core.jar!/processing/opengl/PGraphicsOpenGL.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="3171" column="21" lean-forward="true" selection-start-line="3171" selection-start-column="21" selection-end-line="3171" selection-end-column="21" />
+          <folding>
+            <element signature="e#34276#34277#0" expanded="true" />
+            <element signature="e#34359#34360#0" expanded="true" />
+            <element signature="e#34414#34415#0" expanded="true" />
+            <element signature="e#34449#34450#0" expanded="true" />
+            <element signature="e#34645#34646#0" expanded="true" />
+            <element signature="e#34738#34739#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prockt/KAppletApi.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
             <element signature="e#16#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processingkt.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk007/Sketch007.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="60">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prockt/OneBitFilters.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="e#16#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding>
+            <element signature="e#31#142#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
