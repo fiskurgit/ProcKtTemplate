@@ -2,6 +2,7 @@ package prockt.sketches.sk008
 
 import processing.core.PGraphics
 import processing.core.PImage
+import processing.core.PShape
 import prockt.KApplet
 import prockt.OneBitFilter
 
@@ -13,7 +14,7 @@ class Sketch008 : KApplet() {
         const val SPHERE_COUNT = 170
     }
 
-    data class CoordVector(var coord: Coord, var horizontalDirection: Int, var verticalDirection: Int, var speed: Float)
+    data class CoordVector(var coord: Coord, var xDirection: Int, var yDirection: Int, var speed: Float)
 
     private var sourceImage: PGraphics? = null
     private var filteredImage: PImage? = null
@@ -28,7 +29,7 @@ class Sketch008 : KApplet() {
         sourceImage = createGraphics(DIAM, DIAM, P3D)
         filteredImage = PImage(DIAM, DIAM)
 
-        for(i in 0..SPHERE_COUNT) {
+        repeat(SPHERE_COUNT) {
             val coord = Coord(random(0f, DIAM.toFloat()),random(0f, DIAM.toFloat()))
             val horizontalDirection = when {
                 random(1f) > .5f -> 1
@@ -38,7 +39,7 @@ class Sketch008 : KApplet() {
                 random(1f) > .5f -> 1
                 else -> -1
             }
-            val coordVector = CoordVector(coord, horizontalDirection, verticalDirection, random(1.25f, 2.5f))
+            val coordVector = CoordVector(coord, horizontalDirection, verticalDirection, random(0.25f, 1f))
             coords.add(coordVector)
         }
 
@@ -57,48 +58,34 @@ class Sketch008 : KApplet() {
     }
 
     private fun updateLocations(){
+        coords.forEach { coordVector ->
+            var x = coordVector.coord.x
+            var y = coordVector.coord.y
 
-        for(i in 0..SPHERE_COUNT){
+            var xDirection  = coordVector.xDirection
+            var yDirection  = coordVector.yDirection
 
-            var coordVector = coords[i]
+            x += (coordVector.speed * xDirection)
+            y += (coordVector.speed * yDirection)
 
-            var xpos = coordVector.coord.x
-            var ypos = coordVector.coord.y
+            if (x >= width - SPHERE_RAD || x < SPHERE_RAD) xDirection *= -1
+            if (y >= height - SPHERE_RAD || y < SPHERE_RAD) yDirection *= -1
 
-            var horizontalDirection  = coordVector.horizontalDirection
-            var verticalDirection  = coordVector.verticalDirection
-
-            xpos += (coordVector.speed * horizontalDirection)
-            ypos += (coordVector.speed * verticalDirection)
-
-
-            if (xpos >= width - SPHERE_RAD || xpos <= SPHERE_RAD) {
-                horizontalDirection *= -1
-            }
-            if (ypos >= height - SPHERE_RAD || ypos <= SPHERE_RAD) {
-                verticalDirection *= -1
-            }
-
-            coordVector.coord.x = xpos
-            coordVector.coord.y = ypos
-            coordVector.horizontalDirection = horizontalDirection
-            coordVector.verticalDirection = verticalDirection
-
-            coords.set(i, coordVector)
-
+            coordVector.coord.x = x
+            coordVector.coord.y = y
+            coordVector.xDirection = xDirection
+            coordVector.yDirection = yDirection
         }
     }
 
     private fun updateSource(){
         sourceImage?.beginDraw()
         sourceImage?.background(BLACK)
-
         sourceImage?.noStroke()
         sourceImage?.lights()
 
-        for(i in 0..SPHERE_COUNT){
+        coords.forEach { coordVector ->
             sourceImage?.pushMatrix()
-            val coordVector = coords[i]
             sourceImage?.translate(coordVector.coord.x, coordVector.coord.y, 0f)
             sourceImage?.sphere(SPHERE_RAD)
             sourceImage?.popMatrix()
