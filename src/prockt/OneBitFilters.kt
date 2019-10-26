@@ -11,6 +11,18 @@ abstract class OneBitFilter {
         const val BLACK = 0x000000
         const val WHITE = 0xffffff
 
+        private var currentIndex = 0
+
+        fun getNext(): OneBitFilter{
+            val availableFilters = availableFilterLabels()
+            val filterName = availableFilters[currentIndex]
+            println("Filter: $filterName")
+            val filter = get(filterName)
+            currentIndex++
+            if(currentIndex == availableFilters.size) currentIndex = 0
+            return filter
+        }
+
         fun availableFilterLabels(): ArrayList<String> {
             return arrayListOf(
                 "2x2Bayer",
