@@ -13,12 +13,12 @@ class Sketch009: KApplet() {
         repeat(50000){
             pushMatrix()
             translate(width/4, height/2)
-            point(randomCircleCoordB(width/4))
+            point(randomCircleCoord(width/4))
             popMatrix()
 
             pushMatrix()
             translate((width/4) * 3, height/2)
-            point(randomCircleCoord(width/4))
+            point(randomCircleCoordB(width/4))
             popMatrix()
         }
 
