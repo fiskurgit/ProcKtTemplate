@@ -29,7 +29,7 @@ class Sketch008 : KApplet() {
         filteredImage = PImage(DIAM, DIAM)
 
         repeat(SPHERE_COUNT) {
-            val coord = Coord(random(0f, DIAM.toFloat()),random(0f, DIAM.toFloat()))
+            val coord = Coord(random(SPHERE_RAD, DIAM - SPHERE_RAD),random(SPHERE_RAD, DIAM - SPHERE_RAD))
             val coordVector = CoordVector(coord, randomDirection(), randomDirection(), random(0.35f, 1.25f))
             coords.add(coordVector)
         }
