@@ -4,7 +4,7 @@ import prockt.KApplet
 
 /*
 
-    Rainbox lemniscate
+    Rainbow lemniscate
 
  */
 class Sketch11: KApplet() {
