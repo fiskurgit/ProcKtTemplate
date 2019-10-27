@@ -7,7 +7,7 @@ import prockt.KApplet
     Rainbow lemniscate
 
  */
-class Sketch11: KApplet() {
+class Sketch011: KApplet() {
 
     companion object {
         const val ITERATIONS = 360

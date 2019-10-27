@@ -16,7 +16,7 @@ class Sketch010: KApplet() {
         background(BLACK)
 
         grid.occupants<RndCircleCell>().forEachIndexed { index, cell ->
-            cell.draw(this, index, grid.cellDiam(), grid.cellOrigin(index))
+            cell.draw(index, grid.cellDiam(), grid.cellOrigin(index))
         }
 
         noLoop()
@@ -26,13 +26,13 @@ class Sketch010: KApplet() {
         loop()
     }
 
-    class RndCircleCell{
-        fun draw(kapl: KApplet, index: Int, diam: Float, origin: PVector){
+    inner class RndCircleCell{
+        fun draw(index: Int, diam: Float, origin: PVector){
             repeat((index+1) * 30){
-                val coord = kapl.randomCircleCoordB(diam/3)
+                val coord = randomCircleCoordB(diam/3)
                 coord.x += origin.x
                 coord.y += origin.y
-                kapl.point(coord)
+                point(coord)
             }
         }
     }
