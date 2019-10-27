@@ -2,7 +2,6 @@ package prockt.sketches.sk008
 
 import processing.core.PGraphics
 import processing.core.PImage
-import processing.core.PShape
 import prockt.KApplet
 import prockt.OneBitFilter
 
@@ -11,18 +10,18 @@ class Sketch008 : KApplet() {
     companion object {
         const val DIAM = 600
         const val SPHERE_RAD = 40f
-        const val SPHERE_COUNT = 170
+        const val SPHERE_COUNT = 140
+        val FILTER = OneBitFilter.get("Sierra").threshold(255)
     }
 
     data class CoordVector(var coord: Coord, var xDirection: Int, var yDirection: Int, var speed: Float)
 
     private var sourceImage: PGraphics? = null
     private var filteredImage: PImage? = null
-    private var filter = OneBitFilter.get("Sierra").threshold(255)
     private var coords = mutableListOf<CoordVector>()
 
     override fun settings() {
-        size(DIAM, DIAM, P3D)
+        size(DIAM, DIAM, P2D)
     }
 
     override fun setup() {
@@ -31,24 +30,16 @@ class Sketch008 : KApplet() {
 
         repeat(SPHERE_COUNT) {
             val coord = Coord(random(0f, DIAM.toFloat()),random(0f, DIAM.toFloat()))
-            val horizontalDirection = when {
-                random(1f) > .5f -> 1
-                else -> -1
-            }
-            val verticalDirection = when {
-                random(1f) > .5f -> 1
-                else -> -1
-            }
-            val coordVector = CoordVector(coord, horizontalDirection, verticalDirection, random(0.25f, 1f))
+            val coordVector = CoordVector(coord, randomDirection(), randomDirection(), random(0.35f, 1.25f))
             coords.add(coordVector)
         }
-
     }
 
     override fun draw() {
         updateLocations()
         updateSource()
-        filter.process(sourceImage!!, filteredImage!!)
+
+        FILTER.process(sourceImage!!, filteredImage!!)
 
         if(mousePressed) {
             image(sourceImage!!)
@@ -92,5 +83,12 @@ class Sketch008 : KApplet() {
         }
 
         sourceImage?.endDraw()
+    }
+
+    private fun randomDirection(): Int{
+        return when {
+            random(1f) > .5f -> 1
+            else -> -1
+        }
     }
 }
