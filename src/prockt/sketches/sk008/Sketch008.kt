@@ -10,8 +10,9 @@ class Sketch008 : KApplet() {
     companion object {
         const val DIAM = 600
         const val SPHERE_RAD = 40f
-        const val SPHERE_COUNT = 140
-        val FILTER = OneBitFilter.get("Sierra").threshold(255)
+        const val SPHERE_COUNT = 160
+        const val BOUNDARY = SPHERE_RAD * 2
+        val FILTER = OneBitFilter.get("Stucki").threshold(255)
     }
 
     data class CoordVector(var coord: Coord, var xDirection: Int, var yDirection: Int, var speed: Float)
@@ -29,7 +30,7 @@ class Sketch008 : KApplet() {
         filteredImage = PImage(DIAM, DIAM)
 
         repeat(SPHERE_COUNT) {
-            val coord = Coord(random(SPHERE_RAD, DIAM - SPHERE_RAD),random(SPHERE_RAD, DIAM - SPHERE_RAD))
+            val coord = Coord(random(BOUNDARY, DIAM - BOUNDARY),random(BOUNDARY, DIAM - BOUNDARY))
             val coordVector = CoordVector(coord, randomDirection(), randomDirection(), random(0.35f, 1.25f))
             coords.add(coordVector)
         }
@@ -41,10 +42,9 @@ class Sketch008 : KApplet() {
 
         FILTER.process(sourceImage!!, filteredImage!!)
 
-        if(mousePressed) {
-            image(sourceImage!!)
-        }else{
-            image(filteredImage!!)
+        when {
+            mousePressed -> image(sourceImage!!)
+            else -> image(filteredImage!!)
         }
     }
 
@@ -59,8 +59,8 @@ class Sketch008 : KApplet() {
             x += (coordVector.speed * xDirection)
             y += (coordVector.speed * yDirection)
 
-            if (x >= width - SPHERE_RAD || x < SPHERE_RAD) xDirection *= -1
-            if (y >= height - SPHERE_RAD || y < SPHERE_RAD) yDirection *= -1
+            if (x >= width - BOUNDARY || x < BOUNDARY) xDirection *= -1
+            if (y >= height - BOUNDARY || y < BOUNDARY) yDirection *= -1
 
             coordVector.coord.x = x
             coordVector.coord.y = y
@@ -71,7 +71,7 @@ class Sketch008 : KApplet() {
 
     private fun updateSource(){
         sourceImage?.beginDraw()
-        sourceImage?.background(BLACK)
+        sourceImage?.background(color("#999999"))
         sourceImage?.noStroke()
         sourceImage?.lights()
 

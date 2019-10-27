@@ -93,6 +93,10 @@ open class KAppletApi: PApplet() {
         ellipse(x.toFloat(), y.toFloat(), diameter.toFloat(), diameter.toFloat())
     }
 
+    fun point(coord: Coord){
+        point(coord.x, coord.y)
+    }
+
     fun circleLine(x1: Number, y1: Number, x2: Number, y2: Number, gapLength: Number, circleDiam: Number){
 
         val v1 = Coord(x1.toFloat(), y1.toFloat())
@@ -196,8 +200,16 @@ open class KAppletApi: PApplet() {
     }
 
     fun randomCircleCoord(radius: Number): Coord {
-        val a = random(0.toFloat(), 1.toFloat()) * 2 * PConstants.PI
-        val r = radius.toFloat() * sqrt(random(0.toFloat(), 1.toFloat()))
+        val a = random(0f, 1f) * TWO_PI
+        val r = radius.toFloat() * sqrt(random(0f, 1f))
+        val x = r * cos(a)
+        val y = r * sin(a)
+        return Coord(x, y)
+    }
+
+    fun randomCircleCoordB(radius: Number): Coord {
+        val a = random(0f, TWO_PI)
+        val r = random(0f, radius.toFloat())
         val x = r * cos(a)
         val y = r * sin(a)
         return Coord(x, y)
