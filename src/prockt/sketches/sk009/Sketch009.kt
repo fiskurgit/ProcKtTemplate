@@ -18,7 +18,7 @@ class Sketch009: KApplet() {
 
             pushMatrix()
             translate((width/4) * 3, height/2)
-            point(randomCircleCoordB(width/4))
+            point(randomCircleCoordC(width/4))
             popMatrix()
         }
 

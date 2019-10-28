@@ -208,7 +208,9 @@ open class KAppletApi: PApplet() {
         return Coord(x, y)
     }
 
-    fun randomCircleCoordB(radius: Number): Coord {
+    //This isn't weighted, but the distribution of same coord count at a smaller radius means they're packed closer together
+    //The visual effect is a weighted distribution so using the method name here, rather than the above method.
+    fun randomCircleCoordWeighted(radius: Number): Coord {
         val a = random(0f, TWO_PI)
         val r = random(0f, radius.toFloat())
         val x = r * cos(a)

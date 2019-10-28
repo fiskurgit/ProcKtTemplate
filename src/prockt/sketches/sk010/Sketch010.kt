@@ -29,7 +29,7 @@ class Sketch010: KApplet() {
     inner class RndCircleCell{
         fun draw(index: Int, diam: Float, origin: PVector){
             repeat((index+1) * 30){
-                val coord = randomCircleCoordB(diam/3)
+                val coord = randomCircleCoordWeighted(diam/3)
                 coord.x += origin.x
                 coord.y += origin.y
                 point(coord)
