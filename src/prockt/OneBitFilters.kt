@@ -71,7 +71,7 @@ abstract class OneBitFilter {
         }
     }
 
-    abstract fun process(source: PGraphics, target: PImage)
+    abstract fun process(source: PGraphics?, target: PImage?)
 
     fun threshold(value: Int): OneBitFilter {
         threshold = value
@@ -80,14 +80,15 @@ abstract class OneBitFilter {
 }
 
 class FilterError : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
         println("Filter name not recognised")
     }
 
 }
 
 class Filter2By2Bayer : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
 
         val width = source.width
         val height = source.height
@@ -120,7 +121,8 @@ class Filter2By2Bayer : OneBitFilter() {
 }
 
 class Filter3By3Bayer : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
 
         val width = source.width
         val height = source.height
@@ -154,7 +156,8 @@ class Filter3By3Bayer : OneBitFilter() {
 }
 
 class Filter4By4Bayer : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
 
         val width = source.width
         val height = source.height
@@ -191,7 +194,9 @@ class Filter4By4Bayer : OneBitFilter() {
 }
 
 class Filter8By48ayer : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -229,7 +234,9 @@ class Filter8By48ayer : OneBitFilter() {
 }
 
 class Filter5By3Bayer : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -267,7 +274,9 @@ class Filter5By3Bayer : OneBitFilter() {
 }
 
 class FilterNewspaperHalftone : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -307,7 +316,8 @@ class FilterNewspaperHalftone : OneBitFilter() {
 }
 
 class FilterFloydSteinberg : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
 
         val width = source.width
         val height = source.height
@@ -348,7 +358,8 @@ class FilterFloydSteinberg : OneBitFilter() {
 }
 
 class FilterJarvisJudiceNinke : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
 
         val width = source.width
         val height = source.height
@@ -400,7 +411,9 @@ class FilterJarvisJudiceNinke : OneBitFilter() {
 }
 
 class FilterSierra : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -448,7 +461,9 @@ class FilterSierra : OneBitFilter() {
 }
 
 class FilterTwoRowSierra : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -493,7 +508,9 @@ class FilterTwoRowSierra : OneBitFilter() {
 
 //Incremented by 2X2 each iteration
 class FilterSierraLite : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -540,7 +557,9 @@ class FilterSierraLite : OneBitFilter() {
 }
 
 class FilterAtkinson : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -584,7 +603,9 @@ class FilterAtkinson : OneBitFilter() {
 }
 
 class FilterStucki : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -633,7 +654,9 @@ class FilterStucki : OneBitFilter() {
 }
 
 class FilterBurkes : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -677,7 +700,9 @@ class FilterBurkes : OneBitFilter() {
 }
 
 class FilterFalseFloydSteinberg : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -716,7 +741,9 @@ class FilterFalseFloydSteinberg : OneBitFilter() {
 }
 
 class FilterLeftToRightErrorDiffusion : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -756,7 +783,9 @@ class FilterLeftToRightErrorDiffusion : OneBitFilter() {
 }
 
 class FilterRandom : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 
@@ -785,7 +814,9 @@ class FilterRandom : OneBitFilter() {
 }
 
 class FilterThreshold : OneBitFilter() {
-    override fun process(source: PGraphics, target: PImage) {
+    override fun process(source: PGraphics?, target: PImage?) {
+        if(source == null || target == null) return
+
         val width = source.width
         val height = source.height
 

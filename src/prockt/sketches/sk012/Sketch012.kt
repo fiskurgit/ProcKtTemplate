@@ -27,7 +27,7 @@ class Sketch012: KApplet() {
     private var filteredImage: PImage? = null
 
     override fun settings() {
-        size(600, 600, P3D)
+        size(SKETCH_DIAM, SKETCH_DIAM, P2D)
     }
 
     override fun setup() {
@@ -45,44 +45,43 @@ class Sketch012: KApplet() {
         setup()
     }
 
-
     override fun draw() {
         background(BLACK)
 
         updateSource()
 
-        FILTER.process(sourceImage!!, filteredImage!!)
+        FILTER.process(sourceImage, filteredImage)
 
         when {
-            mousePressed -> image(sourceImage!!)
-            else -> image(filteredImage!!)
+            mousePressed -> image(sourceImage)
+            else -> image(filteredImage)
         }
     }
 
-    fun updateSource(){
+    private fun updateSource(){
         sourceImage?.beginDraw()
         sourceImage?.background(BLACK)
         sourceImage?.noStroke()
         sourceImage?.lights()
 
         bodies.forEach { body ->
-            body.draw()
+            body.draw(sourceImage)
         }
 
-        sourceImage!!.endDraw()
+        sourceImage?.endDraw()
     }
 
     inner class Body{
 
-        var position= PVector(random(width.toFloat()), random(height.toFloat()))
-        val velocity = PVector(random(-MAX_VELOCITY, MAX_VELOCITY), random(-MAX_VELOCITY, MAX_VELOCITY))
-        var neighbour = PVector(0f, 0f)
-        var mass = ceil(random(MIN_MASS, MAX_MASS))
+        private var position= PVector(random(width.toFloat()), random(height.toFloat()))
+        private val velocity = PVector(random(-MAX_VELOCITY, MAX_VELOCITY), random(-MAX_VELOCITY, MAX_VELOCITY))
+        private var neighbour = PVector(0f, 0f)
+        private var mass = ceil(random(MIN_MASS, MAX_MASS))
 
-        fun draw(){
+        fun draw(graphics: PGraphics?){
             bodies.forEach { otherBody ->
                 neighbour.set(otherBody.position)
-                var dist = neighbour.dist(position)
+                val dist = neighbour.dist(position)
                 var force = (mass * otherBody.mass)/(sq(dist))
                 if(force > MAX_FORCE) {
                     force = MAX_FORCE
@@ -93,10 +92,10 @@ class Sketch012: KApplet() {
                 velocity.add(neighbour)
                 position.add(velocity)
             }
-            sourceImage!!.pushMatrix()
-            sourceImage!!.translate(position.x, position.y)
-            sourceImage!!.sphere(10f * mass)
-            sourceImage!!.popMatrix()
+            graphics?.pushMatrix()
+            graphics?.translate(position.x, position.y)
+            graphics?.sphere(10f * mass)
+            graphics?.popMatrix()
         }
     }
 }

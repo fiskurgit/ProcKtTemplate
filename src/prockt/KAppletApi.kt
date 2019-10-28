@@ -152,7 +152,7 @@ open class KAppletApi: PApplet() {
         image(image, x.toFloat(), y.toFloat())
     }
 
-    fun image(image: PImage){
+    fun image(image: PImage?){
         image(image, 0f, 0f)
     }
 

@@ -40,11 +40,11 @@ class Sketch008 : KApplet() {
         updateLocations()
         updateSource()
 
-        FILTER.process(sourceImage!!, filteredImage!!)
+        FILTER.process(sourceImage, filteredImage)
 
         when {
-            mousePressed -> image(sourceImage!!)
-            else -> image(filteredImage!!)
+            mousePressed -> image(sourceImage)
+            else -> image(filteredImage)
         }
     }
 
