@@ -4,8 +4,6 @@
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prockt/KAppletApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/KAppletApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prockt/OneBitFilters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/OneBitFilters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prockt/sketches/sk012/Sketch012.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk012/Sketch012.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk012/Sketch012.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+            <state relative-caret-position="291">
+              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
               <folding>
                 <element signature="e#31#212#0" expanded="true" />
               </folding>
@@ -41,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
+            <state relative-caret-position="196">
               <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
               <folding>
                 <element signature="e#31#142#0" expanded="true" />
@@ -56,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prockt/KAppletApi.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+            <state relative-caret-position="150">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -151,10 +149,10 @@
         <option value="$PROJECT_DIR$/src/prockt/sketches/sk001/Sketch001.kt" />
         <option value="$PROJECT_DIR$/src/prockt/sketches/sk011/Sketch11.kt" />
         <option value="$PROJECT_DIR$/src/prockt/sketches/sk010/Sketch010.kt" />
-        <option value="$PROJECT_DIR$/src/prockt/KAppletApi.kt" />
         <option value="$PROJECT_DIR$/src/prockt/OneBitFilters.kt" />
-        <option value="$PROJECT_DIR$/src/prockt/sketches/sk012/Sketch012.kt" />
         <option value="$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt" />
+        <option value="$PROJECT_DIR$/src/prockt/KAppletApi.kt" />
+        <option value="$PROJECT_DIR$/src/prockt/sketches/sk012/Sketch012.kt" />
       </list>
     </option>
   </component>
@@ -226,7 +224,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572252697300" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572254987289" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -291,7 +289,7 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18559219" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18559219" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -300,7 +298,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47985348" visible="true" weight="0.40320855" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47985348" visible="true" weight="0.40320855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -688,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prockt/KAppletApi.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prockt/OneBitFilters.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8400">
@@ -705,22 +696,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk012/Sketch012.kt">
+    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        <state relative-caret-position="196">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
           <folding>
-            <element signature="e#31#212#0" expanded="true" />
+            <element signature="e#31#142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk008/Sketch008.kt">
+    <entry file="file://$PROJECT_DIR$/src/prockt/KAppletApi.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        <state relative-caret-position="150">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prockt/sketches/sk012/Sketch012.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
           <folding>
-            <element signature="e#31#142#0" expanded="true" />
+            <element signature="e#31#212#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -46,8 +46,6 @@ class Sketch012: KApplet() {
     }
 
     override fun draw() {
-        background(BLACK)
-
         updateSource()
 
         FILTER.process(sourceImage, filteredImage)
