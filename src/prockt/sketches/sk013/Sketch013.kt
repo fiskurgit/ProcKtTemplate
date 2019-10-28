@@ -3,36 +3,32 @@ package prockt.sketches.sk013
 import processing.core.PConstants
 import prockt.KApplet
 
+/*
+
+    Converting Vera Molnár's Un Deux Trois to ProcKt
+    See: https://generativeartistry.com/tutorials/un-deux-trois/
+
+ */
 class Sketch013: KApplet() {
 
     companion object {
-        const val STEP = 20
-    }
-
-    override fun settings() {
-        size(320)
+        const val STEP = 30
     }
 
     override fun setup() {
-        background(MOLNAR)
-        stroke(BLACK)
-        noFill()
-        strokeWeight(5f)
+        strokeWeight(8f)
         strokeCap(PConstants.ROUND)
     }
 
     override fun draw() {
+        background(MOLNAR)
 
         val aThird = height/3
 
         for(y in STEP until (height - STEP) step STEP) {
             for(x in STEP until (width - STEP) step STEP) {
-                strokeWeight(0.5f)
-                square(x, y, STEP)
-                strokeWeight(3f)
-
                 val molnarShape = createShape()
-                molnarShape.beginShape()
+                molnarShape.beginShape(LINES)
 
                 when {
                     y < aThird -> {
@@ -59,12 +55,12 @@ class Sketch013: KApplet() {
                 }
 
                 molnarShape.endShape()
-                molnarShape.rotate(random(TWO_PI))
+
                 pushMatrix()
-
-                translate(x, y)
-                shape(molnarShape)
-
+                translate(x + STEP/2f, y + STEP/2f)//Move to cell center
+                rotate(radians(random(360f)))//Random rotate around cell center
+                translate(-STEP/2f, -STEP/2f)//Move back to cell origin
+                shape(molnarShape)//Draw Shape
                 popMatrix()
             }
         }
