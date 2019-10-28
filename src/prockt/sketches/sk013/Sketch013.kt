@@ -27,6 +27,7 @@ class Sketch013: KApplet() {
 
         for(y in STEP until (height - STEP) step STEP) {
             for(x in STEP until (width - STEP) step STEP) {
+
                 val molnarShape = createShape()
                 molnarShape.beginShape(LINES)
 
