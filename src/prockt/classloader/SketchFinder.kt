@@ -5,6 +5,22 @@ import java.io.File
 import java.io.IOException
 
 object SketchFinder {
+
+    fun getSketchesFull(): List<Sketch>{
+
+        val allClasses= getClasses("prockt")
+        val sketchClasses = allClasses.filter {
+            it.superclass.simpleName.endsWith("KApplet")
+        }.map {
+
+            val clazz = it as Class<KApplet>
+            //todo - extract comment
+            Sketch(it.simpleName, null, clazz)
+
+        }
+
+        return listOf()
+    }
     fun getSketches(): List<Class<KApplet>> {
         val allClasses= getClasses("prockt")
         return allClasses.filter {

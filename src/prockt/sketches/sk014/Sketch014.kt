@@ -2,29 +2,77 @@ package prockt.sketches.sk014
 
 import prockt.KApplet
 
+/*
+
+    Autechre artwork
+
+ */
 class Sketch014: KApplet() {
 
     companion object {
-        const val MARGIN = 50f
+        const val DIAM = 100
     }
 
     override fun setup() {
         fill(EIGENGRAU)
+        stroke(EIGENGRAU)
+        frameRate(0.5f)
     }
 
     override fun draw() {
-        background(MOLNAR)
+        background(WHITE)
 
-        circle(150, height - 400, 250)
+        val aCount = random(1, 25)
+        for (i in 0 until aCount) {
+            drawTriangle()
+        }
 
-        noStroke()
-        circleLine(MARGIN, height/4, width - MARGIN, height/4, 20, 10)
-        circleLine(MARGIN*2, height/1.2, 200, MARGIN, 12, 6)
-        circleLine(width/2, MARGIN, width/1.2, height-250, 70, 60)
-        circleLine(MARGIN, height- MARGIN, width/1.2, MARGIN * 2, 50, 15)
-        circleLine(width/3, height - (MARGIN * 2), width - MARGIN, height - (MARGIN * 2), 12, 4)
+        val bCount = random(1, 25)
+        for (i in 0 until bCount) {
+            drawQuad()
+        }
 
+        drawBorder()
+    }
+
+    private fun drawTriangle() {
+        val f = random(-3, 3)
+        var lw = DIAM
+        if (f < 0) {
+            lw = DIAM / f
+        }
+        if (f > 0) {
+            lw = f * DIAM
+        }
+        val x = random(0, width / DIAM) * DIAM
+        val y = random(0, height / DIAM) * DIAM
+        triangle(x.toFloat(), y.toFloat(), (x + lw).toFloat(), y.toFloat(), (x + lw).toFloat(), (y + lw).toFloat())
+    }
+
+    private fun drawQuad() {
+        val ww = random(-2, 3) * DIAM
+        val i = random(0, width / DIAM)
+        val sx = i * ww
+        val ex = sx + i * ww
+        val sy = i * ww
+        val ey = sy + i * ww
+        val xo = random(-width / DIAM, width / DIAM) * DIAM
+
+        beginShape()
+        vertex((sx + xo).toFloat(), sy.toFloat())
+        vertex((sx + ww + xo).toFloat(), sy.toFloat())
+        vertex((ex + ww + xo).toFloat(), ey.toFloat())
+        vertex((ex + ww + xo).toFloat(), (ey + ww).toFloat())
+        vertex((ex + xo).toFloat(), ey.toFloat())
+        vertex((sx + xo).toFloat(), sy.toFloat())
+        endShape()
+    }
+
+    private fun drawBorder() {
+        stroke(WHITE)
+        noFill()
+        rect(0, 0, width, height)
+        fill(EIGENGRAU)
         stroke(EIGENGRAU)
-        dottedLine(width/3, height - (MARGIN * 4), width - MARGIN, height - (MARGIN * 4), 6)
     }
 }

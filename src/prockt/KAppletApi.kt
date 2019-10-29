@@ -164,6 +164,10 @@ open class KAppletApi: PApplet() {
         return PApplet.map(value.toFloat(), start1.toFloat(), stop1.toFloat(), start2.toFloat(), stop2.toFloat())
     }
 
+    fun random(): Float{
+        return random(0f, 1f)
+    }
+
     fun random(max: Int): Int{
         return random(max.toFloat()).toInt()
     }
@@ -209,11 +213,27 @@ open class KAppletApi: PApplet() {
         return Coord(x, y)
     }
 
-    //This isn't weighted, but the distribution of same coord count at a smaller radius means they're packed closer together
+    fun randomCircleCoord(innerRadius: Number, outerRadius: Number): Coord {
+        val a = random(0f, 1f) * TWO_PI
+        val r = sqrt(random(sq(innerRadius.toFloat()), sq(outerRadius.toFloat())))
+        val x = r * cos(a)
+        val y = r * sin(a)
+        return Coord(x, y)
+    }
+
+    //This isn't weighted, it's a naive implementation where the count at a smaller radius means they're packed closer together
     //The visual effect is a weighted distribution so using the method name here, rather than the above method.
     fun randomCircleCoordWeighted(radius: Number): Coord {
         val a = random(0f, TWO_PI)
         val r = random(0f, radius.toFloat())
+        val x = r * cos(a)
+        val y = r * sin(a)
+        return Coord(x, y)
+    }
+
+    fun randomCircleCoordWeighted(innerRadius: Number, outerRadius: Number): Coord {
+        val a = random(0f, TWO_PI)
+        val r = random(innerRadius.toFloat(), outerRadius.toFloat())
         val x = r * cos(a)
         val y = r * sin(a)
         return Coord(x, y)
