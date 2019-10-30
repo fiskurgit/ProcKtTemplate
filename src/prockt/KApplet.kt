@@ -27,6 +27,17 @@ open class KApplet: KAppletApi() {
         surface.setTitle(sketchName)
     }
 
+    fun mode(mode: String){
+        when {
+            width == 100 && height == 100 -> {
+                size(DEFAULT_SIZE, DEFAULT_SIZE, mode)
+            }
+            else ->{
+                size(width, height, mode)
+            }
+        }
+    }
+
     override fun settings() {
         //Override default 100x100 sketch size
         when {

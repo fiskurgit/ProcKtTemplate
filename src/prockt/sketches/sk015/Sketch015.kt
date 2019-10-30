@@ -14,6 +14,8 @@ class Sketch015: KApplet() {
     }
 
     override fun draw() {
+        background(MOLNAR)
+
         translate(width/2, height/2)
 
         repeat(25000){

@@ -66,6 +66,10 @@ open class KAppletApi: PApplet() {
         return lerpColor(color(startColor), color(endColor), index.toFloat()/range.toFloat(), PConstants.RGB)
     }
 
+    fun camera(eyeX: Number, eyeY: Number, eyeZ: Number){
+        camera(eyeX.toFloat(), eyeY.toFloat(), eyeZ.toFloat(), 0f, 0f, 0f, 0.0f, 1.0f, 0.0f)
+    }
+
     //Drawing
     fun ellipse(x: Number, y: Number, w: Number, h: Number){
         ellipse(x.toFloat(), y.toFloat(), w.toFloat(), h.toFloat())
@@ -193,6 +197,8 @@ open class KAppletApi: PApplet() {
     }
 
     //Geometry
+
+    data class Particle(var x: Float, var y: Float, var z: Float)
 
     data class Coord(var x: Float, var y: Float){
 
