@@ -5,6 +5,11 @@ import processing.core.PImage
 import prockt.KApplet
 import prockt.OneBitFilter
 
+/*
+
+    Bouncing dithered spheres
+
+ */
 class Sketch008 : KApplet() {
 
     companion object {

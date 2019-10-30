@@ -1,8 +1,12 @@
 package prockt.sketches.sk010
 
-import processing.core.PVector
 import prockt.KApplet
 
+/*
+
+    Weighted random circle grid
+
+ */
 class Sketch010: KApplet() {
 
     override fun setup() {
@@ -16,7 +20,7 @@ class Sketch010: KApplet() {
         background(BLACK)
 
         grid.occupants<RndCircleCell>().forEachIndexed { index, cell ->
-            cell.draw(index, grid.cellDiam(), grid.cellOrigin(index))
+            cell.draw(this, index, grid.cellDiam(), grid.cellOrigin(index))
         }
 
         noLoop()
@@ -24,16 +28,5 @@ class Sketch010: KApplet() {
 
     override fun mouseClicked() {
         loop()
-    }
-
-    inner class RndCircleCell{
-        fun draw(index: Int, diam: Float, origin: PVector){
-            repeat((index+1) * 30){
-                val coord = randomCircleCoordWeighted(diam/3)
-                coord.x += origin.x
-                coord.y += origin.y
-                point(coord)
-            }
-        }
     }
 }

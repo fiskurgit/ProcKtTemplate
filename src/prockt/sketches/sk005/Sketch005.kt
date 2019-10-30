@@ -2,6 +2,11 @@ package prockt.sketches.sk005
 
 import prockt.KApplet
 
+/*
+
+    Shape mask grid
+
+ */
 class Sketch005: KApplet() {
 
     override fun setup() {

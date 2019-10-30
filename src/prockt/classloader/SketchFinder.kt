@@ -9,17 +9,31 @@ object SketchFinder {
     fun getSketchesFull(): List<Sketch>{
 
         val allClasses= getClasses("prockt")
-        val sketchClasses = allClasses.filter {
+
+        return allClasses.filter {
             it.superclass.simpleName.endsWith("KApplet")
         }.map {
 
+            val workingDir = System.getProperty("user.dir")
+
             val clazz = it as Class<KApplet>
-            //todo - extract comment
-            Sketch(it.simpleName, null, clazz)
 
+            //todo - extract this field reading to method:
+            val path = "$workingDir/src/${clazz.name.replace(".", "/")}.kt"
+            val sourceFile = File(path)
+            var comment: String? = null
+            if(sourceFile.exists()){
+                val code = sourceFile.readText()
+
+                if(code.contains("/*")) {
+                    comment = code.substring(code.indexOf("/*") + 2, code.indexOf("*/")).trim()
+                    comment = comment.lines().first()
+                }
+                Sketch(it.simpleName, comment, clazz)
+            }else{
+                Sketch(it.simpleName, null, clazz)
+            }
         }
-
-        return listOf()
     }
     fun getSketches(): List<Class<KApplet>> {
         val allClasses= getClasses("prockt")

@@ -2,6 +2,11 @@ package prockt.sketches.sk004
 
 import prockt.KApplet
 
+/*
+
+    Snowflakes
+
+ */
 class Sketch004: KApplet() {
     
     override fun setup() {

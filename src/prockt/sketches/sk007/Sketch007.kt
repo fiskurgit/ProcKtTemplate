@@ -2,6 +2,11 @@ package prockt.sketches.sk007
 
 import prockt.KApplet
 
+/*
+
+    Simple 2D stars/galaxy
+
+ */
 class Sketch007: KApplet() {
 
     private val origin = Coord(0, 0)

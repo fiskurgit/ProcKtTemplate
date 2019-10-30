@@ -2,6 +2,11 @@ package prockt.sketches.sk003
 
 import prockt.KApplet
 
+/*
+
+    Random grid
+
+ */
 class Sketch003: KApplet() {
 
     override fun setup() {

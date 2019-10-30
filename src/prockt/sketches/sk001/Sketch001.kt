@@ -2,6 +2,11 @@ package prockt.sketches.sk001
 
 import prockt.KApplet
 
+/*
+
+    Mouse grid with lerped colour
+
+ */
 class Sketch001: KApplet() {
 
     override fun setup() {

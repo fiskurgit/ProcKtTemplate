@@ -2,6 +2,11 @@ package prockt.sketches.sk002
 
 import prockt.KApplet
 
+/*
+
+    Hexagrams
+
+ */
 class Sketch002: KApplet() {
 
     override fun setup() {

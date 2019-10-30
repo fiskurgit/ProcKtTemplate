@@ -2,6 +2,11 @@ package prockt.sketches.sk009
 
 import prockt.KApplet
 
+/*
+
+    Random point in circle - weighted and uniform
+
+ */
 class Sketch009: KApplet() {
 
     override fun setup() {
@@ -28,5 +33,4 @@ class Sketch009: KApplet() {
     override fun mouseClicked() {
         loop()
     }
-
 }

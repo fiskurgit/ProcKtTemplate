@@ -3,6 +3,11 @@ package prockt.sketches.sk006
 import processing.core.PGraphics
 import prockt.KApplet
 
+/*
+
+    Shape mask (large)
+
+ */
 class Sketch006: KApplet() {
 
     lateinit var shapeImage: PGraphics

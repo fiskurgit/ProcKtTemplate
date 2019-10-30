@@ -3,6 +3,9 @@ package prockt.sketches.sk016
 import prockt.KApplet
 import processing.core.PShape
 
+/*
+     Asteroid belt using 'randomCircleCoord(innerRadius, outerRadius)'
+ */
 class Sketch016 : KApplet() {
 
     private var xRot: Float = 0f

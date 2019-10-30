@@ -1,6 +1,7 @@
 package prockt
 
 import prockt.classloader.ContactSheet
+import prockt.classloader.Sketch
 import prockt.classloader.SketchFinder
 import java.awt.EventQueue
 import java.io.File
@@ -42,7 +43,7 @@ class ProcKt {
                         }
                         else -> {
                             println("Specify which sketch to run:")
-                            val sketches = SketchFinder.getSketchNames()
+                            val sketches = SketchFinder.getSketchesFull()
 
                             if (sketches.isEmpty()) {
                                 displayWelcome()
@@ -60,16 +61,38 @@ class ProcKt {
             println("Create a new kotlin file that subclasses KApplet to get started (new file wizard coming soon hopefully)")
         }
 
-        private fun displaySketches(sketches: List<String>){
-            sketches.forEachIndexed{ index: Int, name: String ->
-                println("${index+1}: $name")
+        private fun displaySketches(sketches: List<Sketch>){
+            sketches.forEachIndexed{ index: Int, sketch: Sketch ->
+                val numberPrefix = "%02d".format(index+1)
+                when {
+
+                    sketch.description != null -> {
+                        println("$numberPrefix: ${sketch.name} - ${sketch.description}")
+                    }
+                    else -> {
+                        println("$numberPrefix: ${sketch.name}")
+                    }
+                }
+
             }
 
             println("or 'cs' to generate a markdown contact sheet of all sketches.")
 
             val scanner = Scanner(System.`in`)
             val input = scanner.next()
-            parse(input)
+            when (input) {
+                "cs" -> parse(input)
+                else -> {
+                    val index = input.toIntOrNull()
+                    when {
+                        index != null -> sketches[(input.toInt()-1)].clazz.newInstance().run()
+                        else -> {
+                            println("Invalid input: $input")
+                            System.exit(-1)
+                        }
+                    }
+                }
+            }
         }
 
         private fun parse(arg: String){
