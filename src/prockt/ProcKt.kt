@@ -42,7 +42,9 @@ class ProcKt {
                             ideTempFile.delete()
                         }
                         else -> {
-                            println("Specify which sketch to run:")
+                            println()
+                            println("Select a sketch:")
+                            println()
                             val sketches = SketchFinder.getSketchesFull()
 
                             if (sketches.isEmpty()) {
@@ -114,11 +116,11 @@ class ProcKt {
 
         private fun printLogo(){
             println()
-            println(" ____                 _  ___")
-            println("|  _ \\ _ __ ___   ___| |/ / |_")
-            println("| |_) | '__/ _ \\ / __| ' /| __|")
-            println("|  __/| | | (_) | (__| . \\| |_")
-            println("|_|   |_|  \\___/ \\___|_|\\_\\___|")
+            Terminal.lCyan(" ____                 _  ___")
+            Terminal.lCyan("|  _ \\ _ __ ___   ___| |/ / |_")
+            Terminal.lCyan("| |_) | '__/ _ \\ / __| ' /| __|")
+            Terminal.lCyan("|  __/| | | (_) | (__| . \\| |_")
+            Terminal.lCyan("|_|   |_|  \\___/ \\___|_|\\_\\___|")
             println()
 
         }

@@ -8,7 +8,8 @@ import prockt.OneBitFilter
 
 /*
 
-    Gravity logic derived from: https://www.openprocessing.org/sketch/113298
+    Gravity Balls
+    logic derived from: https://www.openprocessing.org/sketch/113298
 
  */
 class Sketch012: KApplet() {
