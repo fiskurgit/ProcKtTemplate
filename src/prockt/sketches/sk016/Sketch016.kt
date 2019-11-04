@@ -8,8 +8,6 @@ import processing.core.PShape
  */
 class Sketch016 : KApplet() {
 
-    private var xRot: Float = 0f
-    private var zRot: Float = 0f
     private var ring: PShape? = null
 
     override fun settings() {
@@ -36,14 +34,10 @@ class Sketch016 : KApplet() {
         background(BLACK)
         camera(-width/2, -height/2, 150)
 
-        rotateY(xRot)
-        rotateZ(zRot)
+        rotateY(PI/60f*frameCount)
+        rotateX(1.45f)
+        rotateZ(-0.23f)
 
         shape(ring!!)
-    }
-
-    override fun mouseDragged() {
-        xRot += (pmouseY - mouseY) * 0.01f
-        zRot += (mouseX - pmouseX) * 0.01f
     }
 }
