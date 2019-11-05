@@ -227,6 +227,31 @@ open class KAppletApi: PApplet() {
         return Coord(x, y)
     }
 
+    fun randomSphereCoord(radius: Number): Particle {
+        var a = 0f
+        var b = 0f
+        var c = 0f
+        var d = 0f
+        var k = 99f
+        while (k >= 1.0) {
+            a = random(-1.0f, 1.0f)
+            b = random(-1.0f, 1.0f)
+            c = random(-1.0f, 1.0f)
+            d = random(-1.0f, 1.0f)
+            k = a * a + b * b + c * c + d * d
+        }
+        k /= radius.toFloat()
+        val x = 2 * (b * d + a * c) / k
+        val y = 2 * (c * d - a * b) / k
+        val z = (a * a + d * d - b * b - c * c) / k
+        return Particle(x, y, z)
+    }
+
+    fun randomSphereCoord(innerRadius: Number, outerRadius: Number): Particle {
+        val radius = random(innerRadius.toFloat(), outerRadius.toFloat())
+        return randomSphereCoord(radius)
+    }
+
     //This isn't weighted, it's a naive implementation where the count at a smaller radius means they're packed closer together
     //The visual effect is a weighted distribution so using the method name here, rather than the above method.
     fun randomCircleCoordWeighted(radius: Number): Coord {
