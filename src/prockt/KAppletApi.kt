@@ -198,6 +198,12 @@ open class KAppletApi: PApplet() {
 
     //Geometry
 
+    data class Line(var x1: Float, var y1: Float, var x2: Float, var y2: Float){
+        fun draw(kapl: KApplet){
+            kapl.line(x1, y1, x2, y2)
+        }
+    }
+
     data class Particle(var x: Float, var y: Float, var z: Float)
 
     data class Coord(var x: Float, var y: Float){

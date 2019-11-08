@@ -35,7 +35,7 @@ class DotFillCell {
 
         maskImage.endDraw()
 
-        //2. Create shape
+        //2. Create mappedShape
         shapeImage.beginDraw()
 
         val sides = kappl.random(3f, 7f).toInt()

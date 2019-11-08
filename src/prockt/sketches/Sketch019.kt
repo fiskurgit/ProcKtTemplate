@@ -1,23 +1,24 @@
 package prockt.sketches
 
-import processing.core.PApplet
 import processing.core.PShape
 import prockt.KApplet
 
 class Sketch019: KApplet() {
+
     companion object {
         const val SHELLS = 4
         const val SHELL_STARS = 10000
         const val RINGS = 50
         const val RING_STARS = 3000
     }
-    
+
     private val shells = mutableListOf<PShape>()
     private val rings = mutableListOf<PShape>()
 
     override fun settings() {
-        mode(P3D)
+        size(1200, 600, P3D)
     }
+
     override fun setup() {
 
         blendMode(ADD)
@@ -82,7 +83,7 @@ class Sketch019: KApplet() {
 
         repeat(SHELLS){ index ->
             pushMatrix()
-            rotateY((TAU /(index*index)*frameCount)/100)
+            rotateY((TAU/(index*index)*frameCount)/100)
             rotateX(1.45f)
             rotateZ((TAU /(index*index)*frameCount)/100)
             shape(shells[index])
@@ -91,7 +92,7 @@ class Sketch019: KApplet() {
 
         repeat(RINGS){ index ->
             pushMatrix()
-            rotateY((TWO_PI/(index*index)*frameCount)/10)
+            rotateY((TAU/(index*index)*frameCount)/10)
             rotateX(1.45f)
             rotateZ(-2.7f)
             shape(rings[index])
