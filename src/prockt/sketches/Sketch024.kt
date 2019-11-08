@@ -5,12 +5,13 @@ import prockt.KApplet
 
 /*
 
-    Map random branching shape onto surface of a sphere
+    Map random branching shape onto surface of a sphere X 2
 
  */
-class Sketch023: KApplet() {
+class Sketch024: KApplet() {
 
-    private lateinit var mappedShape: PShape
+    private lateinit var mappedShapeA: PShape
+    private lateinit var mappedShapeB: PShape
 
     private var lines = mutableListOf<Line>()
     private var terminalLength = 0f
@@ -25,7 +26,8 @@ class Sketch023: KApplet() {
 
     override fun setup() {
         blendMode(ADD)
-        generate()
+        mappedShapeA = generate()
+        mappedShapeB = generate()
     }
 
     override fun draw() {
@@ -43,41 +45,50 @@ class Sketch023: KApplet() {
         perspective(fov, 1f, cameraZ/10f, 14500f)
         camera(-width/2f, -height/2f, 10050f, 0f, 0f, 0f, 0.0f, 1.0f, 0.0f)
 
-        rotateY((TAU*frameCount)/3000)//rotateY((TAU*mouseX)/width)
-        rotateX((TAU*mouseY)/height)
+        pushMatrix()
+        rotateZ((TAU*frameCount)/3000)//rotateY((TAU*mouseX)/width)
+        rotateY((TAU*mouseY)/height)
+        shape(mappedShapeA)
+        popMatrix()
 
-        shape(mappedShape)
+        pushMatrix()
+        rotateY((TAU*frameCount)/2000 * -1)//rotateY((TAU*mouseX)/width)
+        rotateX((TAU*mouseY)/height)
+        shape(mappedShapeB)
+        popMatrix()
     }
 
     override fun mouseClicked() {
-        generate()
+        mappedShapeA = generate()
+        mappedShapeB = generate()
+
     }
 
     override fun keyPressed() {
         drawPlanetMass = !drawPlanetMass
     }
 
-    private fun generate(){
+    private fun generate(): PShape{
         lines.clear()
         terminalLength = random(0.2f, 1f)
         randomAngleDiv = random(2f, 10f)
         reduction = random(1.8f, 2.2f)
         val origin = Coord(width/2, height/2)
-        val dendrites = random(1, 8)
+        val dendrites = random(1, 3)
 
         repeat(dendrites){ index ->
             val angleRnd = random(-1f, 1f)
             var angle = TAU/dendrites * index
             angle += TAU/dendrites
-            grow(origin, 85f, angle + angleRnd)
+            grow(origin, 105f, angle + angleRnd)
         }
 
-        mappedShape = createShape()
-        mappedShape.beginShape(LINES)
-        mappedShape.stroke(WHITE, 40f)
-        mappedShape.strokeWeight(0.5f)
+        val shape = createShape()
+        shape.beginShape(LINES)
 
-        val radius = 4000
+        shape.strokeWeight(0.75f)
+
+        val radius = random(3900, 4100)
         repeat(lines.size){index ->
             val line = lines[index]
 
@@ -92,13 +103,15 @@ class Sketch023: KApplet() {
             val end = Particle(x2, y2, z2)
 
             if(start.distanceTo(end) < radius) {
-                mappedShape.vertex(x1, y1, z1)
-                mappedShape.vertex(x2, y2, z2)
+                val color = colorLerp("#9d2f4d", "#4973a1", index, lines.size)
+                shape.stroke(color, 125f)
+                shape.vertex(x1, y1, z1)
+                shape.vertex(x2, y2, z2)
             }
         }
 
-        mappedShape.endShape()
-
+        shape.endShape()
+        return shape
     }
 
     private fun grow(origin: Coord, length: Float, angle: Float){
