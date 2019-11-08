@@ -3,6 +3,7 @@ package prockt
 import processing.core.PApplet
 import processing.core.PConstants
 import processing.core.PImage
+import processing.core.PVector
 import java.awt.Color
 
 open class KAppletApi: PApplet() {
@@ -204,7 +205,12 @@ open class KAppletApi: PApplet() {
         }
     }
 
-    data class Particle(var x: Float, var y: Float, var z: Float)
+    data class Particle(var x: Float, var y: Float, var z: Float){
+        fun distanceTo(other: Particle): Float{
+            //todo - inline this for perf
+            return  PVector(x, y, z).dist(PVector(other.x, other.y, other.z))
+        }
+    }
 
     data class Coord(var x: Float, var y: Float){
 
