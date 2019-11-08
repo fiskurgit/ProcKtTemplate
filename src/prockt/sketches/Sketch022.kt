@@ -17,8 +17,6 @@ class Sketch022: KApplet() {
     private var randomAngleDiv = 0f
     private var reduction = 0f
 
-    private var cameraZ = 8050f
-
     override fun settings() {
         mode(P3D)
         smooth(8)
@@ -26,21 +24,18 @@ class Sketch022: KApplet() {
 
     override fun setup() {
         blendMode(ADD)
-
         generate()
     }
 
     override fun draw() {
-        lights()
         background(BLACK)
 
         camera(-width/2f, -height/2f, 8050f, 0f, 0f, 0f, 0.0f, 1.0f, 0.0f)
 
-        rotateY((TAU*mouseX)/width)
+        rotateY((TAU*frameCount)/1000)//rotateY((TAU*mouseX)/width)
         rotateX((TAU*mouseY)/height)
 
         shape(mappedShape)
-
     }
 
     override fun mouseClicked() {
