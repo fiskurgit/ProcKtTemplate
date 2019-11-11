@@ -3,6 +3,11 @@ package prockt.sketches
 import processing.core.PShape
 import prockt.KApplet
 
+/*
+
+    3D Galaxy plus white dwarf/black hole center
+
+ */
 class Sketch019: KApplet() {
 
     companion object {

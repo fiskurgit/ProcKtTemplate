@@ -5,7 +5,7 @@ import prockt.KApplet
 
 /*
 
-    Map random branching shape onto surface of a sphere
+    Map random branching shape onto surface of a sphere  (iteration 2 - add planet mass)
 
  */
 class Sketch023: KApplet() {
@@ -16,7 +16,8 @@ class Sketch023: KApplet() {
     private var terminalLength = 0f
     private var randomAngleDiv = 0f
     private var reduction = 0f
-    private var drawPlanetMass = false
+    private var drawPlanetMass = true
+    private var exportFrame = false
 
     override fun settings() {
         size(800, 800, P3D)
@@ -26,9 +27,15 @@ class Sketch023: KApplet() {
     override fun setup() {
         blendMode(ADD)
         generate()
+        noCursor()
+        hint(ENABLE_DEPTH_SORT)
     }
 
     override fun draw() {
+        if (exportFrame) {
+            beginRaw(PDF, "moon_frame_${System.currentTimeMillis()}.pdf");
+        }
+
         lights()
         background(EIGENGRAU)
 
@@ -43,10 +50,16 @@ class Sketch023: KApplet() {
         perspective(fov, 1f, cameraZ/10f, 14500f)
         camera(-width/2f, -height/2f, 10050f, 0f, 0f, 0f, 0.0f, 1.0f, 0.0f)
 
-        rotateY((TAU*frameCount)/3000)//rotateY((TAU*mouseX)/width)
+        //rotateY((TAU*frameCount)/3000)
+        rotateY((TAU*mouseX)/width)
         rotateX((TAU*mouseY)/height)
 
         shape(mappedShape)
+
+        if (exportFrame) {
+            endRaw()
+            exportFrame = false
+        }
     }
 
     override fun mouseClicked() {
@@ -54,14 +67,17 @@ class Sketch023: KApplet() {
     }
 
     override fun keyPressed() {
-        drawPlanetMass = !drawPlanetMass
+        when (key) {
+            'e' -> exportFrame = true
+            'm' -> drawPlanetMass = !drawPlanetMass
+        }
     }
 
     private fun generate(){
         lines.clear()
         terminalLength = random(0.2f, 1f)
         randomAngleDiv = random(2f, 10f)
-        reduction = random(1.8f, 2.2f)
+        reduction = random(1.8f, 2f)
         val origin = Coord(width/2, height/2)
         val dendrites = random(1, 8)
 
@@ -74,7 +90,7 @@ class Sketch023: KApplet() {
 
         mappedShape = createShape()
         mappedShape.beginShape(LINES)
-        mappedShape.stroke(WHITE, 40f)
+        mappedShape.stroke(WHITE, 20f)
         mappedShape.strokeWeight(0.5f)
 
         val radius = 4000
@@ -91,7 +107,7 @@ class Sketch023: KApplet() {
             val z2 = radius * cos(line.y2)
             val end = Particle(x2, y2, z2)
 
-            if(start.distanceTo(end) < radius) {
+            if(start.distanceTo(end) < radius/4) {
                 mappedShape.vertex(x1, y1, z1)
                 mappedShape.vertex(x2, y2, z2)
             }

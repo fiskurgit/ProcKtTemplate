@@ -26,6 +26,7 @@ class Sketch024: KApplet() {
 
     override fun setup() {
         blendMode(ADD)
+
         mappedShapeA = generate()
         mappedShapeB = generate()
     }

@@ -5,7 +5,7 @@ import prockt.KApplet
 
 /*
 
-    Map random branching shape onto surface of a sphere
+    Map random branching shape onto surface of a sphere (iteration 1)
 
  */
 class Sketch022: KApplet() {

@@ -4,7 +4,6 @@ import processing.core.PApplet
 import processing.core.PGraphics
 import processing.event.KeyEvent
 import processing.opengl.PJOGL
-import java.awt.Color
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Paths
