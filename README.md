@@ -1,4 +1,4 @@
-# ProcKt Template
+# ProcKt Template for Jetbrains IDEA
 
 Completely unofficial [Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching.
 
