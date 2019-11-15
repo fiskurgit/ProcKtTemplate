@@ -4,7 +4,7 @@ A simple (and completely unofficial) [Kotlin](https://kotlinlang.org/) wrapper f
 
 ![ProcKt CLI screenshot](images/cli_screenshot.png)
 
-This is just a personal project I use for my own sketches, it's not an open source masterpiece and not a whole lot of thought has gone into it.
+This is just a personal project I use for my own sketches, not a whole lot of thought has gone into it.
 
 ## FAQ
 
@@ -36,7 +36,7 @@ Processing requires JDK8, OpenJDK is fine: `brew cask install adoptopenjdk8`
 
 ## Examples
 
-There's lots of example sketches in [/sketches/](https://github.com/fiskurgit/ProcKtTemplate/tree/master/src/prockt/sketches).
+See [sketches](https://github.com/fiskurgit/ProcKtTemplate/tree/master/src/prockt/sketches).
 
 ![](images/small/sketch012.jpg)![](images/small/sketch013.jpg)![](images/small/sketch014.jpg)![](images/small/sketch020.jpg)![](images/small/sketch023.jpg)![](images/small/sketch018.jpg)
 
