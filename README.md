@@ -55,7 +55,7 @@ The Processing core libraries are distributed under a [GPL licence](https://gith
 ## Additions
 
 * Dithering algorithms, I've included a port of [DitherKt](https://github.com/fiskurgit/DitherKt) that works with Processing, see [Sketch012](https://github.com/fiskurgit/ProcKtTemplate/blob/master/src/prockt/sketches/Sketch012.kt)
-* _Command-S_ on OSX will show a save dialog for a screenshot (note. may appear behind sketch window).
-* _Command-P_ on OSX will show a save dialog for a vector pdf export when `startPdf()` and `endPdf()` have been wrapped around a drawing block (note. may appear behind sketch window).
+* `⌘`+`s` on OSX will show a save dialog for a screenshot (note. may appear behind sketch window).
+* `⌘`+`p` on OSX will show a save dialog for a vector pdf export when `startPdf()` and `endPdf()` have been wrapped around a drawing block (note. may appear behind sketch window).
 * A simple [grid api](GRID.md) for managing two dimensional grids in sketches
 
