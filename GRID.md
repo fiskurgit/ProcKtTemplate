@@ -1,5 +1,7 @@
 # Grid
 
+![](images/sketch002.png)![](images/sketch010.png)
+
 A common feature of sketches (at least of [fiskurgit](https://github.com/fiskurgit)'s) is to have random variants of some code displayed in a two dimensional grid. A simple API has been added to make this easier:
 
 Initialise a grid using a class default constructor (or manage this yourself using `grid.addOccupant(someObject)`):
