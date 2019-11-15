@@ -4,6 +4,16 @@ A simple (and completely unofficial) [Kotlin](https://kotlinlang.org/) wrapper f
 
 ![ProcKt CLI screenshot](images/cli_screenshot.png)
 
+This is just a personal project I use for my own sketches, it's not an open source masterpiece and not a whole lot of thought has gone into it.
+
+## FAQ
+
+* _Why don't you..._ - see above
+* _Why do you..._ - see above
+* _You should..._ - see above
+* _Can you..._ - see above
+* _This is terrible_ - see above
+
 ```
 class Sketch: KApplet() {
 
@@ -32,9 +42,8 @@ The Processing core libraries are distributed under a [GPL licence](https://gith
 
 This project adds a few convenience features to the standard Processing experience:
 
-* _Command-S_ on OSX will show a save dialog for a screenshot.
-* _Command-P_ on OSX will show a save dialog for a vector pdf export when `startPdf()` and `endPdf()` have been wrapped around a drawing block.
-* A simple grid class for creating sketches that require a two dimensional grid (See below)
+* _Command-S_ on OSX will show a save dialog for a screenshot (note. may appear behind sketch window).
+* _Command-P_ on OSX will show a save dialog for a vector pdf export when `startPdf()` and `endPdf()` have been wrapped around a drawing block (note. may appear behind sketch window).
 
 ## Grid
 
