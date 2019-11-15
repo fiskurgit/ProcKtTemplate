@@ -4,7 +4,7 @@ A simple (and completely unofficial) [Kotlin](https://kotlinlang.org/) wrapper f
 
 ## Usage
 
-Run a sketch usding one of the following:
+Launch a sketch using one of the following:
 * The default run configuration displays the menu below, enter a sketch number in the terminal.
 * Enter a sketch number as an program argument in the run configuration (to run the same sketch every time).
 * [Install the plugin](https://github.com/fiskurgit/ProcKtPlugin) (to hop between sketches while coding).
