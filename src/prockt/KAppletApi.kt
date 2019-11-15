@@ -208,7 +208,7 @@ open class KAppletApi: PApplet() {
     data class Particle(var x: Float, var y: Float, var z: Float){
         fun distanceTo(other: Particle): Float{
             //todo - inline this for perf
-            return  PVector(x, y, z).dist(PVector(other.x, other.y, other.z))
+            return PVector(x, y, z).dist(PVector(other.x, other.y, other.z))
         }
     }
 

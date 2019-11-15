@@ -31,16 +31,13 @@ class Sketch022: KApplet() {
         background(BLACK)
 
         camera(-width/2f, -height/2f, 8050f, 0f, 0f, 0f, 0.0f, 1.0f, 0.0f)
-
         rotateY((TAU*frameCount)/1000)//rotateY((TAU*mouseX)/width)
         rotateX((TAU*mouseY)/height)
 
         shape(mappedShape)
     }
 
-    override fun mouseClicked() {
-        generate()
-    }
+    override fun mouseClicked() = generate()
 
     private fun generate(){
         lines.clear()
@@ -79,7 +76,6 @@ class Sketch022: KApplet() {
         }
 
         mappedShape.endShape()
-
     }
 
     private fun grow(origin: Coord, length: Float, angle: Float){
@@ -95,11 +91,9 @@ class Sketch022: KApplet() {
         var offspringAngle = random(0f, 12f)//PI/6 or something for more order
         grow(Coord(length / reduction, 0f), length / reduction, -offspringAngle)
         grow(Coord(length / reduction, 0f), length / reduction, offspringAngle)
-
-        offspringAngle = random(0f, 12f)
+        offspringAngle = random(0f, 12f)//Not neccessary but...
         grow(Coord(0f, 0f), length / reduction, -offspringAngle)
         grow(Coord(length, 0f), length / reduction, -offspringAngle)
-
         popMatrix()
     }
 }

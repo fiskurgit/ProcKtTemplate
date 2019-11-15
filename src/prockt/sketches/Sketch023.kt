@@ -5,7 +5,7 @@ import prockt.KApplet
 
 /*
 
-    Map random branching shape onto surface of a sphere  (iteration 2 - add planet mass)
+    Map random branching shape onto surface of a sphere (iteration 2 - add planet mass)
 
  */
 class Sketch023: KApplet() {

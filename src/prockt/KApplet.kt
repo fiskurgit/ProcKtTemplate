@@ -22,7 +22,7 @@ open class KApplet: KAppletApi() {
 
     fun run() {
         val sketchName = this::class.simpleName
-        PApplet.runSketch(arrayOf(sketchName), this)
+        runSketch(arrayOf(sketchName), this)
         surface.setTitle(sketchName)
     }
 
