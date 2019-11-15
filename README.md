@@ -1,6 +1,8 @@
 # ProcKt Template for Jetbrains IDEA
 
-Completely unofficial [Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching. It's not doing anything clever, just basic inheritance and some utility methods, plus a little command-line tooling. Use with [ProcKtPlugin](https://github.com/fiskurgit/ProcKtPlugin).
+A simple (and completely unofficial) [Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching. Use with [ProcKtPlugin](https://github.com/fiskurgit/ProcKtPlugin) for easier and quicker sketch developing.
+
+![ProcKt CLI screenshot](images/cli_screenshot.png)
 
 ```
 class Sketch: KApplet() {
