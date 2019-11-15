@@ -45,7 +45,7 @@ Processing requires JDK8, OpenJDK is fine: `brew cask install adoptopenjdk8`
 
 See [sketches](https://github.com/fiskurgit/ProcKtTemplate/tree/master/src/prockt/sketches).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/small/sketch012.jpg)![](images/small/sketch013.jpg)![](images/small/sketch014.jpg)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/small/sketch012.jpg)![](images/small/sketch013.jpg)![](images/small/sketch014.jpg)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/small/sketch020.jpg)![](images/small/sketch023.jpg)![](images/small/sketch018.jpg)
 
 ## Licence
