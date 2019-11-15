@@ -1,6 +1,6 @@
 # Grid API
 
-![](images/sketch002_399.jpg)![](images/sketch010_399.jpg)
+![](images/sketch002_399.jpg)    ![](images/sketch010_399.jpg)
 
 A common feature of sketches (at least of [fiskurgit](https://github.com/fiskurgit)'s) is to have random variants of some code displayed in a two dimensional grid.
 
