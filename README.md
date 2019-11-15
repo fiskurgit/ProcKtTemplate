@@ -34,6 +34,12 @@ class Sketch: KApplet() {
 ## Note.
 Processing requires JDK8, OpenJDK is fine: `brew cask install adoptopenjdk8`
 
+## Examples
+
+There's lots of example sketches in [/sketches/](https://github.com/fiskurgit/ProcKtTemplate/tree/master/src/prockt/sketches).
+
+![](images/small/sketch012.jpg)![](images/small/sketch013.jpg)![](images/small/sketch014.jpg)![](images/small/sketch020.jpg)![](images/small/sketch023.jpg)![](images/small/sketch018.jpg)
+
 ## Licence
 
 The Processing core libraries are distributed under a [GPL licence](https://github.com/processing/processing/blob/master/license.txt) -  [this project is too](LICENSE.md).
