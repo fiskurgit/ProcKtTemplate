@@ -10,7 +10,7 @@ import prockt.KApplet
 class Sketch004: KApplet() {
     
     override fun setup() {
-        grid.prepopulate(4, 4, SnowflakeCell::class)
+        grid.prepopulate(3, 3, SnowflakeCell::class)
         stroke(WHITE, 150)
     }
 
