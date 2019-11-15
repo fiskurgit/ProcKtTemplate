@@ -90,7 +90,7 @@ class BasicCell {
     fun draw(kappl: KApplet, origin: PVector, diam: Float, color: Int){
             kappl.fill(color)
             kappl.circle(origin.x, origin.y, diam)
-        }
     }
 }
+
 ```
