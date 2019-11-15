@@ -2,6 +2,13 @@
 
 A simple (and completely unofficial) [Kotlin](https://kotlinlang.org/) wrapper for [Processing](https://processing.org/). Clone, open in [Jetbrains IDEA](https://www.jetbrains.com/idea/), and start sketching. Use with [ProcKtPlugin](https://github.com/fiskurgit/ProcKtPlugin) for easier and quicker sketch developing.
 
+## Usage
+
+Run a sketch in three ways:
+* The default run configuration displays the menu below, enter a sketch number in the terminal.
+* Enter a sketch number as an program argument in the run configuration (to run the same sketch every time).
+* [Install the plugin](https://github.com/fiskurgit/ProcKtPlugin) (to hop between sketches while coding).
+
 ![ProcKt CLI screenshot](images/cli_screenshot.png)
 
 This is just a personal project I use for my own sketches, not a whole lot of thought has gone into it.
