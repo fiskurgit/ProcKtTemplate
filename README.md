@@ -20,6 +20,8 @@ This is just a personal project I use for my own sketches, not a whole lot of th
 * _You should..._ - see above
 * _Can you..._ - see above
 * _This is terrible_ - see above
+* _How do I..._ - sorry, you're on your own
+
 
 ```
 class Sketch: KApplet() {
