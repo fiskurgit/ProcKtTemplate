@@ -8,8 +8,11 @@ import prockt.OneBitFilter
 
 class Sketch025: KApplet() {
 
-    var shape: PShape? = null
-    val FILTER = OneBitFilter.get("Atkinson").threshold(255)
+    companion object{
+        private val FILTER = OneBitFilter.get("Atkinson").threshold(255)
+    }
+
+    private var shape: PShape? = null
     private var sourceImage: PGraphics? = null
     private var filteredImage: PImage? = null
 
@@ -48,7 +51,7 @@ class Sketch025: KApplet() {
         shape = generateShape()
     }
 
-    fun generateShape(): PShape {
+    private fun generateShape(): PShape {
         val shape = createShape()
         shape.beginShape()
         shape.fill(WHITE, 120f)
@@ -56,7 +59,7 @@ class Sketch025: KApplet() {
 
         val vertices = random(10, 100)
 
-        repeat(vertices){index ->
+        repeat(vertices){
             val coord = randomSphereCoord(200, 200)
             shape.vertex(coord.x, coord.y, coord.z)
         }

@@ -11,9 +11,9 @@ Launch a sketch using one of the following:
 
 ![ProcKt CLI screenshot](images/cli_screenshot.png)
 
-This is just a personal project I use for my own sketches, not a whole lot of thought has gone into it.
-
 ## FAQ
+
+This is just a personal project I use for my own sketches, not a whole lot of thought has gone into it.
 
 * _Why don't you..._ - see above
 * _Why do you..._ - see above
