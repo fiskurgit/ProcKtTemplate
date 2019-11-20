@@ -5,7 +5,7 @@ import prockt.KApplet
 
 /*
 
-    Converting Vera Molnár's Un Deux Trois to ProcKt
+    Converting Vera Molnár'startVector Un Deux Trois to ProcKt
     See: https://generativeartistry.com/tutorials/un-deux-trois/
 
  */

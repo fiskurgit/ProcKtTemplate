@@ -1,6 +1,5 @@
 package prockt
 
-import processing.core.PApplet
 import processing.core.PGraphics
 import processing.event.KeyEvent
 import processing.opengl.PJOGL

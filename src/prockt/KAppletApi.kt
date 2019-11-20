@@ -14,6 +14,9 @@ open class KAppletApi: PApplet() {
         val WHITE = Color.WHITE.rgb
         val MOLNAR = Color.decode("#E8E5E1").rgb
         val EIGENGRAU = Color.decode("#16161D").rgb
+        val YELLOW = Color.decode("#FFFF00").rgb
+        val MAGENTA = Color.decode("#FF00cc").rgb
+        val CYAN = Color.decode("#00FFFF").rgb
     }
 
     //Sketch
@@ -98,6 +101,10 @@ open class KAppletApi: PApplet() {
 
     fun circle(x: Number, y: Number, diameter: Number){
         ellipse(x.toFloat(), y.toFloat(), diameter.toFloat(), diameter.toFloat())
+    }
+
+    fun circle(diameter: Number){
+        ellipse(0f, 0f, diameter.toFloat(), diameter.toFloat())
     }
 
     fun point(coord: Coord){
@@ -214,12 +221,27 @@ open class KAppletApi: PApplet() {
 
     data class Coord(var x: Float, var y: Float){
 
+        companion object{
+            fun fromVector(vector: PVector): Coord{
+                return Coord(vector.x, vector.y)
+            }
+
+            fun toVector(coord: Coord): PVector{
+                return PVector(coord.x, coord.y)
+            }
+        }
+
         constructor(x: Int, y: Int) : this(x.toFloat(), y.toFloat())
 
         fun dist(coord: Coord): Float {
             val dx = this.x - coord.x
             val dy = this.y - coord.y
             return Math.sqrt((dx * dx + dy * dy).toDouble()).toFloat()
+        }
+
+        fun set(x: Number, y: Number){
+            this.x = x.toFloat()
+            this.y = y.toFloat()
         }
     }
 
@@ -264,7 +286,7 @@ open class KAppletApi: PApplet() {
         return randomSphereCoord(radius)
     }
 
-    //This isn't weighted, it's a naive implementation where the count at a smaller radius means they're packed closer together
+    //This isn't weighted, it'startVector a naive implementation where the count at a smaller radius means they're packed closer together
     //The visual effect is a weighted distribution so using the method name here, rather than the above method.
     fun randomCircleCoordWeighted(radius: Number): Coord {
         val a = random(0f, TWO_PI)
