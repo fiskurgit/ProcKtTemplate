@@ -6,6 +6,7 @@ import prockt.classloader.SketchFinder
 import java.awt.EventQueue
 import java.io.File
 import java.util.*
+import kotlin.system.exitProcess
 
 /*
 
@@ -81,8 +82,7 @@ class ProcKt {
             println("or 'cs' to generate a markdown contact sheet of all sketches.")
 
             val scanner = Scanner(System.`in`)
-            val input = scanner.next()
-            when (input) {
+            when (val input = scanner.next()) {
                 "cs" -> parse(input)
                 else -> {
                     val index = input.toIntOrNull()
@@ -90,7 +90,7 @@ class ProcKt {
                         index != null -> sketches[(input.toInt()-1)].clazz.newInstance().run()
                         else -> {
                             println("Invalid input: $input")
-                            System.exit(-1)
+                            exitProcess(-1)
                         }
                     }
                 }
@@ -122,7 +122,6 @@ class ProcKt {
             Terminal.lCyan("|  __/| | | (_) | (__| . \\| |_")
             Terminal.lCyan("|_|   |_|  \\___/ \\___|_|\\_\\___|")
             println()
-
         }
     }
 }

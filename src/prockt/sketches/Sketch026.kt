@@ -2,6 +2,7 @@ package prockt.sketches
 
 import prockt.KApplet
 import processing.core.PVector
+import prockt.api.Coord
 
 /*
 

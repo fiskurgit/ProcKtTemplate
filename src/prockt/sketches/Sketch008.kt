@@ -4,6 +4,7 @@ import processing.core.PGraphics
 import processing.core.PImage
 import prockt.KApplet
 import prockt.OneBitFilter
+import prockt.api.Coord
 
 /*
 

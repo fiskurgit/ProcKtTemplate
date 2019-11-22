@@ -1,6 +1,7 @@
 package prockt.sketches
 
 import prockt.KApplet
+import prockt.api.Coord
 
 /*
 

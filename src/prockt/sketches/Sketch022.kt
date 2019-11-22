@@ -2,6 +2,7 @@ package prockt.sketches
 
 import processing.core.PShape
 import prockt.KApplet
+import prockt.api.Coord
 
 /*
 

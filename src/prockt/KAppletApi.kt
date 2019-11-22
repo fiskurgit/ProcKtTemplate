@@ -4,6 +4,8 @@ import processing.core.PApplet
 import processing.core.PConstants
 import processing.core.PImage
 import processing.core.PVector
+import prockt.api.Coord
+import prockt.api.KVector
 import java.awt.Color
 
 open class KAppletApi: PApplet() {
@@ -27,6 +29,10 @@ open class KAppletApi: PApplet() {
 
     fun translate(x: Number, y: Number){
         translate(x.toFloat(), y.toFloat())
+    }
+
+    fun translate(vector: KVector){
+        translate(vector.x, vector.y)
     }
 
     fun overlay(color: Int, alpha: Number){
@@ -84,6 +90,10 @@ open class KAppletApi: PApplet() {
     }
 
     fun line(aCoord: Coord, bCoord: Coord){
+        line(aCoord.x, aCoord.y, bCoord.x, bCoord.y)
+    }
+
+    fun line(aCoord: KVector, bCoord: KVector){
         line(aCoord.x, aCoord.y, bCoord.x, bCoord.y)
     }
 
@@ -216,32 +226,6 @@ open class KAppletApi: PApplet() {
         fun distanceTo(other: Particle): Float{
             //todo - inline this for perf
             return PVector(x, y, z).dist(PVector(other.x, other.y, other.z))
-        }
-    }
-
-    data class Coord(var x: Float, var y: Float){
-
-        companion object{
-            fun fromVector(vector: PVector): Coord{
-                return Coord(vector.x, vector.y)
-            }
-
-            fun toVector(coord: Coord): PVector{
-                return PVector(coord.x, coord.y)
-            }
-        }
-
-        constructor(x: Int, y: Int) : this(x.toFloat(), y.toFloat())
-
-        fun dist(coord: Coord): Float {
-            val dx = this.x - coord.x
-            val dy = this.y - coord.y
-            return Math.sqrt((dx * dx + dy * dy).toDouble()).toFloat()
-        }
-
-        fun set(x: Number, y: Number){
-            this.x = x.toFloat()
-            this.y = y.toFloat()
         }
     }
 
