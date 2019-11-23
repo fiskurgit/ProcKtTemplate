@@ -51,6 +51,7 @@ class Sketch030: KApplet() {
         private var velocity = KVector(0f, 0f)
         private var acceleration: KVector? = null
         private var maxSpeed = 3f
+        private var relationshipLength = random(100, 500)
         var closestDistance = Float.MAX_VALUE
 
         val exes = mutableListOf<Int>()
@@ -77,11 +78,12 @@ class Sketch030: KApplet() {
             }
             currentCompanion = closestMote!!.id
 
-            if(cyclesAttached > 400){
+            if(cyclesAttached > relationshipLength){
                 exes.add(currentCompanion)
 
                 currentCompanion = -1
                 cyclesAttached = 0
+                relationshipLength = random(100, 500)
             }
 
             directionToMote *= when {
