@@ -19,6 +19,12 @@ data class KVector(var x: Float, var y: Float) {
         }
     }
 
+    fun distance(other: KVector): Float{
+        val dx = x - other.x
+        val dy = y - other.y
+        return sqrt(dx * dx + dy * dy)
+    }
+
     fun normalize() = normalise()
 
     fun limit(max: Float){
