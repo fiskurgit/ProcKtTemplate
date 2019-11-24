@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prockt/sketches/Sketch031.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/Sketch031.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/prockt/sketches/Sketch031.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="289">
+              <caret line="154" column="82" lean-forward="true" selection-start-line="154" selection-start-column="82" selection-end-line="154" selection-end-column="82" />
               <folding>
                 <element signature="e#25#72#0" expanded="true" />
               </folding>
@@ -278,7 +277,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574632165140" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574632473555" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="kotlin" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -864,8 +863,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prockt/sketches/Sketch031.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="289">
+          <caret line="154" column="82" lean-forward="true" selection-start-line="154" selection-start-column="82" selection-end-line="154" selection-end-column="82" />
           <folding>
             <element signature="e#25#72#0" expanded="true" />
           </folding>

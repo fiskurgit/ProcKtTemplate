@@ -15,7 +15,7 @@ class Sketch031: KApplet() {
 
     private val moteDiameter = 3f
     private val maxRelationshipMemory = 20
-    private val count = 200
+    private val count = 100
     private var offspring = 0
 
     private val startColor = color("#9d2f4d")
@@ -148,6 +148,9 @@ class Sketch031: KApplet() {
                     val mote = motes.find { mote ->
                         mote.id == sortedDistances[index].first
                     }
+
+                    //Removed because I think it just makes couples coalesce
+                    /*
                     if(mote!!.inRelationship && !foundFriend){
                         //Nearest neighbour in a relationship, move towards them for safety
                         val directionToFriend = mote.location - location
@@ -155,6 +158,8 @@ class Sketch031: KApplet() {
                         acceleration = directionToMote + (directionToFriend * 0.6f)
                         foundFriend = true
                     }
+                    */
+
                     if(!mote.inRelationship && !foundThreat){
                         //Single - is a threat, move away
                         val directionToThreat = mote.location - location
