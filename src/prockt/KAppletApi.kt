@@ -109,6 +109,10 @@ open class KAppletApi: PApplet() {
         ellipse(coord.x, coord.y, diameter.toFloat(), diameter.toFloat())
     }
 
+    fun circle(coord: KVector, diameter: Number){
+        ellipse(coord.x, coord.y, diameter.toFloat(), diameter.toFloat())
+    }
+
     fun circle(x: Number, y: Number, diameter: Number){
         ellipse(x.toFloat(), y.toFloat(), diameter.toFloat(), diameter.toFloat())
     }
