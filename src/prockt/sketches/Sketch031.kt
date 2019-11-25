@@ -68,7 +68,7 @@ class Sketch031: KApplet() {
         }
     }
 
-    inner class Mote(val id: Int, spawnLocation: KVector?,val parentId: Int?){
+    inner class Mote(val id: Int, spawnLocation: KVector?, val parentId: Int?){
 
         constructor(id: Int) : this(id, null, null)
 
@@ -123,7 +123,7 @@ class Sketch031: KApplet() {
                 cyclesAttached++
             }
 
-            inRelationship = cyclesAttached > 10
+            inRelationship = cyclesAttached > 100
 
 
             //Update cloest mote id after we've checked if they were previous closest
@@ -145,6 +145,7 @@ class Sketch031: KApplet() {
             directionToMote *= when {
                 exes.contains(closestMote.id) -> -0.6f
                 (parentId != null && (parentId == closestMote.id)) -> -1.8f
+                (parentId != null && (parentId == closestMote.parentId)) -> -1.8f
                 else -> 0.2f
             }
 
@@ -192,6 +193,12 @@ class Sketch031: KApplet() {
                     }
                 }
             }
+
+            val blackHole = KVector(width/2, height/2)
+            var directionToBlackHole = blackHole - location
+            directionToBlackHole.normalize()
+            directionToBlackHole *= 0.02f
+            acceleration = acceleration!! +  directionToBlackHole
 
             velocity += acceleration!!
             velocity.limit(maxSpeed)
