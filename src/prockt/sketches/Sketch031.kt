@@ -18,19 +18,20 @@ class Sketch031: KApplet() {
     private val count = 100
     private var offspring = 0
 
-    private val startColor = color("#9d2f4d")
-    private val endColor = color("#4973a1")
+    private val startColor = color("#4973a1")
+    private val endColor = color("#9d2f4d")
+    private val coupledColor = WHITE
 
     override fun settings() {
         size(800, 600)
     }
 
     override fun setup() {
+        noStroke()
+        noCursor()
         repeat(count){ index ->
             motes.add(Mote(index))
         }
-        noStroke()
-        noCursor()
     }
 
     override fun draw() {
@@ -41,7 +42,16 @@ class Sketch031: KApplet() {
         }
 
         motes.removeAll{ mote ->
+            if(!mote.alive){
+                fill(endColor)
+                circle(mote.location, 12f)
+            }
             !mote.alive
+        }
+
+        cycleOffspring.forEach { baby ->
+            fill(startColor)
+            circle(baby.location, 12f)
         }
 
         motes.addAll(cycleOffspring)
@@ -58,11 +68,11 @@ class Sketch031: KApplet() {
         }
     }
 
-    inner class Mote(val id: Int, spawnLocation: KVector?){
+    inner class Mote(val id: Int, spawnLocation: KVector?,val parentId: Int?){
 
-        constructor(id: Int) : this(id, null)
+        constructor(id: Int) : this(id, null, null)
 
-        private var location: KVector = when {
+        var location: KVector = when {
             spawnLocation != null -> spawnLocation
             else -> KVector(random(width), random(height))
         }
@@ -70,8 +80,8 @@ class Sketch031: KApplet() {
         private var velocity = KVector(0f, 0f)
         private var acceleration: KVector? = null
         private var maxSpeed = 2f
-        private var relationshipLength = random(100, 500)
-        private var allowedCycles = random(500, 1000)
+        private var relationshipLength = random(400, 900)
+        private var allowedCycles = random(900, 2000)
         private var closestDistance = Float.MAX_VALUE
         private val exes = mutableListOf<Int>()
         private var currentCompanion = -1
@@ -103,22 +113,20 @@ class Sketch031: KApplet() {
                 mote.id == sortedDistances[1].first
             }
 
-            //and their distance value
             closestDistance = sortedDistances[1].second
 
             var directionToMote = closestMote!!.location - location
             directionToMote.normalize()
 
             //Is the closest mote the same as last cycle?
-            inRelationship = when (currentCompanion) {
-                closestMote.id -> {
-                    cyclesAttached++
-                    true
-                }
-                else -> false
+            if(currentCompanion == closestMote.id && closestDistance < 5){
+                cyclesAttached++
             }
 
-            //Update cloest mote id after we've checked if they were previous cloests
+            inRelationship = cyclesAttached > 10
+
+
+            //Update cloest mote id after we've checked if they were previous closest
             currentCompanion = closestMote.id
 
             //Have they been together too long?
@@ -131,9 +139,12 @@ class Sketch031: KApplet() {
                 }
             }
 
-            //If closest neighbour is an ex then move away, otherwise stay close to current companion
+            //If closest neighbour is an ex then move away,
+            //if it's a prent move away quickly,
+            //otherwise stay close to current companion
             directionToMote *= when {
                 exes.contains(closestMote.id) -> -0.6f
+                (parentId != null && (parentId == closestMote.id)) -> -1.8f
                 else -> 0.2f
             }
 
@@ -143,7 +154,7 @@ class Sketch031: KApplet() {
             if(inRelationship){
                 //Find nearest single mote, index 0 is self, index 1 is partner
                 var foundThreat = false
-                var foundFriend = false
+                var foundFriend = true//Should be false if block below is uncommented
                 for(index in 2 until motes.size){
                     val mote = motes.find { mote ->
                         mote.id == sortedDistances[index].first
@@ -160,7 +171,7 @@ class Sketch031: KApplet() {
                     }
                     */
 
-                    if(!mote.inRelationship && !foundThreat){
+                    if(!mote!!.inRelationship && !foundThreat){
                         //Single - is a threat, move away
                         val directionToThreat = mote.location - location
                         directionToThreat.normalise()
@@ -176,7 +187,7 @@ class Sketch031: KApplet() {
                 if(!hasOffspring && cyclesAttached > relationshipLength/2){
                     if(random(100) > 98){
                         hasOffspring = true
-                        cycleOffspring.add(Mote(count + offspring, location))
+                        cycleOffspring.add(Mote(count + offspring, location, id))
                         offspring++
                     }
                 }
@@ -194,8 +205,12 @@ class Sketch031: KApplet() {
         }
 
         fun draw() {
-            val lerpAmount = map(closestDistance, 0, 10, 0f, 1f)
-            fill(lerpColor(startColor, endColor , lerpAmount))
+            if(inRelationship){
+                fill(coupledColor)
+            }else{
+                fill(lerpColor(startColor, endColor ,  map(cycles, 0, allowedCycles, 0f, 1f)))
+            }
+
             circle(location, moteDiameter)
         }
 
