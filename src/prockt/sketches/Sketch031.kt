@@ -79,7 +79,7 @@ class Sketch031: KApplet() {
 
         private var velocity = KVector(0f, 0f)
         private var acceleration: KVector? = null
-        private var maxSpeed = 2f
+        private var maxSpeed = 2.5f
         private var relationshipLength = random(400, 900)
         private var allowedCycles = random(900, 2000)
         private var closestDistance = Float.MAX_VALUE
@@ -140,7 +140,7 @@ class Sketch031: KApplet() {
             }
 
             //If closest neighbour is an ex then move away,
-            //if it's a prent move away quickly,
+            //if it's a parent or siblings move away quickly,
             //otherwise stay close to current companion
             directionToMote *= when {
                 exes.contains(closestMote.id) -> -0.6f
