@@ -12,12 +12,9 @@ class Sketch031: KApplet() {
 
     private val motes = mutableListOf<Mote>()
     private val cycleOffspring = mutableListOf<Mote>()
-
-    private val moteDiameter = 3f
     private val maxRelationshipMemory = 20
     private val count = 100
     private var offspring = 0
-
     private val startColor = color("#4973a1")
     private val endColor = color("#9d2f4d")
     private val coupledColor = WHITE
@@ -57,7 +54,7 @@ class Sketch031: KApplet() {
         motes.addAll(cycleOffspring)
         cycleOffspring.clear()
 
-        fill(BLACK, 20)
+        fill(BLACK, 30)
         rect(0, 0, width, height)
     }
 
@@ -87,7 +84,7 @@ class Sketch031: KApplet() {
         private var currentCompanion = -1
         private var cycles = 0
         private var cyclesAttached = 0
-        private var inRelationship = false
+        var inRelationship = false
         var alive = true
         var hasOffspring = false
 
@@ -98,6 +95,7 @@ class Sketch031: KApplet() {
                 //die
                 alive = false
             }
+
             //Get distances of all motes
             val distances = HashMap<Int, Float>()
             motes.forEach {mote ->
@@ -119,7 +117,7 @@ class Sketch031: KApplet() {
             directionToMote.normalize()
 
             //Is the closest mote the same as last cycle?
-            if(currentCompanion == closestMote.id && closestDistance < 5){
+            if(currentCompanion == closestMote.id && closestDistance < 2.5){
                 cyclesAttached++
             }
 
@@ -136,6 +134,7 @@ class Sketch031: KApplet() {
                     currentCompanion = -1
                     cyclesAttached = 0
                     relationshipLength = random(100, 500)
+                    inRelationship = false
                 }
             }
 
@@ -144,8 +143,8 @@ class Sketch031: KApplet() {
             //otherwise stay close to current companion
             directionToMote *= when {
                 exes.contains(closestMote.id) -> -0.6f
-                (parentId != null && (parentId == closestMote.id)) -> -1.8f
-                (parentId != null && (parentId == closestMote.parentId)) -> -1.8f
+                (parentId != null && (parentId == closestMote.id)) -> -2.4f
+                (parentId != null && (parentId == closestMote.parentId)) -> -2.4f
                 else -> 0.2f
             }
 
@@ -176,7 +175,7 @@ class Sketch031: KApplet() {
                         //Single - is a threat, move away
                         val directionToThreat = mote.location - location
                         directionToThreat.normalise()
-                        acceleration = directionToMote + (directionToThreat * -0.3f)
+                        acceleration = directionToMote + (directionToThreat * -0.4f)
                         foundThreat = true
                     }
 
@@ -185,23 +184,34 @@ class Sketch031: KApplet() {
                     }
                 }
 
-                if(!hasOffspring && cyclesAttached > relationshipLength/2){
-                    if(random(100) > 98){
+                //Arbitary max population count
+                if(!hasOffspring && cyclesAttached > relationshipLength/2 && motes.size < 200){
+                    if(random(100) < 8){
                         hasOffspring = true
-                        cycleOffspring.add(Mote(count + offspring, location, id))
-                        offspring++
+                        val numberOfOffspring = random(1, 2)
+                        repeat(numberOfOffspring){
+                            cycleOffspring.add(Mote(count + offspring, location, id))
+                        }
+
+                        offspring += numberOfOffspring
                     }
                 }
             }
 
-            val blackHole = KVector(width/2, height/2)
-            var directionToBlackHole = blackHole - location
-            directionToBlackHole.normalize()
-            directionToBlackHole *= 0.02f
-            acceleration = acceleration!! +  directionToBlackHole
-
             velocity += acceleration!!
-            velocity.limit(maxSpeed)
+
+            if(inRelationship){
+                val blackHole = KVector(width/2, height/2)
+                var directionToBlackHole = blackHole - location
+                directionToBlackHole.normalize()
+                directionToBlackHole *= 0.08f
+                velocity += directionToBlackHole
+
+                velocity.limit(maxSpeed / 1.25f)
+            }else{
+                velocity.limit(maxSpeed)
+            }
+
             location += velocity
 
             if (exes.size == maxRelationshipMemory) exes.removeAt(0)//Forget oldest relationships
@@ -218,7 +228,9 @@ class Sketch031: KApplet() {
                 fill(lerpColor(startColor, endColor ,  map(cycles, 0, allowedCycles, 0f, 1f)))
             }
 
-            circle(location, moteDiameter)
+            val diam = map(cycles, 0, allowedCycles, 2, 4.5)
+
+            circle(location, diam)
         }
 
         private fun checkBounds() {
@@ -226,7 +238,6 @@ class Sketch031: KApplet() {
                 location.x > width -> location.x = 0f
                 location.x < 0 -> location.x = width.toFloat()
             }
-
             when {
                 location.y > height -> location.y = 0f
                 location.y < 0 -> location.y = height.toFloat()

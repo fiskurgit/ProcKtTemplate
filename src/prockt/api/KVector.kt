@@ -7,6 +7,10 @@ data class KVector(var x: Float, var y: Float) {
     constructor(x: Number, y: Number) : this(x.toFloat(), y.toFloat())
     constructor(coord: Coord) : this(coord.x, coord.y)
 
+    fun reset(){
+        x = 0f
+        y = 0f
+    }
     fun magnitude(): Float{
         return sqrt(x * x + y * y)
     }
