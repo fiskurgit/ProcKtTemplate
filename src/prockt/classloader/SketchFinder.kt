@@ -38,7 +38,7 @@ object SketchFinder {
     fun getSketches(): List<Class<KApplet>> {
         val allClasses= getClasses("prockt")
         return allClasses.filter {
-            it.superclass.simpleName.endsWith("KApplet")
+            it.superclass?.simpleName?.endsWith("KApplet") ?: false
         }.map {
             it as Class<KApplet>
         }

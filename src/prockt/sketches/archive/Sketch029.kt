@@ -1,27 +1,29 @@
-package prockt.sketches
+package prockt.sketches.archive
 
 import prockt.KApplet
 import prockt.api.KVector
 
 /*
 
-    Head away from nearest neighbour
+    Attracted to nearest neighbour
 
  */
-
-class Sketch028: KApplet() {
+class Sketch029: KApplet() {
 
     private val motes = mutableListOf<Mote>()
+
+    private val count = 200
 
     override fun settings() {
         size(800, 600)
     }
 
     override fun setup() {
-        repeat(60){
+        repeat(count){
             motes.add(Mote())
         }
         noStroke()
+        noCursor()
     }
 
     override fun draw() {
@@ -30,13 +32,13 @@ class Sketch028: KApplet() {
             mote.draw()
         }
 
-        fill(BLACK, 20)
+        fill(BLACK, 30)
         rect(0, 0, width, height)
     }
 
     override fun mousePressed() {
         motes.clear()
-        repeat(60){
+        repeat(count){
             motes.add(Mote())
         }
     }
@@ -45,11 +47,12 @@ class Sketch028: KApplet() {
         private var location = KVector(random(width), random(height))
         private var velocity = KVector(0f, 0f)
         private var acceleration: KVector? = null
-        private var maxSpeed = 5f
+        private var maxSpeed = 3f
+        var closestDistance = Float.MAX_VALUE
 
-        fun update(): Mote{
+        fun update(): Mote {
             var closestMote: Mote? = null
-            var closestDistance = Float.MAX_VALUE
+            closestDistance = Float.MAX_VALUE
             motes.forEach {mote ->
                 val distance = location.distance(mote.location)
                 if(distance > 1 && distance < closestDistance){
@@ -59,9 +62,8 @@ class Sketch028: KApplet() {
             }
 
             var directionToMote = closestMote!!.location - location
-
             directionToMote.normalize()
-            directionToMote *= -2.1f
+            directionToMote *= 0.2f
 
             acceleration = directionToMote
 
@@ -75,7 +77,8 @@ class Sketch028: KApplet() {
         }
 
         fun draw() {
-            fill(MOLNAR)
+            val color = colorLerp("#9d2f4d", "#4973a1" , closestDistance, 20)
+            fill(color)
             ellipse(location.x, location.y, 4, 4)
         }
 

@@ -1,4 +1,4 @@
-package prockt.sketches
+package prockt.sketches.archive
 
 import prockt.KApplet
 import prockt.api.KVector
@@ -6,6 +6,7 @@ import prockt.api.KVector
 /*
 
     Life, death, birth.
+    todo: use of MutableIterator here would drop a couple of repeat iterations and allocations
 
  */
 class Sketch031: KApplet() {
@@ -88,7 +89,7 @@ class Sketch031: KApplet() {
         var alive = true
         var hasOffspring = false
 
-        fun update(): Mote{
+        fun update(): Mote {
             if(motes.size == 1) return this
             cycles++
             if(cycles == allowedCycles){

@@ -1,44 +1,41 @@
-package prockt.sketches
+package prockt.sketches.archive
 
 import prockt.KApplet
 import prockt.api.KVector
 
 /*
 
-    Attracted to nearest neighbour
+    KVector beginnings - trapped in orbit, but trying to be alone.
+    See: https://processing.org/tutorials/pvector/
 
  */
-class Sketch029: KApplet() {
+
+class Sketch027: KApplet() {
 
     private val motes = mutableListOf<Mote>()
 
-    private val count = 200
-
-    override fun settings() {
-        size(800, 600)
-    }
-
     override fun setup() {
-        repeat(count){
+        repeat(30){
             motes.add(Mote())
         }
         noStroke()
-        noCursor()
     }
 
     override fun draw() {
+        background(EIGENGRAU)
+
+        fill(WHITE, 200)
+        circle(width/2, height/2, 30)
+
         motes.forEach { mote ->
             mote.update().draw()
             mote.draw()
         }
-
-        fill(BLACK, 30)
-        rect(0, 0, width, height)
     }
 
     override fun mousePressed() {
         motes.clear()
-        repeat(count){
+        repeat(60){
             motes.add(Mote())
         }
     }
@@ -47,25 +44,25 @@ class Sketch029: KApplet() {
         private var location = KVector(random(width), random(height))
         private var velocity = KVector(0f, 0f)
         private var acceleration: KVector? = null
-        private var maxSpeed = 3f
-        var closestDistance = Float.MAX_VALUE
+        private var maxSpeed = 5f
 
-        fun update(): Mote{
-            var closestMote: Mote? = null
-            closestDistance = Float.MAX_VALUE
+        fun update(): Mote {
+            var agg = KVector(0, 0)
             motes.forEach {mote ->
-                val distance = location.distance(mote.location)
-                if(distance > 1 && distance < closestDistance){
-                    closestMote = mote
-                    closestDistance = distance
-                }
+                var directionToMote = mote.location - location
+
+                directionToMote.normalize()
+                directionToMote *= -0.1f
+                agg += directionToMote
             }
 
-            var directionToMote = closestMote!!.location - location
-            directionToMote.normalize()
-            directionToMote *= 0.2f
+            val blackHole = KVector(width/2, height/2)
+            var directionToBlackHole = blackHole - location
+            directionToBlackHole.normalize()
+            directionToBlackHole *= 2.4f
+            agg += directionToBlackHole
 
-            acceleration = directionToMote
+            acceleration = agg/motes.size
 
             velocity += acceleration!!
             velocity.limit(maxSpeed)
@@ -77,8 +74,7 @@ class Sketch029: KApplet() {
         }
 
         fun draw() {
-            val color = colorLerp("#9d2f4d", "#4973a1" , closestDistance, 20)
-            fill(color)
+            fill(MOLNAR)
             ellipse(location.x, location.y, 4, 4)
         }
 
