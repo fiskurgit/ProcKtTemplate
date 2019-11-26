@@ -26,4 +26,8 @@ data class Coord(var x: Float, var y: Float){
         this.x = x.toFloat()
         this.y = y.toFloat()
     }
+
+    fun toVector(): KVector{
+        return KVector(x, y)
+    }
 }

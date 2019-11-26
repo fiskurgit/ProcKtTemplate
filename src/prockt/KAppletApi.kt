@@ -14,6 +14,8 @@ open class KAppletApi: PApplet() {
         const val DEFAULT_SIZE = 600
         val BLACK = Color.BLACK.rgb
         val WHITE = Color.WHITE.rgb
+        val RED = Color.RED.rgb
+        val GREEN = Color.GREEN.rgb
         val MOLNAR = Color.decode("#E8E5E1").rgb
         val EIGENGRAU = Color.decode("#16161D").rgb
         val YELLOW = Color.decode("#FFFF00").rgb

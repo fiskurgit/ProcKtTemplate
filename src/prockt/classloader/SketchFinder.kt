@@ -11,7 +11,7 @@ object SketchFinder {
         val allClasses= getClasses("prockt")
 
         return allClasses.filter {
-            it.superclass.simpleName.endsWith("KApplet")
+            it.superclass?.simpleName?.endsWith("KApplet") ?: false
         }.map {
 
             val workingDir = System.getProperty("user.dir")

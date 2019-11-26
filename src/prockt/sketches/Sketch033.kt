@@ -1,13 +1,21 @@
-package prockt.sketches.sk032
+package prockt.sketches
 
 import prockt.KApplet
 import prockt.api.Coord
 import prockt.api.Beam
+import prockt.sketches.sk032.MirrorObject
 
-class Sketch032: KApplet() {
+class Sketch033: KApplet() {
 
     private val mirrorCount = 50
     private val mirrors = mutableListOf<MirrorObject>()
+    private lateinit var center: Coord
+    private val light = color(255, 1)
+
+    override fun settings() {
+        mode(P3D)
+        super.settings()
+    }
 
     override fun setup() {
         repeat(mirrorCount){
@@ -15,48 +23,24 @@ class Sketch032: KApplet() {
         }
 
         noCursor()
+        background(BLACK)
+        blendMode(ADD)
+        center = Coord(width/2, height/2)
     }
 
     override fun draw() {
-        background(BLACK)
-        stroke(WHITE)
-
-        val center = Coord(width/2, height/2)
-        val mouse = Coord(mouseX, mouseY)
-        val mouseBeam = Beam(center, mouse)
-
-        mirrors.forEach { mirror ->
-            mirror.draw(this)
+        repeat(10) {
+            run(Beam(center, random(TWO_PI), width * height.toFloat()))
         }
-
-        run(mouseBeam)
-
-        mouseBeam.draw(this, color(255, 50))
-
-        fill(GREEN)
-        circle(mouse, 8)
-
-        fill(WHITE)
-        circle(center, 5)
-
-        noLoop()
     }
 
-    override fun mouseMoved() {
-        loop()
-    }
-
-    fun run(beam: Beam?){
-
-
+    private fun run(beam: Beam?){
         if(beam == null) return
-
-        val reflextion = processBeam(beam)
-
-        run(reflextion)
+        val reflection = processBeam(beam)
+        run(reflection)
     }
 
-    fun processBeam(beam: Beam?): Beam?{
+    private fun processBeam(beam: Beam?): Beam?{
         if(beam == null) return null
 
         var closestMirror: MirrorObject?  = null
@@ -79,7 +63,7 @@ class Sketch032: KApplet() {
 
         if(closestMirror != null){
             val collisionBeam = Beam(beam.start, closestCollisionCoord!!)
-            collisionBeam.draw(this, MAGENTA)
+            collisionBeam.draw(this, light)
         }
 
         val reflectBeam = closestMirror?.reflection(beam)
@@ -87,30 +71,17 @@ class Sketch032: KApplet() {
 
         if(reflectBeam == null){
             //Beam exits drawing area
-            beam.draw(this, MAGENTA)
+            beam.draw(this, light)
         }
 
         return reflectBeam
     }
 
-    override fun keyPressed() {
+    override fun mouseClicked() {
+        background(BLACK)
         mirrors.clear()
         repeat(mirrorCount){
             mirrors.add(MirrorObject(Coord(random(width), random(height)), random(20f, 100f), radians(random(0f, 360f))))
         }
-    }
-
-    override fun mouseClicked() {
-        val mouseCoord = Coord(mouseX, mouseY)
-        var closestMirror: MirrorObject? = null
-        var closestDistance = width * height
-        mirrors.forEach { mirror ->
-            val distance = mouseCoord.dist(mirror.coord)
-            if (distance < closestDistance) {
-                closestDistance = distance.toInt()
-                closestMirror = mirror
-            }
-        }
-        closestMirror!!.flip()
     }
 }

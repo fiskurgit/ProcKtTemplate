@@ -1,11 +1,25 @@
 package prockt.api
 
 import processing.core.PApplet.sqrt
+import processing.core.PVector
 
 data class KVector(var x: Float, var y: Float) {
 
     constructor(x: Number, y: Number) : this(x.toFloat(), y.toFloat())
     constructor(coord: Coord) : this(coord.x, coord.y)
+
+    companion object{
+        fun fromPVector(pvector: PVector): KVector{
+            return KVector(pvector.x, pvector.y)
+        }
+
+        fun normal(vectorA: KVector, vectorB: KVector): KVector{
+            val delta = vectorA - vectorB
+            delta.normalize()
+            return KVector(-delta.y, delta.x)
+        }
+    }
+
 
     fun reset(){
         x = 0f
@@ -61,5 +75,13 @@ data class KVector(var x: Float, var y: Float) {
 
     operator fun div(value: Number): KVector {
         return KVector(this.x / value.toFloat(), this.y / value.toFloat())
+    }
+
+    fun toPVector(): PVector {
+        return PVector(x, y)
+    }
+
+    fun clone(): KVector {
+        return KVector(x, y)
     }
 }
