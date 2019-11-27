@@ -13,10 +13,22 @@ data class KVector(var x: Float, var y: Float) {
             return KVector(pvector.x, pvector.y)
         }
 
+        fun dot(v1: KVector, v2: KVector): Float {
+            return v1.x * v2.x + v1.y * v2.y
+        }
+
+        fun direction(start: KVector, end: KVector): KVector {
+            return KVector(end.x - start.x, end.y - start.y)
+        }
+
         fun normal(vectorA: KVector, vectorB: KVector): KVector{
             val delta = vectorA - vectorB
             delta.normalize()
             return KVector(-delta.y, delta.x)
+        }
+
+        fun empty(): KVector{
+            return KVector(0, 0)
         }
     }
 
@@ -41,6 +53,20 @@ data class KVector(var x: Float, var y: Float) {
         val dx = x - other.x
         val dy = y - other.y
         return sqrt(dx * dx + dy * dy)
+    }
+
+    fun direction(other: KVector): KVector {
+        return KVector(other.x - x, other.y - y)
+    }
+
+    fun dot(other: KVector): Float {
+        return x * other.x + y * other.y
+    }
+
+    fun perpendicular(): KVector {
+        val pX = -y
+        val pY = x
+        return KVector(pX, pY)
     }
 
     fun normalize() = normalise()

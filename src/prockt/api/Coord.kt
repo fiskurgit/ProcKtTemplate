@@ -8,10 +8,6 @@ data class Coord(var x: Float, var y: Float){
         fun fromVector(vector: PVector): Coord{
             return Coord(vector.x, vector.y)
         }
-
-        fun toVector(coord: Coord): PVector {
-            return PVector(coord.x, coord.y)
-        }
     }
 
     constructor(x: Int, y: Int) : this(x.toFloat(), y.toFloat())
@@ -29,5 +25,13 @@ data class Coord(var x: Float, var y: Float){
 
     fun toVector(): KVector{
         return KVector(x, y)
+    }
+
+    fun toPVector(): PVector{
+        return PVector(x, y)
+    }
+
+    fun clone(): Coord{
+        return Coord(x, y)
     }
 }

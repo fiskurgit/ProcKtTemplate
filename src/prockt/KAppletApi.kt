@@ -15,6 +15,7 @@ open class KAppletApi: PApplet() {
         val BLACK = Color.BLACK.rgb
         val WHITE = Color.WHITE.rgb
         val RED = Color.RED.rgb
+        val BLUE = Color.BLUE.rgb
         val GREEN = Color.GREEN.rgb
         val MOLNAR = Color.decode("#E8E5E1").rgb
         val EIGENGRAU = Color.decode("#16161D").rgb

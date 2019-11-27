@@ -1,19 +1,19 @@
-package prockt.sketches.sk032
+package prockt.sketches.sk033
 
 import prockt.KApplet
 import prockt.api.Coord
 import prockt.api.Beam
 
-class Sketch032: KApplet() {
+class Sketch033: KApplet() {
 
-    private val mirrorCount = 50
-    private val mirrors = mutableListOf<MirrorObject>()
+    private val circlesCount = 15
+    private val circles = mutableListOf<CircleObject>()
 
     private var maxRayLength: Float = 2000f
 
     override fun setup() {
-        repeat(mirrorCount){
-            mirrors.add( MirrorObject(Coord(random(width), random(height)), random(20f, 100f), radians(random(0f, 360f))))
+        repeat(circlesCount){
+            circles.add(CircleObject(Coord(random(width), random(height)), random(50f, 100f)))
         }
 
         maxRayLength = sqrt(sq(width.toFloat()) + sq(height.toFloat()))
@@ -29,13 +29,16 @@ class Sketch032: KApplet() {
         val mouse = Coord(mouseX, mouseY)
         val mouseBeam = Beam(center, mouse)
 
-        mirrors.forEach { mirror ->
-            mirror.draw(this)
+        circles.forEach { circle ->
+            circle.draw(this)
         }
+
+
+        mouseBeam.draw(this, color(255, 50))
 
         run(mouseBeam)
 
-        mouseBeam.draw(this, color(255, 50))
+
 
         fill(GREEN)
         circle(mouse, 8)
@@ -52,42 +55,48 @@ class Sketch032: KApplet() {
 
     private fun run(beam: Beam?){
         if(beam == null) return
-        run(processBeam(beam))
+
+        val rBeam = processBeam(beam)
+        run(rBeam)
     }
 
     private fun processBeam(beam: Beam?): Beam?{
         if(beam == null) return null
 
-        var closestMirror: MirrorObject?  = null
-        var closestDistance = width * width * height.toFloat()
+        var closestCircle: CircleObject?  = null
+        var closestDistance = (width * width) * height.toFloat()
         var closestCollisionCoord: Coord? = null
-        mirrors.forEach { mirror ->
-            if(mirror != beam.originObject) {
-                val collisionCoord = mirror.collision(beam)
+        circles.forEach { circle ->
+            if(circle != beam.originObject) {
+                val collisionCoord = circle.collision(beam)
                 if (collisionCoord != null) {
                     val distance = beam.start.dist(collisionCoord)
-
                     if (distance < closestDistance) {
                         closestDistance = distance
-                        closestMirror = mirror
-                        closestCollisionCoord = collisionCoord
+                        closestCircle = circle
+                        closestCollisionCoord = collisionCoord.clone()
                     }
                 }
             }
         }
 
-        if(closestMirror != null){
-            val collisionBeam = Beam(beam.start, closestCollisionCoord!!)
-            collisionBeam.draw(this, MAGENTA)
+        var reflectBeam: Beam? = null
+
+        closestCollisionCoord?.let {coord ->
+            closestCircle?.drawNormal(this, coord)
+            val collisionBeam = Beam(beam.start, coord)
+            collisionBeam.draw(this, YELLOW)
+
+            fill(CYAN)
+            noStroke()
+            circle(coord, 10)
+
+            reflectBeam = closestCircle?.reflection(beam)
+            reflectBeam?.setOrigin(closestCircle)
+
         }
 
-        val reflectBeam = closestMirror?.reflection(beam)
-        reflectBeam?.setOrigin(closestMirror)
-
         if(reflectBeam == null){
-            //Beam exits drawing area
-            beam.draw(this, MAGENTA)
-
             var direction = beam.direction()
             direction *= maxRayLength
             val outOfBoundsBeam = Beam(beam.start, direction.coord())
@@ -97,10 +106,10 @@ class Sketch032: KApplet() {
         return reflectBeam
     }
 
-    override fun keyPressed() {
-        mirrors.clear()
-        repeat(mirrorCount){
-            mirrors.add(MirrorObject(Coord(random(width), random(height)), random(20f, 100f), radians(random(0f, 360f))))
+    override fun mouseClicked() {
+        circles.clear()
+        repeat(circlesCount){
+            circles.add(CircleObject(Coord(random(width), random(height)), random(20f, 100f)))
         }
     }
 }
