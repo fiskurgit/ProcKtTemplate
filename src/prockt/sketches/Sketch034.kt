@@ -49,10 +49,8 @@ class Sketch034: KApplet() {
             position.x += direction.x
             position.y += direction.y
 
-            if (position.x + radius > width) direction.x *= -1
-            if (position.x + radius < 0) direction.x *= -1
-            if (position.y + radius > height) direction.y *= -1
-            if (position.y + radius < 0) direction.y *= -1
+            if (position.x > Sketch035.PROCESS_DIAM || position.x < 0) direction.x *= -1
+            if (position.y > Sketch035.PROCESS_DIAM || position.y < 0) direction.y *= -1
         }
     }
 }
