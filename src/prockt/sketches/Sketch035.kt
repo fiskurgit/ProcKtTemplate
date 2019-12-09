@@ -10,15 +10,15 @@ class Sketch035: KApplet() {
 
     companion object{
         const val PROCESS_DIAM = 300
-        const val SKETCH_SIZE = 600
-        val FILTER = OneBitFilter.get("Stucki").threshold(255)
+        const val SKETCH_SIZE = 800
+        val FILTER = OneBitFilter.get("Atkinson").threshold(255)
     }
 
     private var sourceImage: PGraphics? = null
     private var filteredImage: PImage? = null
 
-    private val ballCount = 5
-    private val numberOfBands = 8
+    private val ballCount = 15
+    private val numberOfBands = 6
     private var balls = mutableListOf<Metaball>()
 
     override fun settings() {
@@ -63,12 +63,13 @@ class Sketch035: KApplet() {
 
     inner class Metaball{
         var direction = KVector.randomDirection(this@Sketch035)
+        var velocity = random(1, 5)
         var position = KVector(random(0f, PROCESS_DIAM.toFloat()), random(0f, PROCESS_DIAM.toFloat()))
-        val radius = random(6, 10)
+        val radius = random(2, 5)
 
         fun update(){
-            position.x += direction.x
-            position.y += direction.y
+            position.x += (direction.x * velocity)
+            position.y += (direction.y * velocity)
 
             if (position.x + radius > PROCESS_DIAM) direction.x *= -1
             if (position.x + radius < 0) direction.x *= -1
