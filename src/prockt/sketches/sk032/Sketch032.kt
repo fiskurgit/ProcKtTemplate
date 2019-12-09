@@ -15,7 +15,7 @@ class Sketch032: KApplet() {
         repeat(mirrorCount){
             mirrors.add( MirrorObject(Coord(random(width), random(height)), random(20f, 100f), radians(random(0f, 360f))))
         }
-
+31
         maxRayLength = sqrt(sq(width.toFloat()) + sq(height.toFloat()))
 
         noCursor()

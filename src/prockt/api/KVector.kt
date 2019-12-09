@@ -1,7 +1,9 @@
 package prockt.api
 
+import processing.core.PApplet
 import processing.core.PApplet.sqrt
 import processing.core.PVector
+import prockt.KApplet
 
 data class KVector(var x: Float, var y: Float) {
 
@@ -15,6 +17,16 @@ data class KVector(var x: Float, var y: Float) {
 
         fun dot(v1: KVector, v2: KVector): Float {
             return v1.x * v2.x + v1.y * v2.y
+        }
+
+        fun randomDirection(kapl: KApplet): KVector{
+            val direction = KVector(kapl.random(-1f, 1f), kapl.random(-1f, 1f))
+            direction.normalise()
+            return direction
+        }
+
+        fun randomPosition(kapl: KApplet): KVector{
+            return KVector(kapl.random(0f, kapl.width.toFloat()), kapl.random(0f, kapl.height.toFloat()))
         }
 
         fun direction(start: KVector, end: KVector): KVector {
