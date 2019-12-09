@@ -41,7 +41,7 @@ open class KApplet: KAppletApi() {
         when {
             width == 100 && height == 100 -> size(DEFAULT_SIZE)
         }
-        PJOGL.setIcon("prockt.png")
+        //PJOGL.setIcon("prockt.png")
         grid.width = width
         grid.height = height
 

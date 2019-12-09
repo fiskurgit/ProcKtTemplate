@@ -2,144 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b211b9e-8719-4abb-adaa-92c62b8ef66c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/prockt/sketches/Sketch034.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prockt/sketches/Sketch035.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noloop_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/noloop_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/META-INF/ProcKt.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/META-INF/ProcKt.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter2By2Bayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter2By2Bayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter3By3Bayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter3By3Bayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter4By4Bayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter4By4Bayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter5By3Bayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter5By3Bayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter8By48ayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Filter8By48ayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterAtkinson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterAtkinson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterBurkes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterBurkes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterFalseFloydSteinberg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterFalseFloydSteinberg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterFloydSteinberg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterFloydSteinberg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterJarvisJudiceNinke.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterJarvisJudiceNinke.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterLeftToRightErrorDiffusion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterLeftToRightErrorDiffusion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterNewspaperHalftone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterNewspaperHalftone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterRandom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterRandom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterSierra.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterSierra.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterSierraLite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterSierraLite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterStucki.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterStucki.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterThreshold.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterThreshold.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterTwoRowSierra.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/FilterTwoRowSierra.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/KApplet$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/KApplet$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/KApplet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/KApplet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi$Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi$Line.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi$Particle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi$Particle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/KAppletApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/OneBitFilter$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/OneBitFilter$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/OneBitFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/OneBitFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt$Companion$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt$Companion$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt$Companion$parse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt$Companion$parse$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/ProcKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Terminal$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Terminal$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/Terminal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Beam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Beam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Coord$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Coord$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Coord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Coord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/KVector$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/KVector$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/KVector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/KVector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Objekt$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Objekt$DefaultImpls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Objekt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/api/Objekt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/Archiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/Archiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/ContactSheet$chooseExportDirectory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/ContactSheet$chooseExportDirectory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/ContactSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/ContactSheet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/Sketch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/Sketch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/SketchFinder$getClasses$$inlined$sortBy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/SketchFinder$getClasses$$inlined$sortBy$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/SketchFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/classloader/SketchFinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch006.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch006.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch007.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch007.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch008$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch008$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch008$CoordVector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch008$CoordVector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch008.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch008.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch009.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch009.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch011$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch011$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch011.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch011.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch012$Body.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch012$Body.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch012$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch012$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch012.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch012.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch013$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch013$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch013.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch013.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch014$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch014$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch014.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch014.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch015.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch015.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch016.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch016.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch017$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch017$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch017.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch017.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch018$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch018$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch018.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch018.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch019$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch019$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch019.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch019.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch020.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch020.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch021.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch021.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch022.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch022.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch023.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch023.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch024.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch024.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch025$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch025$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch025.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch025.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch026$Mirror.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch026$Mirror.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch026$Ray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch026$Ray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch026.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch026.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch027$Mote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch027$Mote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch027.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch027.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch028$Mote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch028$Mote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch028.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch028.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch029$Mote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch029$Mote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch029.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch029.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch030$Mote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch030$Mote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch030.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch030.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031$Mote$update$$inlined$sortedBy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031$Mote$update$$inlined$sortedBy$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031$Mote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031$Mote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031$draw$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031$draw$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/Sketch031.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk001/BasicCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk001/BasicCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk001/Sketch001.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk001/Sketch001.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk002/HexagramCell$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk002/HexagramCell$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk002/HexagramCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk002/HexagramCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk002/Sketch002.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk002/Sketch002.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk003/RandomisedCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk003/RandomisedCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk003/Sketch003.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk003/Sketch003.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk004/Sketch004.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk004/Sketch004.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk004/SnowflakeCell$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk004/SnowflakeCell$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk004/SnowflakeCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk004/SnowflakeCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk005/DotFillCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk005/DotFillCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk005/Sketch005.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk005/Sketch005.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk010/RndCircleCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk010/RndCircleCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk010/Sketch010.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/archive/sk010/Sketch010.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk032/MirrorObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk032/MirrorObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk032/Sketch032.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk032/Sketch032.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk033/CircleObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk033/CircleObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk033/MirrorObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk033/MirrorObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk033/Sketch033.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/sk033/Sketch033.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/core.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/export.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt-natives-linux-aarch64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt-natives-linux-amd64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt-natives-linux-armv6hf.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt-natives-linux-i586.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt-natives-macosx-universal.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt-natives-windows-amd64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt-natives-windows-i586.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/gluegen-rt.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/itext.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all-natives-linux-aarch64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all-natives-linux-amd64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all-natives-linux-armv6hf.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all-natives-linux-i586.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all-natives-macosx-universal.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all-natives-windows-amd64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all-natives-windows-i586.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/jogl-all.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProcessingKt/pdf.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prockt/api/KVector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/api/KVector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prockt/sketches/sk032/Sketch032.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/sk032/Sketch032.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/Sketch034$Metaball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/Sketch034$Metaball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/Sketch034.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProcKt/prockt/sketches/Sketch034.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prockt/KApplet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/KApplet.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prockt/sketches/Sketch034.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/prockt/sketches/Sketch034.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +77,7 @@
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574875792114" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="kotlin" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/p5libs/core.jar!/" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15287356" />
@@ -236,7 +105,7 @@
     <configuration name="prockt.ProcKt" type="JetRunConfigurationType" factoryName="Kotlin" nameIsGenerated="true">
       <module name="ProcKt" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="35" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -273,6 +142,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="102" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575909421599">
+      <screen x="0" y="27" width="1280" height="822" />
+    </state>
+    <state x="102" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1280.822@0.27.1280.822" timestamp="1575909421599" />
     <state x="487" y="313" width="302" height="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575742628788">
       <screen x="0" y="27" width="1280" height="822" />
     </state>
@@ -281,26 +154,26 @@
       <screen x="0" y="27" width="1280" height="822" />
     </state>
     <state x="224" y="86" width="824" height="701" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.27.1280.822@0.27.1280.822" timestamp="1575742625296" />
-    <state x="422" y="192" width="424" height="501" key="FileChooserDialogImpl" timestamp="1575742619063">
+    <state x="422" y="182" width="486" height="501" key="FileChooserDialogImpl" timestamp="1575907730985">
       <screen x="0" y="27" width="1280" height="822" />
     </state>
-    <state x="422" y="192" width="424" height="501" key="FileChooserDialogImpl/0.27.1280.822@0.27.1280.822" timestamp="1575742619063" />
-    <state width="1256" height="128" key="GridCell.Tab.0.bottom" timestamp="1575905831762">
+    <state x="422" y="182" width="486" height="501" key="FileChooserDialogImpl/0.27.1280.822@0.27.1280.822" timestamp="1575907730985" />
+    <state width="1256" height="128" key="GridCell.Tab.0.bottom" timestamp="1575911073627">
       <screen x="0" y="27" width="1280" height="822" />
     </state>
-    <state width="1256" height="128" key="GridCell.Tab.0.bottom/0.27.1280.822@0.27.1280.822" timestamp="1575905831762" />
-    <state width="1256" height="128" key="GridCell.Tab.0.center" timestamp="1575905831761">
+    <state width="1256" height="128" key="GridCell.Tab.0.bottom/0.27.1280.822@0.27.1280.822" timestamp="1575911073627" />
+    <state width="1256" height="128" key="GridCell.Tab.0.center" timestamp="1575911073626">
       <screen x="0" y="27" width="1280" height="822" />
     </state>
-    <state width="1256" height="128" key="GridCell.Tab.0.center/0.27.1280.822@0.27.1280.822" timestamp="1575905831761" />
-    <state width="1256" height="128" key="GridCell.Tab.0.left" timestamp="1575905831761">
+    <state width="1256" height="128" key="GridCell.Tab.0.center/0.27.1280.822@0.27.1280.822" timestamp="1575911073626" />
+    <state width="1256" height="128" key="GridCell.Tab.0.left" timestamp="1575911073625">
       <screen x="0" y="27" width="1280" height="822" />
     </state>
-    <state width="1256" height="128" key="GridCell.Tab.0.left/0.27.1280.822@0.27.1280.822" timestamp="1575905831761" />
-    <state width="1256" height="128" key="GridCell.Tab.0.right" timestamp="1575905831762">
+    <state width="1256" height="128" key="GridCell.Tab.0.left/0.27.1280.822@0.27.1280.822" timestamp="1575911073625" />
+    <state width="1256" height="128" key="GridCell.Tab.0.right" timestamp="1575911073627">
       <screen x="0" y="27" width="1280" height="822" />
     </state>
-    <state width="1256" height="128" key="GridCell.Tab.0.right/0.27.1280.822@0.27.1280.822" timestamp="1575905831762" />
+    <state width="1256" height="128" key="GridCell.Tab.0.right/0.27.1280.822@0.27.1280.822" timestamp="1575911073627" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
