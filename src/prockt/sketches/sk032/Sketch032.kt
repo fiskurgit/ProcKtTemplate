@@ -2,7 +2,7 @@ package prockt.sketches.sk032
 
 import prockt.KApplet
 import prockt.api.Coord
-import prockt.api.Beam
+import prockt.api.ray.Ray
 
 class Sketch032: KApplet() {
 
@@ -27,7 +27,7 @@ class Sketch032: KApplet() {
 
         val center = Coord(width/2, height/2)
         val mouse = Coord(mouseX, mouseY)
-        val mouseBeam = Beam(center, mouse)
+        val mouseBeam = Ray(center, mouse)
 
         mirrors.forEach { mirror ->
             mirror.draw(this)
@@ -50,22 +50,22 @@ class Sketch032: KApplet() {
         loop()
     }
 
-    private fun run(beam: Beam?){
-        if(beam == null) return
-        run(processBeam(beam))
+    private fun run(ray: Ray?){
+        if(ray == null) return
+        run(processBeam(ray))
     }
 
-    private fun processBeam(beam: Beam?): Beam?{
-        if(beam == null) return null
+    private fun processBeam(ray: Ray?): Ray?{
+        if(ray == null) return null
 
         var closestMirror: MirrorObject?  = null
         var closestDistance = width * width * height.toFloat()
         var closestCollisionCoord: Coord? = null
         mirrors.forEach { mirror ->
-            if(mirror != beam.originObject) {
-                val collisionCoord = mirror.collision(beam)
+            if(mirror != ray.originObject) {
+                val collisionCoord = mirror.collision(ray)
                 if (collisionCoord != null) {
-                    val distance = beam.start.dist(collisionCoord)
+                    val distance = ray.start.dist(collisionCoord)
 
                     if (distance < closestDistance) {
                         closestDistance = distance
@@ -77,20 +77,20 @@ class Sketch032: KApplet() {
         }
 
         if(closestMirror != null){
-            val collisionBeam = Beam(beam.start, closestCollisionCoord!!)
+            val collisionBeam = Ray(ray.start, closestCollisionCoord!!)
             collisionBeam.draw(this, MAGENTA)
         }
 
-        val reflectBeam = closestMirror?.reflection(beam)
+        val reflectBeam = closestMirror?.reflection(ray)
         reflectBeam?.setOrigin(closestMirror)
 
         if(reflectBeam == null){
-            //Beam exits drawing area
-            beam.draw(this, MAGENTA)
+            //Ray exits drawing area
+            ray.draw(this, MAGENTA)
 
-            var direction = beam.direction()
+            var direction = ray.direction()
             direction *= maxRayLength
-            val outOfBoundsBeam = Beam(beam.start, direction.coord())
+            val outOfBoundsBeam = Ray(ray.start, direction.coord())
             outOfBoundsBeam.draw(this, RED)
         }
 

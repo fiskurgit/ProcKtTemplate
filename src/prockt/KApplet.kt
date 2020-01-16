@@ -13,6 +13,7 @@ open class KApplet: KAppletApi() {
     val grid = Grid()
     private var commandKeyPressed = false
     private var saveChooser: JFileChooser? = null
+    private var maxLineLength: Float = -1f
 
     companion object {
         const val NO_LOOP_TEMP_SCREENSHOT = "noloop_temp.png"
@@ -109,6 +110,13 @@ open class KApplet: KAppletApi() {
     override fun loop() {
         File(NO_LOOP_TEMP_SCREENSHOT).delete()
         super.loop()
+    }
+
+    fun getMaximumLineLength(): Float{
+        if(maxLineLength == -1f){
+            maxLineLength = width + height.toFloat()
+        }
+        return maxLineLength
     }
 
     fun startPdf(): PGraphics = beginRecord(PDF, VECTOR_TEMP_FILE)

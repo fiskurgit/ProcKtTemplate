@@ -8,6 +8,10 @@ data class Coord(var x: Float, var y: Float){
         fun fromVector(vector: PVector): Coord{
             return Coord(vector.x, vector.y)
         }
+
+        fun empty(): Coord{
+            return Coord(0, 0)
+        }
     }
 
     constructor(x: Int, y: Int) : this(x.toFloat(), y.toFloat())

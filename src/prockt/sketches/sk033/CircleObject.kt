@@ -4,7 +4,7 @@ import processing.core.PApplet.sqrt
 import prockt.KApplet
 import prockt.KAppletApi.Companion.RED
 import prockt.KAppletApi.Companion.WHITE
-import prockt.api.Beam
+import prockt.api.ray.Ray
 import prockt.api.Coord
 import prockt.api.KVector
 import prockt.api.Objekt
@@ -12,8 +12,8 @@ import prockt.api.Objekt
 class CircleObject(val coord: Coord, val diameter: Float): Objekt {
 
     //http://studio.processingtogether.com/sp/pad/export/ro.9gGiJpQZIcTte/latest
-    override fun collision(_beam: Beam): Coord? {
-        val beam = _beam.clone()
+    override fun collision(_ray: Ray): Coord? {
+        val beam = _ray.clone()
         beam.flip()
         val dx = beam.end.x - beam.start.x
         val dy = beam.end.y - beam.start.y
@@ -38,8 +38,8 @@ class CircleObject(val coord: Coord, val diameter: Float): Objekt {
 
         val collisionOnPlane = Coord(ix1, iy1)
 
-        val startDist = collisionOnPlane.dist(_beam.start)
-        val endDist = collisionOnPlane.dist(_beam.end)
+        val startDist = collisionOnPlane.dist(_ray.start)
+        val endDist = collisionOnPlane.dist(_ray.end)
 
         return when {
             startDist < endDist -> null
@@ -47,8 +47,8 @@ class CircleObject(val coord: Coord, val diameter: Float): Objekt {
         }
     }
 
-    override fun reflection(_beam: Beam): Beam? {
-        var beam = _beam.clone()
+    override fun reflection(_ray: Ray): Ray? {
+        var beam = _ray.clone()
 
         val collision = collision(beam) ?: return null
         val normal = normal(collision)
@@ -64,7 +64,7 @@ class CircleObject(val coord: Coord, val diameter: Float): Objekt {
         val reflection = KVector(-2f * normal.x * dot + incidence.x, -2f * normal.y * dot + incidence.y)
         reflection.normalise()
 
-        return Beam(collision, Coord(collision.x + reflection.x, collision.y + reflection.y))
+        return Ray(collision, Coord(collision.x + reflection.x, collision.y + reflection.y))
     }
 
     fun drawNormal(kapl: KApplet, pCoord: Coord?){

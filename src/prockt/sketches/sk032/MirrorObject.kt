@@ -8,7 +8,7 @@ import prockt.api.KVector
 import prockt.api.Objekt
 import prockt.KAppletApi.Companion.CYAN
 import prockt.KAppletApi.Companion.WHITE
-import prockt.api.Beam
+import prockt.api.ray.Ray
 
 /*
 
@@ -28,7 +28,7 @@ class MirrorObject(val coord: Coord, width: Float, rotationRad: Float): Objekt {
         end = temp.clone()
     }
 
-    override fun collision(beam: Beam): Coord? {
+    override fun collision(ray: Ray): Coord? {
 
         val x1 = start.x
         val y1 = start.y
@@ -36,11 +36,11 @@ class MirrorObject(val coord: Coord, width: Float, rotationRad: Float): Objekt {
         val x2 = end.x
         val y2 = end.y
 
-        val x3 = beam.start.x
-        val y3 = beam.start.y
+        val x3 = ray.start.x
+        val y3 = ray.start.y
 
-        val x4 = beam.end.x
-        val y4 = beam.end.y
+        val x4 = ray.end.x
+        val y4 = ray.end.y
 
         // calculate the distance to intersection point
         val uA = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1))
@@ -69,10 +69,10 @@ class MirrorObject(val coord: Coord, width: Float, rotationRad: Float): Objekt {
         kapl.line(start, end)
     }
 
-    override fun reflection(beam: Beam): Beam? {
-        val collision = collision(beam) ?: return null
+    override fun reflection(ray: Ray): Ray? {
+        val collision = collision(ray) ?: return null
         val normal = normal()
-        val direction = beam.direction()
+        val direction = ray.direction()
 
         val incidence = direction * -1f
         incidence.normalize()
@@ -82,6 +82,6 @@ class MirrorObject(val coord: Coord, width: Float, rotationRad: Float): Objekt {
         var reflection = KVector(-2f * normal.x * dot + incidence.x, -2f * normal.y * dot + incidence.y)
         reflection *= -1500f
 
-        return Beam(collision, Coord(collision.x + reflection.x, collision.y + reflection.y))
+        return Ray(collision, Coord(collision.x + reflection.x, collision.y + reflection.y))
     }
 }

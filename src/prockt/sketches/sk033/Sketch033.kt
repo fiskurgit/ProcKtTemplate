@@ -2,7 +2,7 @@ package prockt.sketches.sk033
 
 import prockt.KApplet
 import prockt.api.Coord
-import prockt.api.Beam
+import prockt.api.ray.Ray
 
 class Sketch033: KApplet() {
 
@@ -27,7 +27,7 @@ class Sketch033: KApplet() {
 
         val center = Coord(width/2, height/2)
         val mouse = Coord(mouseX, mouseY)
-        val mouseBeam = Beam(center, mouse)
+        val mouseBeam = Ray(center, mouse)
 
         circles.forEach { circle ->
             circle.draw(this)
@@ -53,24 +53,24 @@ class Sketch033: KApplet() {
         loop()
     }
 
-    private fun run(beam: Beam?){
-        if(beam == null) return
+    private fun run(ray: Ray?){
+        if(ray == null) return
 
-        val rBeam = processBeam(beam)
+        val rBeam = processBeam(ray)
         run(rBeam)
     }
 
-    private fun processBeam(beam: Beam?): Beam?{
-        if(beam == null) return null
+    private fun processBeam(ray: Ray?): Ray?{
+        if(ray == null) return null
 
         var closestCircle: CircleObject?  = null
         var closestDistance = (width * width) * height.toFloat()
         var closestCollisionCoord: Coord? = null
         circles.forEach { circle ->
-            if(circle != beam.originObject) {
-                val collisionCoord = circle.collision(beam)
+            if(circle != ray.originObject) {
+                val collisionCoord = circle.collision(ray)
                 if (collisionCoord != null) {
-                    val distance = beam.start.dist(collisionCoord)
+                    val distance = ray.start.dist(collisionCoord)
                     if (distance < closestDistance) {
                         closestDistance = distance
                         closestCircle = circle
@@ -80,30 +80,30 @@ class Sketch033: KApplet() {
             }
         }
 
-        var reflectBeam: Beam? = null
+        var reflectRay: Ray? = null
 
         closestCollisionCoord?.let {coord ->
             closestCircle?.drawNormal(this, coord)
-            val collisionBeam = Beam(beam.start, coord)
+            val collisionBeam = Ray(ray.start, coord)
             collisionBeam.draw(this, YELLOW)
 
             fill(CYAN)
             noStroke()
             circle(coord, 10)
 
-            reflectBeam = closestCircle?.reflection(beam)
-            reflectBeam?.setOrigin(closestCircle)
+            reflectRay = closestCircle?.reflection(ray)
+            reflectRay?.setOrigin(closestCircle)
 
         }
 
-        if(reflectBeam == null){
-            var direction = beam.direction()
+        if(reflectRay == null){
+            var direction = ray.direction()
             direction *= maxRayLength
-            val outOfBoundsBeam = Beam(beam.start, direction.coord())
+            val outOfBoundsBeam = Ray(ray.start, direction.coord())
             outOfBoundsBeam.draw(this, RED)
         }
 
-        return reflectBeam
+        return reflectRay
     }
 
     override fun mouseClicked() {

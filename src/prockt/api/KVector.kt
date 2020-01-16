@@ -56,7 +56,9 @@ data class KVector(var x: Float, var y: Float) {
     }
 
     fun direction(other: KVector): KVector {
-        return KVector(other.x - x, other.y - y)
+        val direction = KVector(other.x - x, other.y - y)
+        direction.normalise()
+        return direction
     }
 
     fun dot(other: KVector): Float {
